@@ -227,6 +227,19 @@
 </div>
 
 <script>
+
+// DEBUG AUTOLOAD DIAGNOSTIC
+window.addEventListener("load", async ()=>{
+  try {
+    const testHero = await fetch("data/heroes.json",{cache:"no-store"});
+    const testArt = await fetch("data/artifacts.json",{cache:"no-store"});
+    console.log("heroes.json", testHero.status, testHero.url);
+    console.log("artifacts.json", testArt.status, testArt.url);
+  } catch(e){
+    console.error("Diagnostic fetch error:", e);
+  }
+});
+
 /* ---------- Helpers ---------- */
 const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
