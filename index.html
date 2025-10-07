@@ -9,7 +9,7 @@
   :root{
     --bg1:#0f172a; --bg2:#1e293b; --muted:#94a3b8; --text:#e2e8f0;
     --accent:#60a5fa; --accent-2:#34d399; --border:#233047; --danger:#ef4444; --yellow:#fbbf24;
-    color-scheme: dark; /* forcer le thème sombre aux contrôles natifs */
+    color-scheme: dark;
   }
   *{box-sizing:border-box}
   body{
@@ -167,6 +167,7 @@
       <button class="btn" id="export">Exporter JSON (ma box)</button>
       <button class="btn save" id="save">Sauvegarder</button>
       <button class="btn" id="exportOffline">Exporter HTML (offline)</button>
+      <button class="btn" id="diag">Diagnostic</button>
     </div>
   </div>
 </header>
@@ -226,14 +227,15 @@
 </div>
 
 <script>
+/* ---------- Helpers ---------- */
 const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 function initials(name){ return (name||"??").split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
 function num(x){ const v = parseFloat(String(x).replace(/[^0-9.-]/g,'')); return isNaN(v)? null : v; }
 
-// ---- Démarrage VIERGE (pas d'autoload localStorage)
+/* ---------- Données de l'utilisateur ---------- */
 const STORAGE_KEY = "e7_box_data_online";
-let data = []; // on commence vide
+let data = []; // page vide par défaut
 
 function loadFromLocal(){
   try{
@@ -252,18 +254,20 @@ function clearLocal(){
   catch(e){ alert("Impossible de vider la sauvegarde."); }
 }
 
-// ---- Catalogues
+/* ---------- Catalogues (héros/artefacts) ---------- */
 let HERO_OPTS = [];
 let ART_OPTS = [];
 const MIN_HEROES = 364;
 const MIN_ARTS = 259;
 
-async function fetchJson(u){ const r = await fetch(u,{cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status+" for "+u); return r.json(); }
+async function fetchJson(u){
+  const r = await fetch(u,{cache:"no-store"});
+  if(!r.ok) throw new Error("HTTP "+r.status+" for "+u);
+  return r.json();
+}
 async function loadCatalog(){
   const hs = $("#hStatus"), as = $("#aStatus");
   function pickHeroes(h){
-    // Tolérance aux formats:
-    // {heroes:[...]}  |  [...]  |  {data:{heroes:[...]}}  |  {items:[...]}
     if (Array.isArray(h)) return h;
     if (Array.isArray(h?.heroes)) return h.heroes;
     if (Array.isArray(h?.data?.heroes)) return h.data.heroes;
@@ -271,12 +275,10 @@ async function loadCatalog(){
     return [];
   }
   function pickArtifacts(a){
-    // {artifacts:[...]}  |  [...]  |  {data:{artifacts:[...]}}  |  {items:[...]}
     if (Array.isArray(a)) return a;
     if (Array.isArray(a?.artifacts)) return a.artifacts;
     if (Array.isArray(a?.data?.artifacts)) return a.data.artifacts;
     if (Array.isArray(a?.items)) return a.items;
-    // parfois clé "artifact" au singulier :
     if (Array.isArray(a?.artifact)) return a.artifact;
     return [];
   }
@@ -290,23 +292,21 @@ async function loadCatalog(){
   }catch(e){
     console.error("Catalog load error:", e);
     HERO_OPTS = []; ART_OPTS = [];
-    // Affiche l'erreur dans les chips pour debug rapide:
     hs.textContent = "Héros : erreur";
     as.textContent = "Artefacts : erreur";
     hs.className = "chip err";
     as.className = "chip err";
     return;
   }
-  // Chips de statut
   hs.textContent = `Héros : ${HERO_OPTS.length}`;
   as.textContent = `Artefacts : ${ART_OPTS.length}`;
   hs.className = "chip " + (HERO_OPTS.length>=MIN_HEROES ? "ok" : HERO_OPTS.length? "warn":"err");
   as.className = "chip " + (ART_OPTS.length>=MIN_ARTS ? "ok" : ART_OPTS.length? "warn":"err");
 }
 
-
-// ---- Rendu tableau
+/* ---------- Rendu tableau ---------- */
 let sortKey="Nom", sortDir=1;
+
 function render(){
   const q = $("#q").value.toLowerCase().trim();
   const el = $("#el").value;
@@ -395,7 +395,7 @@ function render(){
   }
 }
 
-// Tri
+/* ---------- Tri & Filtres ---------- */
 $$("thead th").forEach(th=>{
   th.addEventListener("click", ()=>{
     const k = th.dataset.k;
@@ -403,13 +403,11 @@ $$("thead th").forEach(th=>{
     render();
   });
 });
-
-// Filtres
 $("#q").addEventListener("input", render);
 $("#el").addEventListener("change", render);
 $("#cls").addEventListener("change", render);
 
-// Ajouter / Mettre à jour
+/* ---------- Ajouter / Modifier / Supprimer ---------- */
 $("#add").addEventListener("click", ()=>{
   const item = {
     Nom: $("#f_nom").value.trim(),
@@ -431,31 +429,24 @@ $("#add").addEventListener("click", ()=>{
     link: "", artifact_link: "", artifact_icon: ""
   };
   if (!item.Nom){ alert("Le nom du héros est obligatoire."); return; }
-  // auto-link depuis catalogues
-  const hero = HERO_OPTS.find(h => h.name.toLowerCase() === item.Nom.toLowerCase());
+  const hero = HERO_OPTS.find(h => h.name?.toLowerCase() === item.Nom.toLowerCase());
   if (hero){ item.link = hero.link; item.avatar = item.avatar || hero.img; }
-  const art = ART_OPTS.find(a => a.name.toLowerCase() === item.Artefact.toLowerCase());
+  const art = ART_OPTS.find(a => a.name?.toLowerCase() === item.Artefact.toLowerCase());
   if (art){ item.artifact_link = art.link; item.artifact_icon = art.img; }
 
   const idx = data.findIndex(x=> (x.Nom||"").toLowerCase() === item.Nom.toLowerCase());
   if (idx>=0) data[idx] = item; else data.push(item);
   render();
 });
-
-// Supprimer depuis formulaire
 $("#delete").addEventListener("click", ()=>{
   const name = ($("#f_nom").value||"").trim();
-  if (!name){ alert("Sélectionne d'abord un héros (clique une ligne)."); return; }
+  if (!name){ alert("Sélectionne d'abord un héros."); return; }
   if (!confirm(`Supprimer ${name} ?`)) return;
   const idx = data.findIndex(x=> (x.Nom||"").toLowerCase() === name.toLowerCase());
-  if (idx>=0){
-    data.splice(idx,1);
-    ["f_nom","f_pc","f_atk","f_def","f_pv","f_spd","f_cc","f_cd","f_eff","f_er","f_set1","f_set2","f_art","f_elem","f_class","f_avatar"].forEach(id=>{ const el=$("#"+id); if (el) el.value=""; });
-    render();
-  }
+  if (idx>=0){ data.splice(idx,1); render(); }
 });
 
-// Import / Export / Offline
+/* ---------- Import / Export JSON & Offline ---------- */
 $("#import").addEventListener("click", ()=> $("#importFile").click());
 $("#importFile").addEventListener("change", async (ev)=>{
   const f = ev.target.files?.[0];
@@ -463,21 +454,18 @@ $("#importFile").addEventListener("change", async (ev)=>{
   try{
     const text = await f.text();
     const arr = JSON.parse(text);
-    if(!Array.isArray(arr)) throw new Error("JSON invalide: racine attendue = tableau.");
+    if(!Array.isArray(arr)) throw new Error("JSON invalide (racine doit être un tableau).");
     data = arr;
     render();
     alert("Import réussi !");
   }catch(e){
-    console.error(e);
-    alert("Import échoué: " + e.message);
-  }finally{
-    ev.target.value = "";
-  }
+    console.error(e); alert("Import échoué: " + e.message);
+  }finally{ ev.target.value = ""; }
 });
 $("#loadLocal").addEventListener("click", loadFromLocal);
 $("#clearLocal").addEventListener("click", clearLocal);
 $("#save").addEventListener("click", ()=>{
-  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); alert("Sauvegardé dans le navigateur (localStorage)."); }
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); alert("Sauvegardé dans le navigateur."); }
   catch(e){ alert("Échec de sauvegarde."); }
 });
 $("#export").addEventListener("click", ()=>{
@@ -487,39 +475,34 @@ $("#export").addEventListener("click", ()=>{
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 });
 
-// Export HTML offline autonome
-<script>
+/* ---------- Export HTML Offline (sécurisé) ---------- */
 function exportOfflineHtml(){
-  // Données actuelles en mémoire
   const heroes = (window.HERO_OPTS || []);
   const artifacts = (window.ART_OPTS || []);
   const box = (Array.isArray(window.data) ? window.data : []);
 
-  // IMPORTANT: ne jamais écrire "</script>" en clair
   const SOPEN = '<scr' + 'ipt>';
   const SCLOSE = '</scr' + 'ipt>';
 
-  // CSS (aucune balise </script> ici)
   const css =
-  ':root{color-scheme:dark;}'
-  +'body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#e2e8f0;'
-  +'background:radial-gradient(1200px 800px at 10% 10%, #0b1220 10%, #0f172a 30%, #1e293b);}'
-  +'.wrap{max-width:1100px;margin:0 auto;padding:16px 16px 48px;}'
-  +'h1{margin:12px 0 8px}'
-  +'.grid{margin-top:12px;width:100%;overflow:auto;border:1px solid #233047;border-radius:16px;}'
-  +'table{width:100%;border-collapse:separate;border-spacing:0;background:rgba(11,18,32,.6);}'
-  +'thead th{position:sticky;top:0;background:#0b1220;color:#cbd5e1;padding:10px;text-align:left;border-bottom:1px solid #233047;}'
-  +'td{border-top:1px solid #233047;padding:8px 10px;}'
-  +'.avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#60a5fa,#34d399);color:#081225;font-weight:800;}'
-  +'.avatar img{width:100%;height:100%;object-fit:cover}'
-  +'.badge{display:inline-block;margin-right:6px;padding:2px 6px;border:1px solid #233047;border-radius:999px;font-size:12px;background:#0b1220;color:#cbd5e1;}';
+    ':root{color-scheme:dark;}'
+   +'body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#e2e8f0;'
+   +'background:radial-gradient(1200px 800px at 10% 10%,#0b1220 10%,#0f172a 30%,#1e293b);} '
+   +'.wrap{max-width:1100px;margin:0 auto;padding:16px 16px 48px;}'
+   +'h1{margin:12px 0 8px}'
+   +'.grid{margin-top:12px;width:100%;overflow:auto;border:1px solid #233047;border-radius:16px;}'
+   +'table{width:100%;border-collapse:separate;border-spacing:0;background:rgba(11,18,32,.6);}'
+   +'thead th{position:sticky;top:0;background:#0b1220;color:#cbd5e1;padding:10px;text-align:left;border-bottom:1px solid #233047;}'
+   +'td{border-top:1px solid #233047;padding:8px 10px;}'
+   +'.avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#60a5fa,#34d399);color:#081225;font-weight:800;}'
+   +'.avatar img{width:100%;height:100%;object-fit:cover}'
+   +'.badge{display:inline-block;margin-right:6px;padding:2px 6px;border:1px solid #233047;border-radius:999px;font-size:12px;background:#0b1220;color:#cbd5e1;}';
 
-  // JS du fichier offline — attention, pas de backticks, pas de "</script>"
   const js =
     'const HERO_OPTS='+JSON.stringify(heroes)+';'
    +'const ART_OPTS='+JSON.stringify(artifacts)+';'
    +'const data='+JSON.stringify(box)+';'
-   +'function initials(name){return (name||"??").split(/\\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase();}'
+   +'function initials(n){return (n||"??").split(/\\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase();}'
    +'(function render(){'
      +'var body=document.getElementById("body"); body.innerHTML="";'
      +'for(var i=0;i<data.length;i++){var it=data[i];'
@@ -539,7 +522,6 @@ function exportOfflineHtml(){
      +'}'
    +'})();';
 
-  // Assemblage sans "</script>" littéral
   const html =
     '<!DOCTYPE html><html lang="fr"><head>'
    +'<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>'
@@ -559,12 +541,51 @@ function exportOfflineHtml(){
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url; a.download = 'Epic7_Box_Offline.html';
-  document.body.appendChild(a); a.click(); a.remove();
-  URL.revokeObjectURL(url);
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 }
-
-// (ré)attacher l’événement
 document.getElementById('exportOffline').addEventListener('click', exportOfflineHtml);
+
+/* ---------- Pickers ---------- */
+function openPicker(id){ $(id).classList.add("open"); }
+function closePicker(id){ $(id).classList.remove("open"); }
+$$(".close").forEach(btn=> btn.addEventListener("click", ()=> closePicker(btn.getAttribute("data-close")) ));
+
+function fillGrid(gridSel, list, pickerSel, kind){
+  const grid = document.querySelector(gridSel); grid.innerHTML = "";
+  const term = (kind==="hero" ? document.querySelector("#heroSearch").value : document.querySelector("#artifactSearch").value).toLowerCase();
+  list.filter(x => !term || (x.name||"").toLowerCase().includes(term)).forEach(x=>{
+    const div = document.createElement("div");
+    div.className = "opt";
+    div.innerHTML = `<img src="${x.img}" alt="${x.name}" onerror="this.style.display='none'"><div><div><strong>${x.name}</strong></div><div style='font-size:12px;color:#94a3b8'>${x.slug||""}</div></div>`;
+    div.addEventListener("click", ()=>{
+      if (kind==="hero"){
+        $("#f_nom").value = x.name;
+        $("#f_avatar").value = x.img;
+      } else { $("#f_art").value = x.name; }
+      closePicker(pickerSel);
+    });
+    grid.appendChild(div);
+  });
+}
+$("#pickHero").addEventListener("click", ()=>{ $("#heroSearch").value=""; fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"); openPicker("#heroPicker"); });
+$("#pickArtifact").addEventListener("click", ()=>{ $("#artifactSearch").value=""; fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"); openPicker("#artifactPicker"); });
+document.getElementById("heroSearch").addEventListener("input", ()=> fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"));
+document.getElementById("artifactSearch").addEventListener("input", ()=> fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"));
+
+/* ---------- Diagnostic ---------- */
+$("#diag")?.addEventListener("click", ()=>{
+  alert(
+    `H:${HERO_OPTS.length}  A:${ART_OPTS.length}\n` +
+    `Exemple héros: ${(HERO_OPTS[0]?.name)||"(none)"}\n` +
+    `Exemple artefact: ${(ART_OPTS[0]?.name)||"(none)"}`
+  );
+});
+
+/* ---------- Boot ---------- */
+(async function boot(){
+  await loadCatalog();
+  render();
+})();
 </script>
 </body>
 </html>
