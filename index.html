@@ -224,6 +224,7 @@ async function loadCatalog(){
 }
 
 let sortKey="Nom", sortDir=1;
+const NUM_KEYS = new Set(["Pc","Attaque","Défense","PV","Vitesse","Taux Crit","Dégâts Crit","Efficacité","Résistance"]);
 function render(){
   const q = $("#q").value.toLowerCase().trim();
   const el = $("#el").value;
@@ -316,7 +317,14 @@ function render(){
 $$("thead th").forEach(th=>{
   th.addEventListener("click", ()=>{
     const k = th.dataset.k;
-    if (sortKey === k){ sortDir *= -1; } else { sortKey = k; sortDir = 1; }
+    if (sortKey === k){
+      // On inverse si on reclique la même colonne
+      sortDir *= -1;
+    } else {
+      sortKey = k;
+      // Par défaut : descendante pour les stats numériques, sinon ascendante
+      sortDir = NUM_KEYS.has(k) ? -1 : 1;
+    }
     render();
   });
 });
