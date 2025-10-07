@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Epic Seven — Catalog Check</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:24px;line-height:1.45}
+  code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
+  .ok{color:#16a34a;font-weight:700}
+  .warn{color:#d97706;font-weight:700}
+  .err{color:#dc2626;font-weight:700}
+  ul{padding-left:18px}
+</style>
+</head>
+<body>
+<h1>Epic Seven — Catalog Check</h1>
+<p>This page loads <code>data/heroes.json</code> and <code>data/artifacts.json</code> from your repo to verify counts.</p>
+
+<ul id="info"><li>Loading…</li></ul>
+
+<script>
+async function load(u){ const r=await fetch(u,{cache:'no-store'}); if(!r.ok) throw new Error(u+' '+r.status); return r.json(); }
+(async()=>{
+  const ul = document.getElementById('info'); ul.innerHTML='';
+  try{
+    const [H,A] = await Promise.all([load('data/heroes.json'), load('data/artifacts.json')]);
+    const hc = Array.isArray(H.heroes) ? H.heroes.length : 0;
+    const ac = Array.isArray(A.artifacts) ? A.artifacts.length : 0;
+
+    const li1 = document.createElement('li');
+    li1.innerHTML = `Heroes: <strong>${hc}</strong> ` + (hc>=364 ? '<span class="ok">OK</span>' : hc? '<span class="warn">LOW</span>' : '<span class="err">MISSING</span>');
+    const li2 = document.createElement('li');
+    li2.innerHTML = `Artifacts: <strong>${ac}</strong> ` + (ac>=259 ? '<span class="ok">OK</span>' : ac? '<span class="warn">LOW</span>' : '<span class="err">MISSING</span>');
+    ul.append(li1, li2);
+
+    const li3 = document.createElement('li');
+    li3.innerHTML = "<em>First 10 heroes:</em> " + (H.heroes||[]).slice(0,10).map(x=>x.name).join(", ");
+    ul.append(li3);
+  }catch(e){
+    const li = document.createElement('li');
+    li.className = 'err';
+    li.textContent = 'Error: ' + e.message;
+    ul.append(li);
+  }
+})();
+</script>
+</body>
+</html>
