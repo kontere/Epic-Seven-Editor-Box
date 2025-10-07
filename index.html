@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ma Box Epic Seven — LIVE (Epic7DB sync + fallback)</title>
+<title>Ma Box Epic Seven — Online</title>
+<meta name="description" content="Gère ta box Epic Seven en ligne : ajout rapide de héros, stats, et artefacts. Catalogues depuis data/*.json du repo.">
 <style>
   :root{
-    --bg1:#0f172a; --bg2:#1e293b; --card:#0b1220; --muted:#94a3b8; --text:#e2e8f0;
-    --accent:#60a5fa; --accent-2:#34d399; --border:#233047; --yellow:#fbbf24; --danger:#f87171;
+    --bg1:#0f172a; --bg2:#1e293b; --muted:#94a3b8; --text:#e2e8f0;
+    --accent:#60a5fa; --accent-2:#34d399; --border:#233047; --danger:#ef4444; --yellow:#fbbf24;
   }
   *{box-sizing:border-box}
   body{
@@ -16,23 +17,37 @@
     background: radial-gradient(1200px 800px at 10% 10%, #0b1220 10%, var(--bg1) 30%, var(--bg2));
     min-height:100vh;
   }
-  header{ padding:28px 18px 10px; }
+  a{color:#bfdbfe}
+  header{ padding:28px 18px 12px; }
   .wrap{ max-width:1200px; margin:0 auto; padding:0 16px 60px; }
-  h1{ margin:0 0 8px; font-size: clamp(24px, 4vw, 36px); letter-spacing:.5px; }
-  .sub{ color:var(--muted); margin-bottom:12px; }
-  .controls{
-    display:grid; grid-template-columns: 1fr 1fr 1fr auto; gap:10px;
-    background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
-    padding:12px; border:1px solid var(--border); border-radius:14px; backdrop-filter: blur(2px);
+  h1{ margin:0 0 6px; font-size: clamp(24px, 4vw, 36px); letter-spacing:.5px; }
+  .sub{ color:var(--muted); margin: 0 0 14px; }
+  .status{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .chip{ font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:#0b1220; color:#cbd5e1; }
+  .chip.ok{ border-color: rgba(52,211,153,.5); color:#86efac; }
+  .chip.warn{ border-color: rgba(251,191,36,.5); color:#fde68a; }
+  .chip.err{ border-color: rgba(239,68,68,.5); color:#fecaca; }
+
+  /* Form above listing */
+  .form{
+    margin-top:16px; border:1px solid var(--border); border-radius:16px; padding:12px;
+    background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.005));
   }
+  .form h2{ margin:0 0 10px; font-size:18px; color:#bfdbfe; }
+  .form-grid{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:10px; }
+  .form-grid input{ background:#0b1220; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px; width:100%; }
+  .form-actions{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
+  .btn{ border:1px solid var(--accent); color: var(--accent); background:#0b1220; border-radius:10px; padding:10px 12px; cursor:pointer; }
+  .danger{ border-color: var(--danger); color: var(--danger); }
+  .save{ border-color: var(--accent-2); color: var(--accent-2); }
+
+  /* Controls row */
+  .controls{ display:grid; grid-template-columns: 1fr 1fr 1fr auto; gap:10px; margin-top:16px; }
   .controls input, .controls select, .controls button{
     background:#0b1220; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px 12px; outline:none;
   }
-  .controls .btn{ cursor:pointer; font-weight:600; transition:.15s ease; }
-  .controls .btn:hover{ border-color: var(--accent); color: var(--accent); }
-  .hint{ font-size:12px; color:#9ca3af; margin: 0 0 10px; }
 
-  .grid{ margin-top:16px; width:100%; overflow:auto; border:1px solid var(--border); border-radius:16px; }
+  .grid{ margin-top:12px; width:100%; overflow:auto; border:1px solid var(--border); border-radius:16px; }
   table{ width:100%; border-collapse:separate; border-spacing:0; background: rgba(11,18,32,.6); }
   thead th{
     position:sticky; top:0; background:#0b1220; z-index:1; color:#cbd5e1; font-weight:700; text-align:left; padding:12px;
@@ -51,218 +66,207 @@
   .badge{ font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; color:#cbd5e1; background:#0b1220; white-space:nowrap; }
   .pill{ background:rgba(52,211,153,.12); border-color:rgba(52,211,153,.4); color:#86efac; }
 
-  details.form{ margin-top:18px; border:1px dashed var(--border); border-radius:14px; padding:12px 12px 6px; }
-  details.form summary{ cursor:pointer; list-style:none; font-weight:700; color:#bfdbfe; margin-bottom:10px; }
-  .form-grid{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:10px; }
-  .form-grid input, .form-grid select{ background:#0b1220; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px; width:100%; }
-  .actions{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;}
-  .btn{ border:1px solid var(--accent); color: var(--accent); background:#0b1220; border-radius:10px; padding:10px 12px; cursor:pointer; }
-  .save{ border-color: var(--accent-2); color: var(--accent-2); }
-  .export{ border-color: var(--yellow); color: var(--yellow); }
-  .danger{ border-color: var(--danger); color: var(--danger); }
-  .note{ font-size:12px; color:#94a3b8; margin-top:6px; }
-
-  /* Picker panel */
+  /* Pickers */
   .picker{ position:fixed; inset:0; display:none; background:rgba(0,0,0,.55); align-items:flex-start; justify-content:center; padding-top:8vh; }
   .picker.open{ display:flex; }
   .picker-card{ width:min(1000px, 95vw); max-height:80vh; overflow:auto; background:#0b1220; border:1px solid var(--border); border-radius:16px; padding:16px; }
-  .picker h3{ margin:0 0 10px; }
-  .picker .row{ display:flex; gap:8px; align-items:center; margin-bottom:10px; }
-  .picker input{ flex:1; }
+  .row{ display:flex; gap:8px; align-items:center; margin-bottom:10px; }
   .picker-grid{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:8px; }
   .opt{ display:flex; align-items:center; gap:10px; padding:8px; border:1px solid var(--border); border-radius:12px; cursor:pointer; }
   .opt:hover{ border-color: var(--accent); }
   .opt img{ width:40px; height:40px; border-radius:10px; object-fit:cover; }
-  .opt .meta{ font-size:12px; color:#94a3b8; }
   .close{ margin-left:auto; cursor:pointer; border:1px solid var(--border); border-radius:10px; padding:8px 10px; background:#0b1220; color:#e2e8f0; }
 </style>
 </head>
 <body>
-  <header class="wrap">
-    <h1>Ma Box Epic Seven</h1>
-    <div class="sub">Mode <b>LIVE</b> : synchronisation des listes via Epic7DB (proxy CORS) + <i>fallback</i> catalogue local/import.</div>
-    <p class="hint">Si la sync échoue, utilise le bouton “Importer JSON (catalogue héros/artefacts)” ou le catalogue intégré.</p>
-    <div class="controls">
-      <input id="q" placeholder="Filtrer (nom, élément, classe, artefact, set…)" />
-      <select id="el">
-        <option value="">— Élément (tous) —</option>
-        <option>Feu</option><option>Glace</option><option>Terre</option><option>Ténèbres</option><option>Lumière</option>
-      </select>
-      <select id="cls">
-        <option value="">— Classe (toutes) —</option>
-        <option>Warrior</option><option>Thief</option><option>Ranger</option><option>Knight</option><option>Mage</option><option>Soul Weaver</option>
-      </select>
-      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
-        <label class="btn" for="importData" style="display:inline-flex;align-items:center;gap:8px; cursor:pointer;">Importer JSON (box)<input id="importData" type="file" accept="application/json" style="display:none"></label>
-        <label class="btn" for="importCatalog" style="display:inline-flex;align-items:center;gap:8px; cursor:pointer;">Importer JSON (catalogue héros/artefacts)<input id="importCatalog" type="file" accept="application/json" style="display:none"></label>
-        <button class="export" id="export">Exporter JSON</button>
-        <button class="save" id="save">Sauvegarder</button>
-      </div>
-    </div>
-  </header>
+<header class="wrap">
+  <h1>Ma Box Epic Seven</h1>
+  <div class="sub">Les catalogues proviennent de <code>data/heroes.json</code> & <code>data/artifacts.json</code>. Ta box personnelle est sauvegardée dans le navigateur.</div>
 
-  <main class="wrap">
-    <div class="grid">
-      <table id="tbl">
-        <thead>
-          <tr>
-            <th data-k="Nom">Héros</th>
-            <th data-k="Pc">Puissance</th>
-            <th data-k="Attaque">ATK</th>
-            <th data-k="Défense">DEF</th>
-            <th data-k="PV">PV</th>
-            <th data-k="Vitesse">SPD</th>
-            <th data-k="Taux Crit">%CC</th>
-            <th data-k="Dégâts Crit">%CD</th>
-            <th data-k="Efficacité">%Eff</th>
-            <th data-k="Résistance">%ER</th>
-            <th data-k="Set principal">Set 1</th>
-            <th data-k="Set secondaire">Set 2</th>
-            <th data-k="Artefact">Artefact</th>
-            <th data-k="__actions">Actions</th>
-          </tr>
-        </thead>
-        <tbody id="body"></tbody>
-      </table>
-    </div>
-
-    <details class="form" open>
-      <summary>＋ Ajouter / modifier un héros</summary>
-      <div class="form-grid">
-        <div style="display:flex; gap:8px;">
-          <input id="f_nom" placeholder="Nom du héros *" />
-          <button class="btn" id="pickHero">Choisir (Epic7DB)</button>
-        </div>
-        <input id="f_pc" type="number" placeholder="Puissance (PC)" />
-        <input id="f_atk" type="number" placeholder="ATK" />
-        <input id="f_def" type="number" placeholder="DEF" />
-        <input id="f_pv" type="number" placeholder="PV" />
-        <input id="f_spd" type="number" placeholder="SPD" />
-        <input id="f_cc" type="number" placeholder="% Crit" />
-        <input id="f_cd" type="number" placeholder="% Dégâts Crit" />
-        <input id="f_eff" type="number" placeholder="% Efficacité" />
-        <input id="f_er" type="number" placeholder="% Résistance" />
-        <input id="f_set1" placeholder="Set principal" />
-        <input id="f_set2" placeholder="Set secondaire" />
-        <div style="display:flex; gap:8px;">
-          <input id="f_art" placeholder="Artefact" />
-          <button class="btn" id="pickArtifact">Choisir (Epic7DB)</button>
-        </div>
-        <input id="f_elem" placeholder="Élément (ex: Feu, Glace…)" />
-        <input id="f_class" placeholder="Classe (Warrior, Thief…)" />
-        <input id="f_avatar" placeholder="URL Avatar (héros) — auto si choisi" />
-      </div>
-      <div class="actions">
-        <button class="btn" id="add">Ajouter / Mettre à jour</button>
-        <button class="danger btn" id="delete">Supprimer ce héros</button>
-        <span class="note">Astuce : clique une ligne → les champs se remplissent.</span>
-      </div>
-    </details>
-  </main>
-
-  <!-- HERO PICKER -->
-  <div class="picker" id="heroPicker">
-    <div class="picker-card">
-      <div class="row">
-        <h3>Choisir un héros (Epic7DB)</h3>
-        <a class="link-ref" href="https://epic7db.com/heroes" target="_blank" rel="noopener">Voir la liste complète</a>
-        <button class="close" data-close="#heroPicker">Fermer</button>
-      </div>
-      <div class="row">
-        <input id="heroSearch" placeholder="Rechercher un héros…" />
-      </div>
-      <div class="picker-grid" id="heroGrid"></div>
-    </div>
+  <div class="status">
+    <span id="hStatus" class="chip">Héros : …</span>
+    <span id="aStatus" class="chip">Artefacts : …</span>
   </div>
 
-  <!-- ARTIFACT PICKER -->
-  <div class="picker" id="artifactPicker">
-    <div class="picker-card">
-      <div class="row">
-        <h3>Choisir un artefact (Epic7DB)</h3>
-        <a class="link-ref" href="https://epic7db.com/artifacts" target="_blank" rel="noopener">Voir la liste complète</a>
-        <button class="close" data-close="#artifactPicker">Fermer</button>
-      </div>
-      <div class="row">
-        <input id="artifactSearch" placeholder="Rechercher un artefact…" />
-      </div>
-      <div class="picker-grid" id="artifactGrid"></div>
+  <!-- Quick add form ABOVE the listing -->
+  <section class="form">
+    <h2>＋ Ajouter / modifier un héros</h2>
+    <div class="form-grid">
+      <input id="f_nom" placeholder="Nom du héros *" />
+      <input id="f_art" placeholder="Artefact" />
+      <input id="f_elem" placeholder="Élément (Feu, Eau, Terre, Ténèbres, Lumière)" />
+      <input id="f_class" placeholder="Classe (Guerrier, Voleur, Rôdeur, Chevalier, Mage, Tisseuse d'âme)" />
+      <input id="f_pc" type="number" placeholder="Puissance (PC)" />
+      <input id="f_atk" type="number" placeholder="ATK" />
+      <input id="f_def" type="number" placeholder="DEF" />
+      <input id="f_pv" type="number" placeholder="PV" />
+      <input id="f_spd" type="number" placeholder="SPD" />
+      <input id="f_cc" type="number" placeholder="% Crit" />
+      <input id="f_cd" type="number" placeholder="% Dégâts Crit" />
+      <input id="f_eff" type="number" placeholder="% Efficacité" />
+      <input id="f_er" type="number" placeholder="% Résistance" />
+      <select id="f_set1">
+  <option value="">Set principal</option>
+  <option>set attaque</option>
+  <option>set defense</option>
+  <option>set sante</option>
+  <option>set vitesse</option>
+  <option>set critique</option>
+  <option>set destruction</option>
+  <option>set coup</option>
+  <option>set resistance</option>
+  <option>set vol de vie</option>
+  <option>set contre</option>
+  <option>set unite</option>
+  <option>set immunite</option>
+  <option>set rage</option>
+  <option>set infiltration</option>
+  <option>set vengeance</option>
+  <option>set blessure</option>
+  <option>set protection</option>
+  <option>set tumulte</option>
+  <option>set riposte</option>
+  <option>set reaction</option>
+</select>
+<select id="f_set2">
+  <option value="">Set secondaire</option>
+  <option>set attaque</option>
+  <option>set defense</option>
+  <option>set sante</option>
+  <option>set vitesse</option>
+  <option>set critique</option>
+  <option>set destruction</option>
+  <option>set coup</option>
+  <option>set resistance</option>
+  <option>set vol de vie</option>
+  <option>set contre</option>
+  <option>set unite</option>
+  <option>set immunite</option>
+  <option>set rage</option>
+  <option>set infiltration</option>
+  <option>set vengeance</option>
+  <option>set blessure</option>
+  <option>set protection</option>
+  <option>set tumulte</option>
+  <option>set riposte</option>
+  <option>set reaction</option>
+</select>
+      <input id="f_avatar" placeholder="URL Avatar (auto si nom reconnu)" />
+    </div>
+    <div class="form-actions">
+      <button class="btn" id="pickHero">Choisir un héros</button>
+      <button class="btn" id="pickArtifact">Choisir un artefact</button>
+      <button class="btn save" id="add">Ajouter / Mettre à jour</button>
+      <button class="btn danger" id="delete">Supprimer ce héros</button>
+    </div>
+  </section>
+
+  <!-- Controls -->
+  <div class="controls">
+    <input id="q" placeholder="Filtrer (nom, élément, classe, artefact, set…)" />
+    <select id="el">
+      <option value="">— Élément (tous) —</option>
+      <option>Feu</option><option>Eau</option><option>Terre</option><option>Ténèbres</option><option>Lumière</option>
+    </select>
+    <select id="cls">
+      <option value="">— Classe (toutes) —</option>
+      <option>Guerrier</option><option>Voleur</option><option>Rôdeur</option><option>Chevalier</option><option>Mage</option><option>Tisseuse d'âme</option>
+</select>
+    <div style="display:flex; gap:8px; justify-content:flex-end">
+      <button class="btn" id="export">Exporter JSON (ma box)</button>
+      <button class="btn save" id="save">Sauvegarder</button>
     </div>
   </div>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th data-k="Nom">Héros</th>
+          <th data-k="Pc">Puissance</th>
+          <th data-k="Attaque">ATK</th>
+          <th data-k="Défense">DEF</th>
+          <th data-k="PV">PV</th>
+          <th data-k="Vitesse">SPD</th>
+          <th data-k="Taux Crit">%CC</th>
+          <th data-k="Dégâts Crit">%CD</th>
+          <th data-k="Efficacité">%Eff</th>
+          <th data-k="Résistance">%ER</th>
+          <th data-k="Set principal">Set 1</th>
+          <th data-k="Set secondaire">Set 2</th>
+          <th data-k="Artefact">Artefact</th>
+          <th data-k="__actions">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+</main>
+
+<!-- HERO PICKER -->
+<div class="picker" id="heroPicker">
+  <div class="picker-card">
+    <div class="row">
+      <h3>Choisir un héros</h3>
+      <button class="close" data-close="#heroPicker">Fermer</button>
+    </div>
+    <div class="row">
+      <input id="heroSearch" placeholder="Rechercher un héros…" style="flex:1;background:#0b1220;color:#e2e8f0;border:1px solid var(--border);border-radius:10px;padding:10px;">
+    </div>
+    <div class="picker-grid" id="heroGrid"></div>
+  </div>
+</div>
+
+<!-- ARTIFACT PICKER -->
+<div class="picker" id="artifactPicker">
+  <div class="picker-card">
+    <div class="row">
+      <h3>Choisir un artefact</h3>
+      <button class="close" data-close="#artifactPicker">Fermer</button>
+    </div>
+    <div class="row">
+      <input id="artifactSearch" placeholder="Rechercher un artefact…" style="flex:1;background:#0b1220;color:#e2e8f0;border:1px solid var(--border);border-radius:10px;padding:10px;">
+    </div>
+    <div class="picker-grid" id="artifactGrid"></div>
+  </div>
+</div>
 
 <script>
 const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 function initials(name){ return (name||"??").split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
 function num(x){ const v = parseFloat(String(x).replace(/[^0-9.-]/g,'')); return isNaN(v)? null : v; }
-function slugify(str){ return (str||"").toLowerCase().replace(/['’]/g,"").replace(/[^a-z0-9\s-]/g," ").replace(/\s+/g,"-").replace(/-+/g,"-").trim(); }
 
-// STORAGE
-const STORAGE_KEY = "e7_box_data_live";
+const STORAGE_KEY = "e7_box_data_online";
 let data = [];
 try{ data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }catch(e){ data = []; }
 
-// --------- CATALOG SOURCES ---------
-// 1) LIVE via proxy (r.jina.ai) -> returns HTML with permissive CORS
-const JINA = (u) => `https://r.jina.ai/http://` + u.replace(/^https?:\/\//,'').replace(/^\/\//,'');
+let HERO_OPTS = [];
+let ART_OPTS = [];
+const MIN_HEROES = 364;
+const MIN_ARTS = 259;
 
-// 2) FALLBACK embedded minimal seeds
-let HERO_OPTS = [
-  {name:"Arbiter Vildred", slug:"arbiter-vildred", link:"https://epic7db.com/heroes/arbiter-vildred", img:"https://epic7db.com/images/heroes/arbiter-vildred.webp"},
-  {name:"Ruele of Light", slug:"ruele-of-light", link:"https://epic7db.com/heroes/ruele-of-light", img:"https://epic7db.com/images/heroes/ruele-of-light.webp"},
-  {name:"Conqueror Lilias", slug:"conqueror-lilias", link:"https://epic7db.com/heroes/conqueror-lilias", img:"https://epic7db.com/images/heroes/conqueror-lilias.webp"}
-];
-let ART_OPTS = [
-  {name:"Proof of Valor", slug:"proof-of-valor", link:"https://epic7db.com/artifacts/proof-of-valor", img:"https://epic7db.com/images/artifacts/proof-of-valor.webp"},
-  {name:"Aurius", slug:"aurius", link:"https://epic7db.com/artifacts/aurius", img:"https://epic7db.com/images/artifacts/aurius.webp"},
-  {name:"Rod of Amaryllis", slug:"rod-of-amaryllis", link:"https://epic7db.com/artifacts/rod-of-amaryllis", img:"https://epic7db.com/images/artifacts/rod-of-amaryllis.webp"}
-];
+async function fetchJson(u){ const r = await fetch(u,{cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status+" for "+u); return r.json(); }
 
-async function loadLiveCatalog(){
+async function loadCatalog(){
   try{
-    const [heroesHtml, artsHtml] = await Promise.all([
-      fetch(JINA("epic7db.com/heroes")).then(r=>r.text()).catch(()=>""),
-      fetch(JINA("epic7db.com/artifacts")).then(r=>r.text()).catch(()=>""),
-    ]);
-
-    const heroRx = /href="\/heroes\/([a-z0-9-]+)".*?>([^<]+)</gi;
-    const artRx  = /href="\/artifacts\/([a-z0-9-]+)".*?>([^<]+)</gi;
-
-    const heroes = []; const seenH = new Set();
-    let m;
-    while ((m = heroRx.exec(heroesHtml))){
-      const slug = m[1]; const name = m[2].replace(/&amp;/g,"&").trim();
-      const key = "h-"+slug; if (seenH.has(key)) continue; seenH.add(key);
-      heroes.push({name, slug, link:`https://epic7db.com/heroes/${slug}`, img:`https://epic7db.com/images/heroes/${slug}.webp`});
-    }
-
-    const arts = []; const seenA = new Set();
-    while ((m = artRx.exec(artsHtml))){
-      const slug = m[1]; const name = m[2].replace(/&amp;/g,"&").trim();
-      const key = "a-"+slug; if (seenA.has(key)) continue; seenA.add(key);
-      arts.push({name, slug, link:`https://epic7db.com/artifacts/${slug}`, img:`https://epic7db.com/images/artifacts/${slug}.webp`});
-    }
-
-    if (heroes.length) HERO_OPTS = heroes;
-    if (arts.length) ART_OPTS = arts;
-  }catch(e){ /* ignore, keep fallback */ }
-
-  // extend with existing data names (best effort)
-  const addIfMissing = (lst, type, name)=>{
-    if (!name) return;
-    if (!lst.some(x=>x.name.toLowerCase()===name.toLowerCase())){
-      const slug = slugify(name);
-      lst.push({name, slug, link:`https://epic7db.com/${type}/${slug}`, img:`https://epic7db.com/images/${type}/${slug}.webp`});
-    }
-  };
-  Array.from(new Set(data.map(d=>(d.Nom||"").trim()).filter(Boolean))).forEach(n=> addIfMissing(HERO_OPTS, "heroes", n));
-  Array.from(new Set(data.map(d=>(d.Artefact||"").trim()).filter(Boolean))).forEach(n=> addIfMissing(ART_OPTS, "artifacts", n));
+    const [h,a] = await Promise.all([ fetchJson("data/heroes.json"), fetchJson("data/artifacts.json") ]);
+    HERO_OPTS = Array.isArray(h.heroes)? h.heroes : [];
+    ART_OPTS  = Array.isArray(a.artifacts)? a.artifacts : [];
+  }catch(e){
+    console.error(e);
+    HERO_OPTS = []; ART_OPTS = [];
+  }
+  const hs = $("#hStatus"), as = $("#aStatus");
+  hs.textContent = `Héros : ${HERO_OPTS.length}`;
+  as.textContent = `Artefacts : ${ART_OPTS.length}`;
+  hs.className = "chip " + (HERO_OPTS.length>=MIN_HEROES ? "ok" : HERO_OPTS.length? "warn":"err");
+  as.className = "chip " + (ART_OPTS.length>=MIN_ARTS ? "ok" : ART_OPTS.length? "warn":"err");
 }
-loadLiveCatalog();
 
-// ---------- Table rendering & actions ----------
-let sortKey = "Nom";
-let sortDir = 1;
+let sortKey="Nom", sortDir=1;
 function render(){
   const q = $("#q").value.toLowerCase().trim();
   const el = $("#el").value;
@@ -283,17 +287,15 @@ function render(){
     if (na!=null && nb!=null) return (na-nb)*sortDir;
     const va = (a[sortKey] ?? "").toString().toLowerCase();
     const vb = (b[sortKey] ?? "").toString().toLowerCase();
-    if (va<vb) return -1*sortDir;
-    if (va>vb) return 1*sortDir;
-    return 0;
+    if (va<vb) return -1*sortDir; if (va>vb) return 1*sortDir; return 0;
   });
 
   for (const it of rows){
     const tr = document.createElement("tr");
-    const img = it.avatar ? `<img src="${it.avatar}" alt="${it.Nom}" onerror="this.parentNode.textContent=initials('${it.Nom.replace('"','&quot;')}'); this.remove();" />` : "";
+    const img = it.avatar ? `<img src="${it.avatar}" alt="${it.Nom}" onerror="this.parentNode.textContent='${initials(it.Nom)}'; this.remove();" />` : "";
     const avatar = `<div class="avatar">${ img || initials(it.Nom) }</div>`;
     const nameHtml = it.link ? `<a href="${it.link}" target="_blank" rel="noopener noreferrer">${it.Nom||""}</a>` : (it.Nom||"");
-    const artHtml = it.artifact_link ? `<a href="${it.artifact_link}" target="_blank" rel="noopener noreferrer">${it.Artefact||""}</a>` : (it.Artefact||"");
+    const artHtml  = it.artifact_link ? `<a href="${it.artifact_link}" target="_blank" rel="noopener noreferrer">${it.Artefact||""}</a>` : (it.Artefact||"");
     tr.innerHTML = `
       <td>
         <div class="hero">
@@ -309,7 +311,7 @@ function render(){
       </td>
       <td>${it.Pc??""}</td>
       <td>${it.Attaque??""}</td>
-      <td>${it.Défense??""}</td>
+      <td>${it["Défense"]??""}</td>
       <td>${it.PV??""}</td>
       <td>${it.Vitesse??""}</td>
       <td>${it["Taux Crit"]??""}</td>
@@ -319,16 +321,14 @@ function render(){
       <td>${it["Set principal"]||""}</td>
       <td>${it["Set secondaire"]||""}</td>
       <td>${artHtml}</td>
-      <td>
-        <button class="danger btn" data-del="${(it.Nom||'').replace('"','&quot;')}">Supprimer</button>
-      </td>
+      <td><button class="btn danger" data-del="${(it.Nom||'').replace('"','&quot;')}">Supprimer</button></td>
     `;
     tr.addEventListener("click", (ev)=>{
-      if (ev.target && ev.target.dataset && ev.target.dataset.del){ return; }
+      if (ev.target && ev.target.dataset && ev.target.dataset.del) return;
       $("#f_nom").value = it.Nom||"";
       $("#f_pc").value = it.Pc??"";
       $("#f_atk").value = it.Attaque??"";
-      $("#f_def").value = it.Défense??"";
+      $("#f_def").value = it["Défense"]??"";
       $("#f_pv").value = it.PV??"";
       $("#f_spd").value = it.Vitesse??"";
       $("#f_cc").value = it["Taux Crit"]??"";
@@ -375,7 +375,7 @@ $("#add").addEventListener("click", ()=>{
     Nom: $("#f_nom").value.trim(),
     Pc: num($("#f_pc").value),
     Attaque: num($("#f_atk").value),
-    Défense: num($("#f_def").value),
+    "Défense": num($("#f_def").value),
     PV: num($("#f_pv").value),
     Vitesse: num($("#f_spd").value),
     "Taux Crit": num($("#f_cc").value),
@@ -391,6 +391,7 @@ $("#add").addEventListener("click", ()=>{
     link: "", artifact_link: "", artifact_icon: ""
   };
   if (!item.Nom){ alert("Le nom du héros est obligatoire."); return; }
+  // Auto link depuis catalogues statiques
   const hero = HERO_OPTS.find(h => h.name.toLowerCase() === item.Nom.toLowerCase());
   if (hero){ item.link = hero.link; item.avatar = item.avatar || hero.img; }
   const art = ART_OPTS.find(a => a.name.toLowerCase() === item.Artefact.toLowerCase());
@@ -414,40 +415,16 @@ $("#delete").addEventListener("click", ()=>{
   }
 });
 
-// Save / Export / Import
+// Save / Export
 $("#save").addEventListener("click", ()=>{
   try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); alert("Sauvegardé dans le navigateur (localStorage)."); }
-  catch(e){ alert("Échec de sauvegarde. Vérifie que le stockage du navigateur n'est pas bloqué (mode privé / cookies)."); }
+  catch(e){ alert("Échec de sauvegarde. Vérifie le stockage du navigateur."); }
 });
 $("#export").addEventListener("click", ()=>{
   const blob = new Blob([JSON.stringify(data, null, 2)], {type:"application/json"});
   const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url; a.download = "epic7_box_export.json";
-  document.body.appendChild(a); a.click(); a.remove();
-  URL.revokeObjectURL(url);
-});
-document.getElementById("importData").addEventListener("change", (ev)=>{
-  const file = ev.target.files[0]; if (!file) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    try{ data = JSON.parse(reader.result); localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); render(); }
-    catch(e){ alert("JSON invalide (box)."); }
-  };
-  reader.readAsText(file);
-});
-document.getElementById("importCatalog").addEventListener("change", (ev)=>{
-  const file = ev.target.files[0]; if (!file) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    try{
-      const cat = JSON.parse(reader.result);
-      if (Array.isArray(cat.heroes)) HERO_OPTS = cat.heroes;
-      if (Array.isArray(cat.artifacts)) ART_OPTS = cat.artifacts;
-      alert("Catalogue importé ! Ouvre les pickers pour tester.");
-    } catch(e){ alert("JSON invalide (catalogue)."); }
-  };
-  reader.readAsText(file);
+  const a = document.createElement("a"); a.href = url; a.download = "epic7_box_export.json";
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 });
 
 // Pickers
@@ -461,13 +438,13 @@ function fillGrid(gridSel, list, pickerSel, kind){
   list.filter(x => !term || x.name.toLowerCase().includes(term)).forEach(x=>{
     const div = document.createElement("div");
     div.className = "opt";
-    div.innerHTML = `<img src="${x.img}" alt="${x.name}" onerror="this.style.display='none'"><div><div><strong>${x.name}</strong></div><div class='meta'>${x.link.replace('https://','')}</div></div>`;
+    div.innerHTML = `<img src="${x.img}" alt="${x.name}" onerror="this.style.display='none'"><div><div><strong>${x.name}</strong></div><div style='font-size:12px;color:#94a3b8'>${x.slug}</div></div>`;
     div.addEventListener("click", ()=>{
       if (kind==="hero"){
-        document.querySelector("#f_nom").value = x.name;
-        document.querySelector("#f_avatar").value = x.img;
+        $("#f_nom").value = x.name;
+        $("#f_avatar").value = x.img;
       } else {
-        document.querySelector("#f_art").value = x.name;
+        $("#f_art").value = x.name;
       }
       closePicker(pickerSel);
     });
@@ -475,13 +452,16 @@ function fillGrid(gridSel, list, pickerSel, kind){
   });
 }
 
-$("#pickHero").addEventListener("click", ()=>{ document.getElementById("heroSearch").value=""; fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"); openPicker("#heroPicker"); });
-$("#pickArtifact").addEventListener("click", ()=>{ document.getElementById("artifactSearch").value=""; fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"); openPicker("#artifactPicker"); });
+$("#pickHero").addEventListener("click", ()=>{ $("#heroSearch").value=""; fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"); openPicker("#heroPicker"); });
+$("#pickArtifact").addEventListener("click", ()=>{ $("#artifactSearch").value=""; fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"); openPicker("#artifactPicker"); });
 document.getElementById("heroSearch").addEventListener("input", ()=> fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"));
 document.getElementById("artifactSearch").addEventListener("input", ()=> fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"));
 
-// Initial render
-render();
+// Boot
+(async function boot(){
+  await loadCatalog();
+  render();
+})();
 </script>
 </body>
 </html>
