@@ -3,45 +3,353 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Epic Seven — Catalog Check</title>
+<title>Ma Box Epic Seven — Online</title>
+<meta name="description" content="Gère ta box Epic Seven en ligne : import JSON de ta box, tri par stats, export offline.">
 <style>
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:20px;}
-  .ok{color:#16a34a;font-weight:700}
-  .warn{color:#d97706;font-weight:700}
+  :root{
+    --bg1:#0f172a; --bg2:#111827; --panel:#0b1220; --muted:#94a3b8; --text:#e5e7eb;
+    --border:#233047; --accent:#60a5fa; --accent2:#34d399; --danger:#ef4444;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    color:var(--text);
+    background: radial-gradient(1200px 800px at 10% 10%, #0b1220 10%, var(--bg1) 30%, var(--bg2));
+  }
+  a{color:#bfdbfe}
+  .wrap{max-width:1200px;margin:0 auto;padding:20px 16px 64px}
+  header h1{margin:0 0 6px; font-size: clamp(22px, 4vw, 34px);}
+  .sub{color:var(--muted); margin:0 0 14px}
+  .bar{
+    display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:12px 0 8px;
+  }
+  .btn{
+    border:1px solid var(--accent); color:var(--accent); background:var(--panel);
+    border-radius:10px; padding:10px 12px; cursor:pointer;
+  }
+  .btn:disabled{opacity:.6; cursor:not-allowed}
+  .danger{ border-color:var(--danger); color:var(--danger) }
+  .ok{ color:#86efac } .warn{ color:#fde68a } .err{ color:#fecaca }
+
+  .panel{
+    background:linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.01));
+    border:1px solid var(--border); border-radius:16px;
+  }
+  .drop{
+    margin-top:10px; padding:18px; text-align:center; color:var(--muted);
+    border:1px dashed var(--border); border-radius:14px; background:rgba(11,18,32,.4);
+  }
+  .drop.drag{ outline:2px dashed var(--accent); color:#e0f2fe; }
+
+  .controls{
+    display:grid; grid-template-columns: 1fr auto auto auto; gap:10px; margin:14px 0 0;
+  }
+  .controls input, .controls select{
+    background:var(--panel); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px 12px;
+  }
+
+  .grid{ margin-top:12px; overflow:auto; border:1px solid var(--border); border-radius:16px; }
+  table{ width:100%; border-collapse:separate; border-spacing:0; background: rgba(11,18,32,.55); }
+  thead th{
+    position:sticky; top:0; background:#0b1220; z-index:1; color:#cbd5e1; font-weight:700; text-align:left; padding:12px;
+    border-bottom:1px solid var(--border); white-space:nowrap; cursor:pointer; user-select:none;
+  }
+  tbody td{ border-top:1px solid var(--border); padding:10px 12px; vertical-align:middle; }
+  tr:hover td{ background: rgba(96,165,250,.06); }
+  .hero{ display:flex; align-items:center; gap:10px; }
+  .avatar{
+    width:36px;height:36px;border-radius:50%; display:inline-flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg, var(--accent), var(--accent2)); color:#081225;font-weight:800;
+    overflow:hidden;border:1px solid rgba(255,255,255,.2); flex:0 0 36px;
+  }
+  .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .badge{ font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; color:#cbd5e1; background:#0b1220; white-space:nowrap; margin-left:8px;}
+  .muted{ color:var(--muted) }
+
+  .empty{
+    padding:14px; color:var(--muted);
+  }
 </style>
 </head>
 <body>
-<h1>Epic Seven — Catalog Check</h1>
-<p>Cette page charge <code>data/heroes.json</code> et <code>data/artifacts.json</code> depuis ton repo, pour vérifier que tout est bon. Ensuite on branchera l'UI complète.</p>
+<div class="wrap">
+  <header>
+    <h1>Ma Box Epic Seven</h1>
+    <p class="sub">Importe un fichier <strong>JSON</strong> de ta box pour l’afficher et la trier par statistiques. La page se réinitialise à chaque chargement.</p>
 
-<ul id="info"></ul>
+    <div class="panel" style="padding:12px">
+      <div class="bar">
+        <input type="file" id="file" accept="application/json" style="display:none" />
+        <button class="btn" id="pick">Importer un JSON…</button>
+        <button class="btn" id="export" disabled>Exporter le JSON</button>
+        <button class="btn" id="exportOffline" disabled>Exporter HTML (offline)</button>
+        <span id="status" class="muted">Aucune donnée chargée</span>
+      </div>
+      <div id="drop" class="drop">Glisse-dépose ici ton fichier <strong>JSON</strong> (ou clique sur “Importer un JSON…”) </div>
+    </div>
+
+    <div class="controls">
+      <input id="q" placeholder="Filtrer (nom, élément, classe, artefact, set…)" disabled />
+      <select id="el" disabled>
+        <option value="">— Élément (tous) —</option>
+        <option>Feu</option><option>Eau</option><option>Terre</option><option>Ténèbres</option><option>Lumière</option>
+      </select>
+      <select id="cls" disabled>
+        <option value="">— Classe (toutes) —</option>
+        <option>Guerrier</option><option>Voleur</option><option>Rôdeur</option><option>Chevalier</option><option>Mage</option><option>Tisseuse d'âme</option>
+      </select>
+      <div class="muted" id="count">0 héros</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid panel">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th data-k="Nom">Héros</th>
+            <th data-k="Pc">Puissance</th>
+            <th data-k="Attaque">ATK</th>
+            <th data-k="Défense">DEF</th>
+            <th data-k="PV">PV</th>
+            <th data-k="Vitesse">SPD</th>
+            <th data-k="Taux Crit">%CC</th>
+            <th data-k="Dégâts Crit">%CD</th>
+            <th data-k="Efficacité">%Eff</th>
+            <th data-k="Résistance">%ER</th>
+            <th data-k="Set principal">Set 1</th>
+            <th data-k="Set secondaire">Set 2</th>
+            <th data-k="Artefact">Artefact</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <tr><td class="empty" colspan="13">Aucune donnée pour l’instant. Importe ton fichier JSON pour afficher ta box.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
 
 <script>
-async function load(u){ const r=await fetch(u); if(!r.ok) throw new Error(u+" "+r.status); return r.json(); }
-(async()=>{
-  const ul = document.getElementById('info');
-  try{
-    const [H,A] = await Promise.all([load('data/heroes.json'), load('data/artifacts.json')]);
-    const hc = Array.isArray(H.heroes) ? H.heroes.length : 0;
-    const ac = Array.isArray(A.artifacts) ? A.artifacts.length : 0;
+/* ========= Helpers & state ========= */
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const num = (x)=>{ const v = parseFloat(String(x??"").toString().replace(/[^0-9.-]/g,'')); return Number.isFinite(v) ? v : null; };
+const initials = (name)=> (name||"??").split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase();
 
-    const hli = document.createElement('li');
-    hli.innerHTML = `Heroes: <strong>${hc}</strong> ${hc>=364 ? '<span class="ok">OK</span>' : '<span class="warn">LOW</span>'}`;
-    const ali = document.createElement('li');
-    ali.innerHTML = `Artifacts: <strong>${ac}</strong> ${ac>=259 ? '<span class="ok">OK</span>' : '<span class="warn">LOW</span>'}`;
+let DATA = [];                 // page reset : vide au chargement
+let sortKey = "Nom", sortDir = 1;
 
-    ul.appendChild(hli); ul.appendChild(ali);
+/* ========= UI enable/disable ========= */
+function enableUI(enabled){
+  $("#q").disabled = !enabled;
+  $("#el").disabled = !enabled;
+  $("#cls").disabled = !enabled;
+  $("#export").disabled = !enabled;
+  $("#exportOffline").disabled = !enabled;
+}
 
-    // petit aperçu des 10 premiers héros
-    const li = document.createElement('li');
-    li.innerHTML = "<em>First 10 heroes:</em> " + (H.heroes||[]).slice(0,10).map(x=>x.name).join(", ");
-    ul.appendChild(li);
-  }catch(e){
-    const li = document.createElement('li');
-    li.textContent = "Error: " + e.message;
-    ul.appendChild(li);
+/* ========= Rendering ========= */
+function render(){
+  const body = $("#body");
+  body.innerHTML = "";
+  const q = $("#q").value.toLowerCase().trim();
+  const el = $("#el").value;
+  const cls = $("#cls").value;
+
+  let rows = DATA.filter(it=>{
+    const blob = [it.Nom, it.Élément, it.Classe, it.Artefact, it["Set principal"], it["Set secondaire"]].join(" ").toLowerCase();
+    const matchQ = !q || blob.includes(q);
+    const matchEl = !el || (it.Élément||"").toLowerCase().includes(el.toLowerCase());
+    const matchCls = !cls || (it.Classe||"").toLowerCase().includes(cls.toLowerCase());
+    return matchQ && matchEl && matchCls;
+  });
+
+  rows.sort((a,b)=>{
+    // numériques > alpha
+    const na = num(a[sortKey]); const nb = num(b[sortKey]);
+    if (na!=null && nb!=null) return (na-nb)*sortDir;
+    const va = (a[sortKey] ?? "").toString().toLowerCase();
+    const vb = (b[sortKey] ?? "").toString().toLowerCase();
+    if (va<vb) return -1*sortDir; if (va>vb) return 1*sortDir; return 0;
+  });
+
+  if (!rows.length){
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td class="empty" colspan="13">Aucun résultat avec ces filtres.</td>`;
+    body.appendChild(tr);
+    $("#count").textContent = "0 héros";
+    return;
   }
-})();
+
+  for (const it of rows){
+    const img = it.avatar ? `<img src="${it.avatar}" alt="${it.Nom||""}" onerror="this.parentNode.textContent='${initials(it.Nom)}'; this.remove();">` : "";
+    const avatar = `<div class="avatar">${ img || initials(it.Nom) }</div>`;
+    const nameHtml = it.link ? `<a href="${it.link}" target="_blank" rel="noopener noreferrer">${it.Nom||""}</a>` : (it.Nom||"");
+    const artHtml  = it.artifact_link ? `<a href="${it.artifact_link}" target="_blank" rel="noopener noreferrer">${it.Artefact||""}</a>` : (it.Artefact||"");
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>
+        <div class="hero">
+          ${avatar}
+          <div>
+            <div><strong>${nameHtml}</strong>
+              ${it.Élément? `<span class="badge">${it.Élément}</span>`:""}
+              ${it.Classe? `<span class="badge">${it.Classe}</span>`:""}
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>${it.Pc??""}</td>
+      <td>${it.Attaque??""}</td>
+      <td>${it["Défense"]??""}</td>
+      <td>${it.PV??""}</td>
+      <td>${it.Vitesse??""}</td>
+      <td>${it["Taux Crit"]??""}</td>
+      <td>${it["Dégâts Crit"]??""}</td>
+      <td>${it.Efficacité??""}</td>
+      <td>${it.Résistance??""}</td>
+      <td>${it["Set principal"]||""}</td>
+      <td>${it["Set secondaire"]||""}</td>
+      <td>${artHtml}</td>
+    `;
+    body.appendChild(tr);
+  }
+  $("#count").textContent = `${rows.length} héros`;
+}
+
+/* ========= Sorting ========= */
+$$("thead th").forEach(th=>{
+  th.addEventListener("click", ()=>{
+    const k = th.dataset.k;
+    if (!k) return;
+    if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = 1; }
+    render();
+  });
+});
+
+/* ========= Filters ========= */
+$("#q").addEventListener("input", render);
+$("#el").addEventListener("change", render);
+$("#cls").addEventListener("change", render);
+
+/* ========= Import JSON (file + drag&drop) ========= */
+function attachDropzone(){
+  const dz = $("#drop");
+  ["dragenter","dragover"].forEach(ev=> dz.addEventListener(ev, e=>{ e.preventDefault(); dz.classList.add("drag"); }));
+  ["dragleave","drop"].forEach(ev=> dz.addEventListener(ev, e=>{ e.preventDefault(); dz.classList.remove("drag"); }));
+  dz.addEventListener("drop", async (e)=>{
+    const f = e.dataTransfer.files?.[0]; if(!f) return;
+    await loadJsonFile(f);
+  });
+}
+
+async function loadJsonFile(f){
+  try{
+    const text = await f.text();
+    const arr = JSON.parse(text);
+    if(!Array.isArray(arr)) throw new Error("Le JSON doit être un tableau (liste d'entrées héros).");
+    DATA = arr;
+    enableUI(true);
+    $("#status").innerHTML = `<span class="ok">Import réussi</span> — ${DATA.length} entrées`;
+    render();
+    $("#export").disabled = false;
+    $("#exportOffline").disabled = false;
+  }catch(e){
+    console.error(e);
+    $("#status").innerHTML = `<span class="err">Import échoué</span> — ${e.message}`;
+  }
+}
+
+$("#pick").addEventListener("click", ()=> $("#file").click());
+$("#file").addEventListener("change", async (ev)=>{
+  const f = ev.target.files?.[0];
+  if(!f) return;
+  await loadJsonFile(f);
+  ev.target.value = "";
+});
+
+/* ========= Export JSON ========= */
+$("#export").addEventListener("click", ()=>{
+  const blob = new Blob([JSON.stringify(DATA, null, 2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "epic7_box_export.json";
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+
+/* ========= Export Offline (sécurisé, sans </script>) ========= */
+function exportOfflineHtml(){
+  const SOPEN = '<scr'+'ipt>'; const SCLOSE = '</scr'+'ipt>';
+  const css =
+    ':root{color-scheme:dark;}'
+   +'body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#e2e8f0;'
+   +'background:radial-gradient(1200px 800px at 10% 10%,#0b1220 10%,#0f172a 30%,#1e293b);} '
+   +'.wrap{max-width:1100px;margin:0 auto;padding:16px 16px 48px;}'
+   +'h1{margin:12px 0 8px}'
+   +'.grid{margin-top:12px;width:100%;overflow:auto;border:1px solid #233047;border-radius:16px;}'
+   +'table{width:100%;border-collapse:separate;border-spacing:0;background:rgba(11,18,32,.6);}'
+   +'thead th{position:sticky;top:0;background:#0b1220;color:#cbd5e1;padding:10px;text-align:left;border-bottom:1px solid #233047;}'
+   +'td{border-top:1px solid #233047;padding:8px 10px;}'
+   +'.avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#60a5fa,#34d399);color:#081225;font-weight:800;}'
+   +'.avatar img{width:100%;height:100%;object-fit:cover}';
+
+  const js =
+    'const DATA='+JSON.stringify(DATA)+';'
+   +'function num(x){const v=parseFloat(String(x??"").replace(/[^0-9.-]/g,""));return Number.isFinite(v)?v:null;}'
+   +'function initials(n){return (n||"??").split(/\\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase();}'
+   +'(function(){var body=document.getElementById("body"); if(!DATA.length){body.innerHTML="<tr><td colspan=13>Aucune donnée</td></tr>";return;}'
+   +'for(var i=0;i<DATA.length;i++){var it=DATA[i];'
+   +'var img=it.avatar?\'<img src="\'+it.avatar+\'" alt="\'+(it.Nom||\'\')+\'" onerror="this.parentNode.textContent=\\\'\'+(it.Nom||\'\').slice(0,2).toUpperCase()+\'\\\'; this.remove();">\':"";'
+   +'var avatar=\'<div class="avatar">\'+(img||(it.Nom||"??").slice(0,2).toUpperCase())+\'</div>\';'
+   +'var name=it.Nom||""; var link=it.link?\'<a href="\'+it.link+\'" target="_blank" rel="noopener">\'+name+\'</a>\':name;'
+   +'var art=it.artifact_link?\'<a href="\'+it.artifact_link+\'" target="_blank" rel="noopener">\'+(it.Artefact||"")+\'</a>\':(it.Artefact||"");'
+   +'var tr=document.createElement("tr"); tr.innerHTML='
+   +'\`<td>\${avatar} <strong>\${link}</strong></td>'
+   +'<td>\${it.Pc??""}</td><td>\${it.Attaque??""}</td><td>\${it["Défense"]??""}</td><td>\${it.PV??""}</td>'
+   +'<td>\${it.Vitesse??""}</td><td>\${it["Taux Crit"]??""}</td><td>\${it["Dégâts Crit"]??""}</td>'
+   +'<td>\${it.Efficacité??""}</td><td>\${it.Résistance??""}</td>'
+   +'<td>\${it["Set principal"]||""}</td><td>\${it["Set secondaire"]||""}</td>'
+   +'<td>\${art}</td>\`;'
+   +'body.appendChild(tr); }})();';
+
+  const html =
+    '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"/>'
+   +'<meta name="viewport" content="width=device-width,initial-scale=1"/>'
+   +'<title>Epic7 — Ma Box (Offline)</title>'
+   +'<style>'+css+'</style></head>'
+   +'<body><div class="wrap"><h1>Epic7 — Ma Box (Offline)</h1>'
+   +'<div class="grid"><table><thead><tr>'
+   +'<th>Héros</th><th>PC</th><th>ATK</th><th>DEF</th><th>PV</th><th>SPD</th><th>%CC</th><th>%CD</th><th>%Eff</th><th>%ER</th><th>Set 1</th><th>Set 2</th><th>Artefact</th>'
+   +'</tr></thead><tbody id="body"></tbody></table></div></div>'
+   + SOPEN + js + SCLOSE + '</body></html>';
+
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'Epic7_Box_Offline.html';
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+}
+$("#exportOffline").addEventListener("click", exportOfflineHtml);
+
+/* ========= Boot (page reset + auto-ouverture import) ========= */
+function firstOpenImport(){
+  // auto-ouvre le sélecteur une seule fois au chargement
+  const onceKey = "e7_import_prompted";
+  if (sessionStorage.getItem(onceKey)) return;
+  sessionStorage.setItem(onceKey, "1");
+  setTimeout(()=> $("#pick").click(), 300);
+}
+
+function setup(){
+  enableUI(false);
+  attachDropzone();
+  firstOpenImport();
+}
+setup();
 </script>
 </body>
 </html>
