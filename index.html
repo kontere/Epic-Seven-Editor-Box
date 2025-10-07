@@ -9,7 +9,7 @@
   :root{
     --bg1:#0f172a; --bg2:#1e293b; --muted:#94a3b8; --text:#e2e8f0;
     --accent:#60a5fa; --accent-2:#34d399; --border:#233047; --danger:#ef4444; --yellow:#fbbf24;
-    color-scheme: dark;
+    color-scheme: dark; /* force dark on native controls */
   }
   *{box-sizing:border-box}
   body{
@@ -227,19 +227,6 @@
 </div>
 
 <script>
-
-// DEBUG AUTOLOAD DIAGNOSTIC
-window.addEventListener("load", async ()=>{
-  try {
-    const testHero = await fetch("data/heroes.json",{cache:"no-store"});
-    const testArt = await fetch("data/artifacts.json",{cache:"no-store"});
-    console.log("heroes.json", testHero.status, testHero.url);
-    console.log("artifacts.json", testArt.status, testArt.url);
-  } catch(e){
-    console.error("Diagnostic fetch error:", e);
-  }
-});
-
 /* ---------- Helpers ---------- */
 const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
@@ -278,23 +265,23 @@ async function fetchJson(u){
   if(!r.ok) throw new Error("HTTP "+r.status+" for "+u);
   return r.json();
 }
+function pickHeroes(h){
+  if (Array.isArray(h)) return h;
+  if (Array.isArray(h?.heroes)) return h.heroes;
+  if (Array.isArray(h?.data?.heroes)) return h.data.heroes;
+  if (Array.isArray(h?.items)) return h.items;
+  return [];
+}
+function pickArtifacts(a){
+  if (Array.isArray(a)) return a;
+  if (Array.isArray(a?.artifacts)) return a.artifacts;
+  if (Array.isArray(a?.data?.artifacts)) return a.data.artifacts;
+  if (Array.isArray(a?.items)) return a.items;
+  if (Array.isArray(a?.artifact)) return a.artifact;
+  return [];
+}
 async function loadCatalog(){
   const hs = $("#hStatus"), as = $("#aStatus");
-  function pickHeroes(h){
-    if (Array.isArray(h)) return h;
-    if (Array.isArray(h?.heroes)) return h.heroes;
-    if (Array.isArray(h?.data?.heroes)) return h.data.heroes;
-    if (Array.isArray(h?.items)) return h.items;
-    return [];
-  }
-  function pickArtifacts(a){
-    if (Array.isArray(a)) return a;
-    if (Array.isArray(a?.artifacts)) return a.artifacts;
-    if (Array.isArray(a?.data?.artifacts)) return a.data.artifacts;
-    if (Array.isArray(a?.items)) return a.items;
-    if (Array.isArray(a?.artifact)) return a.artifact;
-    return [];
-  }
   try{
     const [h,a] = await Promise.all([
       fetchJson("data/heroes.json"),
@@ -303,14 +290,24 @@ async function loadCatalog(){
     HERO_OPTS = pickHeroes(h);
     ART_OPTS  = pickArtifacts(a);
   }catch(e){
-    console.error("Catalog load error:", e);
+    console.warn("Local catalog failed, will try RAW fallback:", e);
     HERO_OPTS = []; ART_OPTS = [];
-    hs.textContent = "Héros : erreur";
-    as.textContent = "Artefacts : erreur";
-    hs.className = "chip err";
-    as.className = "chip err";
-    return;
   }
+  // Fallback si vide
+  if (HERO_OPTS.length===0 || ART_OPTS.length===0){
+    try{
+      const urlH = "https://raw.githubusercontent.com/kontere/Epic-Seven-Editor-Box/main/data/heroes.json";
+      const urlA = "https://raw.githubusercontent.com/kontere/Epic-Seven-Editor-Box/main/data/artifacts.json";
+      const [h2,a2] = await Promise.all([ fetch(urlH), fetch(urlA) ]);
+      const hj = await h2.json(); const aj = await a2.json();
+      HERO_OPTS = pickHeroes(hj);
+      ART_OPTS  = pickArtifacts(aj);
+      console.log("Loaded from RAW fallback:", HERO_OPTS.length, ART_OPTS.length);
+    }catch(e2){
+      console.error("RAW fallback failed:", e2);
+    }
+  }
+  // Chips de statut
   hs.textContent = `Héros : ${HERO_OPTS.length}`;
   as.textContent = `Artefacts : ${ART_OPTS.length}`;
   hs.className = "chip " + (HERO_OPTS.length>=MIN_HEROES ? "ok" : HERO_OPTS.length? "warn":"err");
@@ -494,6 +491,7 @@ function exportOfflineHtml(){
   const artifacts = (window.ART_OPTS || []);
   const box = (Array.isArray(window.data) ? window.data : []);
 
+  // pas de string "</script>" littérale
   const SOPEN = '<scr' + 'ipt>';
   const SCLOSE = '</scr' + 'ipt>';
 
@@ -534,6 +532,9 @@ function exportOfflineHtml(){
        +'body.appendChild(tr);'
      +'}'
    +'})();';
+
+  const SOPEN = '<scr' + 'ipt>';
+  const SCLOSE = '</scr' + 'ipt>';
 
   const html =
     '<!DOCTYPE html><html lang="fr"><head>'
@@ -596,7 +597,8 @@ $("#diag")?.addEventListener("click", ()=>{
 
 /* ---------- Boot ---------- */
 (async function boot(){
-  await loadCatalog();
+  await loadCatalog();                 // essaie data/*.json
+  // Si vide, le fallback RAW est déjà fait dans loadCatalog()
   render();
 })();
 </script>
