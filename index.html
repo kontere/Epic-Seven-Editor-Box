@@ -260,19 +260,50 @@ const MIN_ARTS = 259;
 
 async function fetchJson(u){ const r = await fetch(u,{cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status+" for "+u); return r.json(); }
 async function loadCatalog(){
-  try{
-    const [h,a] = await Promise.all([ fetchJson("data/heroes.json"), fetchJson("data/artifacts.json") ]);
-    HERO_OPTS = Array.isArray(h.heroes)? h.heroes : [];
-    ART_OPTS  = Array.isArray(a.artifacts)? a.artifacts : [];
-  }catch(e){
-    console.error(e); HERO_OPTS = []; ART_OPTS = [];
-  }
   const hs = $("#hStatus"), as = $("#aStatus");
+  function pickHeroes(h){
+    // Tolérance aux formats:
+    // {heroes:[...]}  |  [...]  |  {data:{heroes:[...]}}  |  {items:[...]}
+    if (Array.isArray(h)) return h;
+    if (Array.isArray(h?.heroes)) return h.heroes;
+    if (Array.isArray(h?.data?.heroes)) return h.data.heroes;
+    if (Array.isArray(h?.items)) return h.items;
+    return [];
+  }
+  function pickArtifacts(a){
+    // {artifacts:[...]}  |  [...]  |  {data:{artifacts:[...]}}  |  {items:[...]}
+    if (Array.isArray(a)) return a;
+    if (Array.isArray(a?.artifacts)) return a.artifacts;
+    if (Array.isArray(a?.data?.artifacts)) return a.data.artifacts;
+    if (Array.isArray(a?.items)) return a.items;
+    // parfois clé "artifact" au singulier :
+    if (Array.isArray(a?.artifact)) return a.artifact;
+    return [];
+  }
+  try{
+    const [h,a] = await Promise.all([
+      fetchJson("data/heroes.json"),
+      fetchJson("data/artifacts.json")
+    ]);
+    HERO_OPTS = pickHeroes(h);
+    ART_OPTS  = pickArtifacts(a);
+  }catch(e){
+    console.error("Catalog load error:", e);
+    HERO_OPTS = []; ART_OPTS = [];
+    // Affiche l'erreur dans les chips pour debug rapide:
+    hs.textContent = "Héros : erreur";
+    as.textContent = "Artefacts : erreur";
+    hs.className = "chip err";
+    as.className = "chip err";
+    return;
+  }
+  // Chips de statut
   hs.textContent = `Héros : ${HERO_OPTS.length}`;
   as.textContent = `Artefacts : ${ART_OPTS.length}`;
   hs.className = "chip " + (HERO_OPTS.length>=MIN_HEROES ? "ok" : HERO_OPTS.length? "warn":"err");
   as.className = "chip " + (ART_OPTS.length>=MIN_ARTS ? "ok" : ART_OPTS.length? "warn":"err");
 }
+
 
 // ---- Rendu tableau
 let sortKey="Nom", sortDir=1;
