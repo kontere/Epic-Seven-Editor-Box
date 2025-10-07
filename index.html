@@ -258,8 +258,28 @@ function initials(name){ return (name||"??").split(/\s+/).slice(0,2).map(w=>w[0]
 function num(x){ const v = parseFloat(String(x).replace(/[^0-9.-]/g,'')); return isNaN(v)? null : v; }
 
 const STORAGE_KEY = "e7_box_data_online";
-let data = [];
-try{ data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }catch(e){ data = []; }
+let data = []; // démarrage VIERGE (plus d'autoload localStorage)
+
+function loadFromLocal(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw){ alert("Aucune sauvegarde locale trouvée."); return; }
+    data = JSON.parse(raw) || [];
+    render();
+    alert("Chargé depuis le navigateur.");
+  }catch(e){
+    console.error(e);
+    alert("Échec du chargement local.");
+  }
+}
+function clearLocal(){
+  try{
+    localStorage.removeItem(STORAGE_KEY);
+    alert("Sauvegarde locale supprimée.");
+  }catch(e){
+    alert("Impossible de vider la sauvegarde.");
+  }
+}
 
 let HERO_OPTS = [];
 let ART_OPTS = [];
