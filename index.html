@@ -185,14 +185,18 @@ option { background:#0b1220; color:#e2e8f0; }
     <select id="cls">
       <option value="">— Classe (toutes) —</option>
       <option>Guerrier</option><option>Voleur</option><option>Rôdeur</option><option>Chevalier</option><option>Mage</option><option>Tisseuse d'âme</option>
-</select>
-    <div style="display:flex; gap:8px; justify-content:flex-end">
+    </select>
+    <div style="display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap;">
+      <input type="file" id="importFile" accept="application/json" style="display:none">
+      <button class="btn" id="import">Importer JSON (ma box)</button>
+      <button class="btn" id="loadLocal">Charger depuis le navigateur</button>
+      <button class="btn danger" id="clearLocal">Vider la sauvegarde</button>
       <button class="btn" id="export">Exporter JSON (ma box)</button>
       <button class="btn save" id="save">Sauvegarder</button>
+      <button class="btn" id="exportOffline">Exporter HTML (offline)</button>
     </div>
   </div>
 </header>
-
 <main class="wrap">
   <div class="grid">
     <table id="tbl">
