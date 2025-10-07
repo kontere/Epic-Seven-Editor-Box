@@ -3,47 +3,70 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Epic Seven — Catalog Check</title>
+<title>Ma Box Epic Seven — Online</title>
+<meta name="description" content="Gère ta box Epic Seven en ligne : ajout rapide de héros, stats, et artefacts. Catalogues depuis data/*.json du repo.">
 <style>
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:24px;line-height:1.45}
-  code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
-  .ok{color:#16a34a;font-weight:700}
-  .warn{color:#d97706;font-weight:700}
-  .err{color:#dc2626;font-weight:700}
-  ul{padding-left:18px}
-</style>
-</head>
-<body>
-<h1>Epic Seven — Catalog Check</h1>
-<p>This page loads <code>data/heroes.json</code> and <code>data/artifacts.json</code> from your repo to verify counts.</p>
-
-<ul id="info"><li>Loading…</li></ul>
-
-<script>
-async function load(u){ const r=await fetch(u,{cache:'no-store'}); if(!r.ok) throw new Error(u+' '+r.status); return r.json(); }
-(async()=>{
-  const ul = document.getElementById('info'); ul.innerHTML='';
-  try{
-    const [H,A] = await Promise.all([load('data/heroes.json'), load('data/artifacts.json')]);
-    const hc = Array.isArray(H.heroes) ? H.heroes.length : 0;
-    const ac = Array.isArray(A.artifacts) ? A.artifacts.length : 0;
-
-    const li1 = document.createElement('li');
-    li1.innerHTML = `Heroes: <strong>${hc}</strong> ` + (hc>=364 ? '<span class="ok">OK</span>' : hc? '<span class="warn">LOW</span>' : '<span class="err">MISSING</span>');
-    const li2 = document.createElement('li');
-    li2.innerHTML = `Artifacts: <strong>${ac}</strong> ` + (ac>=259 ? '<span class="ok">OK</span>' : ac? '<span class="warn">LOW</span>' : '<span class="err">MISSING</span>');
-    ul.append(li1, li2);
-
-    const li3 = document.createElement('li');
-    li3.innerHTML = "<em>First 10 heroes:</em> " + (H.heroes||[]).slice(0,10).map(x=>x.name).join(", ");
-    ul.append(li3);
-  }catch(e){
-    const li = document.createElement('li');
-    li.className = 'err';
-    li.textContent = 'Error: ' + e.message;
-    ul.append(li);
+  :root{
+    --bg1:#0f172a; --bg2:#1e293b; --muted:#94a3b8; --text:#e2e8f0;
+    --accent:#60a5fa; --accent-2:#34d399; --border:#233047; --danger:#ef4444; --yellow:#fbbf24;
   }
-})();
-</script>
-</body>
-</html>
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    color:var(--text);
+    background: radial-gradient(1200px 800px at 10% 10%, #0b1220 10%, var(--bg1) 30%, var(--bg2));
+    min-height:100vh;
+  }
+  a{color:#bfdbfe}
+  header{ padding:28px 18px 12px; }
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 16px 60px; }
+  h1{ margin:0 0 6px; font-size: clamp(24px, 4vw, 36px); letter-spacing:.5px; }
+  .sub{ color:var(--muted); margin: 0 0 14px; }
+  .status{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .chip{ font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:#0b1220; color:#cbd5e1; }
+  .chip.ok{ border-color: rgba(52,211,153,.5); color:#86efac; }
+  .chip.warn{ border-color: rgba(251,191,36,.5); color:#fde68a; }
+  .chip.err{ border-color: rgba(239,68,68,.5); color:#fecaca; }
+
+  /* Form above listing */
+  .form{
+    margin-top:16px; border:1px solid var(--border); border-radius:16px; padding:12px;
+    background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.005));
+  }
+  .form h2{ margin:0 0 10px; font-size:18px; color:#bfdbfe; }
+  .form-grid{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:10px; }
+  .form-grid input{ background:#0b1220; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px; width:100%; }
+  .form-actions{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
+  .btn{ border:1px solid var(--accent); color: var(--accent); background:#0b1220; border-radius:10px; padding:10px 12px; cursor:pointer; }
+  .danger{ border-color: var(--danger); color: var(--danger); }
+  .save{ border-color: var(--accent-2); color: var(--accent-2); }
+
+  /* Controls row */
+  .controls{ display:grid; grid-template-columns: 1fr 1fr 1fr auto; gap:10px; margin-top:16px; }
+  .controls input, .controls select, .controls button{
+    background:#0b1220; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px 12px; outline:none;
+  }
+
+  .grid{ margin-top:12px; width:100%; overflow:auto; border:1px solid var(--border); border-radius:16px; }
+  table{ width:100%; border-collapse:separate; border-spacing:0; background: rgba(11,18,32,.6); }
+  thead th{
+    position:sticky; top:0; background:#0b1220; z-index:1; color:#cbd5e1; font-weight:700; text-align:left; padding:12px;
+    border-bottom:1px solid var(--border); white-space:nowrap; cursor:pointer;
+  }
+  tbody td{ border-top:1px solid var(--border); padding:10px 12px; vertical-align:middle; }
+  tr:hover td{ background: rgba(96,165,250,.06); }
+  .hero{ display:flex; align-items:center; gap:10px; }
+  .avatar{
+    width:36px;height:36px;border-radius:50%; display:inline-flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#081225;font-weight:800;
+    overflow:hidden;border:1px solid rgba(255,255,255,.2); flex:0 0 36px;
+  }
+  .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .badges{ display:flex; gap:6px; flex-wrap:wrap; }
+  .badge{ font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; color:#cbd5e1; background:#0b1220; white-space:nowrap; }
+  .pill{ background:rgba(52,211,153,.12); border-color:rgba(52,211,153,.4); color:#86efac; }
+
+  /* Pickers */
+  .picker{ position:fixed; inset:0; display:none; background:rgba(0,0,0,.55); align-items:flex-start; justify-content:center; padding-top:8vh; }
+  .picker.open{ display:flex; }
+  .picker-card{ width:min(1000px, 95vw); max-height:80vh; overflow:auto; background:#0b1220; bord
