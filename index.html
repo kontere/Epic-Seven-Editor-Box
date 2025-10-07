@@ -453,17 +453,116 @@ $("#delete").addEventListener("click", ()=>{
   }
 });
 
-// Save / Export
-$("#save").addEventListener("click", ()=>{
-  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); alert("Sauvegardé dans le navigateur (localStorage)."); }
-  catch(e){ alert("Échec de sauvegarde. Vérifie le stockage du navigateur."); }
+// Import JSON (ma box)
+$("#import").addEventListener("click", ()=> $("#importFile").click());
+$("#importFile").addEventListener("change", async (ev)=>{
+  const f = ev.target.files?.[0];
+  if(!f) return;
+  try{
+    const text = await f.text();
+    const arr = JSON.parse(text);
+    if(!Array.isArray(arr)) throw new Error("JSON invalide: le root doit être un tableau.");
+    data = arr;
+    render();
+    alert("Import réussi !");
+  }catch(e){
+    console.error(e);
+    alert("Import échoué: " + e.message);
+  }finally{
+    ev.target.value = "";
+  }
 });
+
+// Charger / Vider localStorage
+$("#loadLocal").addEventListener("click", loadFromLocal);
+$("#clearLocal").addEventListener("click", clearLocal);
+
+// Sauvegarder dans localStorage
+$("#save").addEventListener("click", ()=>{
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    alert("Sauvegardé dans le navigateur (localStorage).");
+  }catch(e){
+    alert("Échec de sauvegarde.");
+  }
+});
+
+// Export JSON (ma box)
 $("#export").addEventListener("click", ()=>{
   const blob = new Blob([JSON.stringify(data, null, 2)], {type:"application/json"});
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a"); a.href = url; a.download = "epic7_box_export.json";
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 });
+
+// Export HTML (offline) — tout-en-un
+function exportOfflineHtml(){
+  const heroes = (window.HERO_OPTS || []);
+  const artifacts = (window.ART_OPTS || []);
+
+  const offline = `<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Epic7 — Ma Box (Offline)</title>
+<style>
+  :root{ color-scheme: dark; }
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#e2e8f0;background: radial-gradient(1200px 800px at 10% 10%, #0b1220 10%, #0f172a 30%, #1e293b);}
+  .wrap{max-width:1100px;margin:0 auto;padding:16px 16px 48px;}
+  h1{margin:12px 0 8px}
+  .grid{ margin-top:12px; width:100%; overflow:auto; border:1px solid #233047; border-radius:16px; }
+  table{ width:100%; border-collapse:separate; border-spacing:0; background: rgba(11,18,32,.6); }
+  thead th{ position:sticky; top:0; background:#0b1220; color:#cbd5e1; padding:10px; text-align:left; border-bottom:1px solid #233047; }
+  td{ border-top:1px solid #233047; padding:8px 10px; }
+  .avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2); display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#60a5fa,#34d399);color:#081225;font-weight:800;}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  .badge{ display:inline-block; margin-right:6px; padding:2px 6px; border:1px solid #233047; border-radius:999px; font-size:12px; background:#0b1220; color:#cbd5e1; }
+</style></head>
+<body><div class="wrap">
+  <h1>Epic7 — Ma Box (Offline)</h1>
+  <p>Fichier autonome exporté depuis ton site. Aucune connexion Internet nécessaire.</p>
+  <div class="grid">
+    <table id="tbl">
+      <thead><tr>
+        <th>Héros</th><th>PC</th><th>ATK</th><th>DEF</th><th>PV</th><th>SPD</th><th>%CC</th><th>%CD</th><th>%Eff</th><th>%ER</th><th>Set 1</th><th>Set 2</th><th>Artefact</th>
+      </tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+</div>
+<script>
+  const HERO_OPTS = ${JSON.stringify(HERO_OPTS)};
+  const ART_OPTS  = ${JSON.stringify(ART_OPTS)};
+  const data = ${JSON.stringify(data)};
+  function initials(name){ return (name||"??").split(/\\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
+  (function render(){
+    const body = document.getElementById("body"); body.innerHTML = "";
+    for(const it of data){
+      const img = it.avatar ? '<img src="'+it.avatar+'" alt="'+(it.Nom||'')+'" onerror="this.parentNode.textContent=\\''+initials(it.Nom||'')+'\\'; this.remove();">' : "";
+      const avatar = '<div class="avatar">'+(img || initials(it.Nom||""))+'</div>';
+      const nameHtml = it.link ? '<a href="'+it.link+'" target="_blank" rel="noopener">'+(it.Nom||"")+'</a>' : (it.Nom||"");
+      const artHtml  = it.artifact_link ? '<a href="'+it.artifact_link+'" target="_blank" rel="noopener">'+(it.Artefact||"")+'</a>' : (it.Artefact||"");
+      const tr = document.createElement("tr");
+      tr.innerHTML = \`
+        <td>\${avatar} <strong>\${nameHtml}</strong> \${it.Élément? '<span class="badge">'+it.Élément+'</span>': ''} \${it.Classe? '<span class="badge">'+it.Classe+'</span>': ''}</td>
+        <td>\${it.Pc??""}</td><td>\${it.Attaque??""}</td><td>\${it["Défense"]??""}</td><td>\${it.PV??""}</td>
+        <td>\${it.Vitesse??""}</td><td>\${it["Taux Crit"]??""}</td><td>\${it["Dégâts Crit"]??""}</td>
+        <td>\${it.Efficacité??""}</td><td>\${it.Résistance??""}</td>
+        <td>\${it["Set principal"]||""}</td><td>\${it["Set secondaire"]||""}</td>
+        <td>\${artHtml}</td>\`;
+      body.appendChild(tr);
+    }
+  })();
+</script>
+</body></html>`;
+
+  const blob = new Blob([offline], {type:"text/html;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "Epic7_Box_Offline.html";
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+}
+
+$("#exportOffline").addEventListener("click", exportOfflineHtml);
 
 // Pickers
 function openPicker(id){ $(id).classList.add("open"); }
