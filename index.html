@@ -457,7 +457,7 @@ $("#export").addEventListener("click", ()=>{
 });
 
 // Export HTML offline autonome
-</script> 
+<script>
 function exportOfflineHtml(){
   const heroes = (window.HERO_OPTS || []);
   const artifacts = (window.ART_OPTS || []);
@@ -476,7 +476,7 @@ function exportOfflineHtml(){
   .avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2); display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#60a5fa,#34d399);color:#081225;font-weight:800;}
   .avatar img{width:100%;height:100%;object-fit:cover}
   .badge{ display:inline-block; margin-right:6px; padding:2px 6px; border:1px solid #233047; border-radius:999px; font-size:12px; background:#0b1220; color:#cbd5e1; }
-</style></head>
+<\/style><\/head>
 <body><div class="wrap">
   <h1>Epic7 — Ma Box (Offline)</h1>
   <p>Fichier autonome exporté depuis ton site. Aucune connexion Internet nécessaire.</p>
@@ -512,7 +512,7 @@ function exportOfflineHtml(){
       body.appendChild(tr);
     }
   })();
-</script>
+<\/script>
 </body></html>`;
   const blob = new Blob([offline], {type:"text/html;charset=utf-8"});
   const url = URL.createObjectURL(blob);
@@ -520,42 +520,7 @@ function exportOfflineHtml(){
   a.href = url; a.download = "Epic7_Box_Offline.html";
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 }
-$("#exportOffline").addEventListener("click", exportOfflineHtml);
-
-// Pickers
-function openPicker(id){ $(id).classList.add("open"); }
-function closePicker(id){ $(id).classList.remove("open"); }
-$$(".close").forEach(btn=> btn.addEventListener("click", ()=>{ closePicker(btn.getAttribute("data-close")); }));
-
-function fillGrid(gridSel, list, pickerSel, kind){
-  const grid = document.querySelector(gridSel); grid.innerHTML = "";
-  const term = (kind==="hero" ? document.querySelector("#heroSearch").value : document.querySelector("#artifactSearch").value).toLowerCase();
-  list.filter(x => !term || x.name.toLowerCase().includes(term)).forEach(x=>{
-    const div = document.createElement("div");
-    div.className = "opt";
-    div.innerHTML = `<img src="${x.img}" alt="${x.name}" onerror="this.style.display='none'"><div><div><strong>${x.name}</strong></div><div style='font-size:12px;color:#94a3b8'>${x.slug}</div></div>`;
-    div.addEventListener("click", ()=>{
-      if (kind==="hero"){
-        $("#f_nom").value = x.name;
-        $("#f_avatar").value = x.img;
-      } else {
-        $("#f_art").value = x.name;
-      }
-      closePicker(pickerSel);
-    });
-    grid.appendChild(div);
-  });
-}
-$("#pickHero").addEventListener("click", ()=>{ $("#heroSearch").value=""; fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"); openPicker("#heroPicker"); });
-$("#pickArtifact").addEventListener("click", ()=>{ $("#artifactSearch").value=""; fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"); openPicker("#artifactPicker"); });
-document.getElementById("heroSearch").addEventListener("input", ()=> fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"));
-document.getElementById("artifactSearch").addEventListener("input", ()=> fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"));
-
-// Boot
-(async function boot(){
-  await loadCatalog();
-  render(); // tableau vide tant que l'utilisateur n'importe pas ou n'ajoute pas
-})();
+document.getElementById("exportOffline").addEventListener("click", exportOfflineHtml);
 </script>
 </body>
 </html>
