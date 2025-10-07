@@ -129,6 +129,8 @@
     <option>Guerrier</option><option>Voleur</option><option>Rôdeur</option><option>Chevalier</option><option>Mage</option><option>Tisseuse d'âme</option>
   </select>
     <div style="display:flex; gap:8px; justify-content:flex-end">
+      <input id="importFile" type="file" accept="application/json" hidden>
+      <button class="btn" id="import">Importer JSON</button>
       <button class="btn" id="export">Exporter JSON (ma box)</button>
       <button class="btn save" id="save">Sauvegarder</button>
     </div>
@@ -196,9 +198,8 @@ function initials(name){ return (name||"??").split(/\s+/).slice(0,2).map(w=>w[0]
 function num(x){ const v = parseFloat(String(x).replace(/[^0-9.-]/g,'')); return isNaN(v)? null : v; }
 
 const STORAGE_KEY = "e7_box_data_online";
+// Reset total à chaque ouverture : la page démarre vide.
 let data = [];
-try{ data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }catch(e){ data = []; }
-
 let HERO_OPTS = [];
 let ART_OPTS = [];
 const MIN_HEROES = 364;
@@ -381,6 +382,26 @@ $("#export").addEventListener("click", ()=>{
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a"); a.href = url; a.download = "epic7_box_export.json";
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+// -------- Import JSON --------
+document.getElementById("import").addEventListener("click", ()=> {
+  document.getElementById("importFile").click();
+});
+document.getElementById("importFile").addEventListener("change", async (ev)=>{
+  const f = ev.target.files?.[0];
+  if(!f) return;
+  try{
+    const text = await f.text();
+    const arr = JSON.parse(text);
+    if(!Array.isArray(arr)) throw new Error("Le JSON doit contenir un tableau (une entrée par héros).");
+    data = arr;
+    render();
+    alert("Import réussi !");
+  }catch(e){
+    alert("Import échoué : " + e.message);
+  }finally{
+    ev.target.value = "";
+  }
 });
 
 // Pickers
