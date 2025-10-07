@@ -490,6 +490,8 @@ function exportOfflineHtml(){
   const heroes = (window.HERO_OPTS || []);
   const artifacts = (window.ART_OPTS || []);
   const box = (Array.isArray(window.data) ? window.data : []);
+  const SOPEN = '<scr' + 'ipt>';
+  const SCLOSE = '</scr' + 'ipt>';
 
   // pas de string "</script>" littérale
   const SOPEN = '<scr' + 'ipt>';
