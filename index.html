@@ -3,241 +3,45 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ma Box Epic Seven</title>
-<meta name="description" content="Gère ta box Epic Seven : import JSON et tri des stats.">
+<title>Epic Seven — Catalog Check</title>
 <style>
-  :root{
-    /* palette sombre uniforme */
-    --bg0:#0b1220;
-    --bg1:#0f172a;
-    --bg2:#1e293b;
-    --txt:#e2e8f0;
-    --muted:#94a3b8;
-    --border:#233047;
-    --acc:#60a5fa;
-    --acc2:#34d399;
-    --danger:#ef4444;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0; color:var(--txt); font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-    background: radial-gradient(1200px 800px at 10% 10%, var(--bg0) 10%, var(--bg1) 30%, var(--bg2));
-  }
-  a{color:#bfdbfe}
-  header{padding:28px 18px 8px}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 16px 48px}
-  h1{margin:0 0 4px; font-size:clamp(24px,4vw,34px)}
-  .sub{color:var(--muted); margin:0 0 12px}
-
-  /* barre d'action */
-  .actions{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:8px}
-  .btn{
-    background:var(--bg0); color:var(--acc); border:1px solid var(--acc);
-    border-radius:10px; padding:10px 12px; cursor:pointer;
-  }
-  .btn:disabled{opacity:.6; cursor:not-allowed}
-  .btn.danger{color:#fecaca; border-color:var(--danger)}
-  .chip{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:var(--bg0); color:#cbd5e1; font-size:12px}
-
-  /* zone filtre */
-  .filters{display:grid; grid-template-columns: 1fr auto; gap:10px; margin-top:12px}
-  .filters input{
-    background:var(--bg0); color:var(--txt); border:1px solid var(--border); border-radius:10px; padding:10px 12px; outline:none;
-  }
-
-  /* tableau */
-  .grid{ margin-top:12px; border:1px solid var(--border); border-radius:16px; overflow:auto; background:rgba(11,18,32,.6) }
-  table{ width:100%; border-collapse:separate; border-spacing:0 }
-  thead th{
-    position:sticky; top:0; background:var(--bg0); color:#cbd5e1; padding:12px; text-align:left; border-bottom:1px solid var(--border);
-    white-space:nowrap; cursor:pointer; user-select:none;
-  }
-  thead th .dir{opacity:.7; font-size:12px; margin-left:6px}
-  tbody td{ border-top:1px solid var(--border); padding:10px 12px; vertical-align:middle }
-  tr:hover td{ background:rgba(96,165,250,.06) }
-
-  /* vide */
-  .empty{
-    text-align:center; color:var(--muted); padding:28px 10px;
-    border:1px dashed var(--border); border-radius:12px; background:rgba(11,18,32,.35); margin-top:10px
-  }
-
-  /* footer mini */
-  footer{color:var(--muted); font-size:12px; padding:18px; text-align:center}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:20px;}
+  .ok{color:#16a34a;font-weight:700}
+  .warn{color:#d97706;font-weight:700}
 </style>
 </head>
 <body>
-<header class="wrap">
-  <h1>Ma Box Epic Seven</h1>
-  <p class="sub">Cette page démarre <strong>toujours vide</strong> (reset à chaque chargement). Importez votre JSON pour afficher votre box, puis triez par ATK / DEF / PV.</p>
+<h1>Epic Seven — Catalog Check</h1>
+<p>Cette page charge <code>data/heroes.json</code> et <code>data/artifacts.json</code> depuis ton repo, pour vérifier que tout est bon. Ensuite on branchera l'UI complète.</p>
 
-  <div class="actions">
-    <input id="file" type="file" accept="application/json" hidden>
-    <button class="btn" id="btnImport">Importer ma box (JSON)</button>
-    <button class="btn" id="btnExport" disabled>Exporter (JSON)</button>
-    <span class="chip" id="count">0 héros</span>
-  </div>
-
-  <div class="filters">
-    <input id="q" placeholder="Filtrer (nom, élément, classe, artefact, set…)" />
-    <div style="display:flex;gap:8px;align-items:center">
-      <span class="chip">Tri : cliquez les entêtes ATK/DEF/PV</span>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-  <div id="empty" class="empty">Aucune donnée. Cliquez sur <em>Importer ma box (JSON)</em>.</div>
-
-  <div class="grid" id="grid" style="display:none">
-    <table>
-      <thead>
-        <tr>
-          <th data-k="Nom">Héros</th>
-          <th data-k="Pc"  title="Puissance">PC</th>
-          <th data-k="Attaque">ATK <span class="dir" id="hAtk"></span></th>
-          <th data-k="Défense">DEF <span class="dir" id="hDef"></span></th>
-          <th data-k="PV">PV <span class="dir" id="hPv"></span></th>
-          <th data-k="Vitesse">SPD</th>
-          <th data-k="Taux Crit">%CC</th>
-          <th data-k="Dégâts Crit">%CD</th>
-          <th data-k="Efficacité">%Eff</th>
-          <th data-k="Résistance">%ER</th>
-          <th data-k="Set principal">Set 1</th>
-          <th data-k="Set secondaire">Set 2</th>
-          <th data-k="Artefact">Artefact</th>
-        </tr>
-      </thead>
-      <tbody id="body"></tbody>
-    </table>
-  </div>
-</main>
-
-<footer>&copy; Epic Seven — page personnalisée (import JSON, tri). Palette sombre uniforme.</footer>
+<ul id="info"></ul>
 
 <script>
-/* ============= Helpers ============= */
-const $  = s => document.querySelector(s);
-const $$ = s => Array.from(document.querySelectorAll(s));
-function num(x){ const v = parseFloat(String(x ?? "").toString().replace(/[^0-9.-]/g,'')); return isNaN(v)? null : v; }
-function initials(n){ return (n||"??").split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
-
-/* ============= État ============= */
-let rows = [];            // données courantes (tableau d'objets)
-let sortKey = "Nom";      // clé de tri
-let sortDir = -1;         // -1 => desc, 1 => asc (par défaut desc pour les stats)
-const DIR_ICONS = {1:"▲", "-1":"▼"};
-
-/* ============= Reset à chaque chargement ============= */
-/* Note : on ne lit ni localStorage ni autre – la page est vide au départ. */
-
-/* ============= Import / Export ============= */
-$("#btnImport").addEventListener("click", ()=> $("#file").click());
-$("#file").addEventListener("change", async (ev)=>{
-  const f = ev.target.files?.[0]; if(!f) return;
+async function load(u){ const r=await fetch(u); if(!r.ok) throw new Error(u+" "+r.status); return r.json(); }
+(async()=>{
+  const ul = document.getElementById('info');
   try{
-    const text = await f.text();
-    const parsed = JSON.parse(text);
-    if(!Array.isArray(parsed)) throw new Error("Le JSON doit être un tableau d'objets (une ligne par héros).");
-    rows = parsed;
-    render();
+    const [H,A] = await Promise.all([load('data/heroes.json'), load('data/artifacts.json')]);
+    const hc = Array.isArray(H.heroes) ? H.heroes.length : 0;
+    const ac = Array.isArray(A.artifacts) ? A.artifacts.length : 0;
+
+    const hli = document.createElement('li');
+    hli.innerHTML = `Heroes: <strong>${hc}</strong> ${hc>=364 ? '<span class="ok">OK</span>' : '<span class="warn">LOW</span>'}`;
+    const ali = document.createElement('li');
+    ali.innerHTML = `Artifacts: <strong>${ac}</strong> ${ac>=259 ? '<span class="ok">OK</span>' : '<span class="warn">LOW</span>'}`;
+
+    ul.appendChild(hli); ul.appendChild(ali);
+
+    // petit aperçu des 10 premiers héros
+    const li = document.createElement('li');
+    li.innerHTML = "<em>First 10 heroes:</em> " + (H.heroes||[]).slice(0,10).map(x=>x.name).join(", ");
+    ul.appendChild(li);
   }catch(e){
-    alert("Import impossible : " + e.message);
-  }finally{
-    ev.target.value = "";
+    const li = document.createElement('li');
+    li.textContent = "Error: " + e.message;
+    ul.appendChild(li);
   }
-});
-$("#btnExport").addEventListener("click", ()=>{
-  const blob = new Blob([JSON.stringify(rows, null, 2)], {type:"application/json"});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a"); a.href = url; a.download = "epic7_box_export.json";
-  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-});
-
-/* ============= Filtre texte ============= */
-$("#q").addEventListener("input", render);
-
-/* ============= Tri ============= */
-function setSort(k){
-  if (sortKey === k){ sortDir *= -1; } else { sortKey = k; sortDir = (["Attaque","Défense","PV","Pc","Vitesse","Taux Crit","Dégâts Crit","Efficacité","Résistance"].includes(k)? -1 : 1); }
-  render();
-}
-$$("thead th").forEach(th=>{
-  th.addEventListener("click", ()=> setSort(th.dataset.k));
-});
-
-/* ============= Rendu ============= */
-function render(){
-  // icônes direction tri (seulement sur ATK/DEF/PV)
-  $("#hAtk").textContent = (sortKey==="Attaque") ? DIR_ICONS[sortDir] : "";
-  $("#hDef").textContent = (sortKey==="Défense") ? DIR_ICONS[sortDir] : "";
-  $("#hPv").textContent  = (sortKey==="PV")      ? DIR_ICONS[sortDir] : "";
-
-  const q = $("#q").value.toLowerCase().trim();
-  const body = $("#body");
-  body.innerHTML = "";
-
-  const filtered = rows.filter(it=>{
-    const blob = [
-      it.Nom, it.Artefact, it["Set principal"], it["Set secondaire"],
-      it.Élément, it.Classe
-    ].map(v=> (v??"").toString().toLowerCase()).join(" ");
-    return !q || blob.includes(q);
-  });
-
-  // tri : numérique si possible, sinon lexicographique
-  filtered.sort((a,b)=>{
-    const na = num(a[sortKey]); const nb = num(b[sortKey]);
-    if (na!=null && nb!=null){ return (na - nb) * sortDir; }
-    const va = (a[sortKey] ?? "").toString().toLowerCase();
-    const vb = (b[sortKey] ?? "").toString().toLowerCase();
-    if (va<vb) return -1*sortDir; if (va>vb) return 1*sortDir; return 0;
-  });
-
-  for (const it of filtered){
-    const tr = document.createElement("tr");
-    const avatar = (it.avatar)
-      ? `<div style="width:36px;height:36px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--acc),var(--acc2));margin-right:10px"><img src="${it.avatar}" alt="${it.Nom||""}" style="width:100%;height:100%;object-fit:cover" onerror="this.parentNode.textContent='${initials(it.Nom||"")}'"></div>`
-      : `<div style="width:36px;height:36px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--acc),var(--acc2));margin-right:10px;font-weight:800;color:#081225">${initials(it.Nom||"")}</div>`;
-    tr.innerHTML = `
-      <td>
-        <div style="display:flex;align-items:center">
-          ${avatar}
-          <div>
-            <div><strong>${(it.link? `<a href="${it.link}" target="_blank" rel="noopener">${it.Nom||""}</a>` : (it.Nom||""))}</strong></div>
-            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:2px">
-              ${it.Élément? `<span class="chip" style="padding:2px 6px">${it.Élément}</span>`:""}
-              ${it.Classe? `<span class="chip" style="padding:2px 6px;border-color:rgba(52,211,153,.4);color:#86efac">${it.Classe}</span>`:""}
-            </div>
-          </div>
-        </div>
-      </td>
-      <td>${it.Pc??""}</td>
-      <td>${it.Attaque??""}</td>
-      <td>${it["Défense"]??""}</td>
-      <td>${it.PV??""}</td>
-      <td>${it.Vitesse??""}</td>
-      <td>${it["Taux Crit"]??""}</td>
-      <td>${it["Dégâts Crit"]??""}</td>
-      <td>${it.Efficacité??""}</td>
-      <td>${it.Résistance??""}</td>
-      <td>${it["Set principal"]||""}</td>
-      <td>${it["Set secondaire"]||""}</td>
-      <td>${it.Artefact||""}</td>
-    `;
-    body.appendChild(tr);
-  }
-
-  // header/compteurs + visibilités
-  $("#count").textContent = `${filtered.length} héros`;
-  const hasData = rows.length>0;
-  $("#grid").style.display  = hasData ? "block" : "none";
-  $("#empty").style.display = hasData ? "none"  : "block";
-  $("#btnExport").disabled  = !hasData;
-}
-
-// page vide au départ (reset) -> rien d’autre à faire ici
+})();
 </script>
 </body>
 </html>
