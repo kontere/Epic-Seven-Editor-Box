@@ -4,11 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ma Box Epic Seven — Online</title>
-<meta name="description" content="Gère ta box Epic Seven en ligne : ajout rapide de héros, stats, et artefacts. Catalogues depuis data/*.json du repo.">
+<meta name="description" content="Gère ta box Epic Seven en ligne : ajout de héros, stats, artefacts. Catalogues depuis data/*.json. Export offline.">
 <style>
   :root{
     --bg1:#0f172a; --bg2:#1e293b; --muted:#94a3b8; --text:#e2e8f0;
     --accent:#60a5fa; --accent-2:#34d399; --border:#233047; --danger:#ef4444; --yellow:#fbbf24;
+    color-scheme: dark; /* forcer le thème sombre aux contrôles natifs */
   }
   *{box-sizing:border-box}
   body{
@@ -35,7 +36,10 @@
   }
   .form h2{ margin:0 0 10px; font-size:18px; color:#bfdbfe; }
   .form-grid{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:10px; }
-  .form-grid input{ background:#0b1220; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px; width:100%; }
+  .form-grid input,
+  .form-grid select{
+    background:#0b1220; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px; width:100%;
+  }
   .form-actions{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
   .btn{ border:1px solid var(--accent); color: var(--accent); background:#0b1220; border-radius:10px; padding:10px 12px; cursor:pointer; }
   .danger{ border-color: var(--danger); color: var(--danger); }
@@ -76,26 +80,14 @@
   .opt:hover{ border-color: var(--accent); }
   .opt img{ width:40px; height:40px; border-radius:10px; object-fit:cover; }
   .close{ margin-left:auto; cursor:pointer; border:1px solid var(--border); border-radius:10px; padding:8px 10px; background:#0b1220; color:#e2e8f0; }
-  :root{ color-scheme: dark; }  /* force le thème sombre aux contrôles natifs */
-.form-grid input,
-.form-grid select,
-.controls input,
-.controls select,
-.controls button {
-  background:#0b1220;
-  color:#e2e8f0;
-  border:1px solid #233047;
-  border-radius:10px;
-}
 
-option { background:#0b1220; color:#e2e8f0; }
-.picker-card { background:#0b1220; border:1px solid #233047; }
+  option { background:#0b1220; color:#e2e8f0; }
 </style>
 </head>
 <body>
 <header class="wrap">
   <h1>Ma Box Epic Seven</h1>
-  <div class="sub">Les catalogues proviennent de <code>data/heroes.json</code> & <code>data/artifacts.json</code>. Ta box personnelle est sauvegardée dans le navigateur.</div>
+  <div class="sub">Catalogues : <code>data/heroes.json</code> & <code>data/artifacts.json</code>. Ta box est privée (stockage navigateur) ou import/export manuel.</div>
 
   <div class="status">
     <span id="hStatus" class="chip">Héros : …</span>
@@ -110,61 +102,42 @@ option { background:#0b1220; color:#e2e8f0; }
       <input id="f_art" placeholder="Artefact" />
       <input id="f_elem" placeholder="Élément (Feu, Eau, Terre, Ténèbres, Lumière)" />
       <input id="f_class" placeholder="Classe (Guerrier, Voleur, Rôdeur, Chevalier, Mage, Tisseuse d'âme)" />
+
       <input id="f_pc" type="number" placeholder="Puissance (PC)" />
       <input id="f_atk" type="number" placeholder="ATK" />
       <input id="f_def" type="number" placeholder="DEF" />
       <input id="f_pv" type="number" placeholder="PV" />
+
       <input id="f_spd" type="number" placeholder="SPD" />
       <input id="f_cc" type="number" placeholder="% Crit" />
       <input id="f_cd" type="number" placeholder="% Dégâts Crit" />
       <input id="f_eff" type="number" placeholder="% Efficacité" />
+
       <input id="f_er" type="number" placeholder="% Résistance" />
+
+      <!-- Sets en menus déroulants -->
       <select id="f_set1">
-  <option value="">Set principal</option>
-  <option>set attaque</option>
-  <option>set defense</option>
-  <option>set sante</option>
-  <option>set vitesse</option>
-  <option>set critique</option>
-  <option>set destruction</option>
-  <option>set coup</option>
-  <option>set resistance</option>
-  <option>set vol de vie</option>
-  <option>set contre</option>
-  <option>set unite</option>
-  <option>set immunite</option>
-  <option>set rage</option>
-  <option>set infiltration</option>
-  <option>set vengeance</option>
-  <option>set blessure</option>
-  <option>set protection</option>
-  <option>set tumulte</option>
-  <option>set riposte</option>
-  <option>set reaction</option>
-</select>
-<select id="f_set2">
-  <option value="">Set secondaire</option>
-  <option>set attaque</option>
-  <option>set defense</option>
-  <option>set sante</option>
-  <option>set vitesse</option>
-  <option>set critique</option>
-  <option>set destruction</option>
-  <option>set coup</option>
-  <option>set resistance</option>
-  <option>set vol de vie</option>
-  <option>set contre</option>
-  <option>set unite</option>
-  <option>set immunite</option>
-  <option>set rage</option>
-  <option>set infiltration</option>
-  <option>set vengeance</option>
-  <option>set blessure</option>
-  <option>set protection</option>
-  <option>set tumulte</option>
-  <option>set riposte</option>
-  <option>set reaction</option>
-</select>
+        <option value="">Set principal</option>
+        <option>set attaque</option><option>set defense</option><option>set sante</option>
+        <option>set vitesse</option><option>set critique</option><option>set destruction</option>
+        <option>set coup</option><option>set resistance</option><option>set vol de vie</option>
+        <option>set contre</option><option>set unite</option><option>set immunite</option>
+        <option>set rage</option><option>set infiltration</option><option>set vengeance</option>
+        <option>set blessure</option><option>set protection</option><option>set tumulte</option>
+        <option>set riposte</option><option>set reaction</option>
+      </select>
+
+      <select id="f_set2">
+        <option value="">Set secondaire</option>
+        <option>set attaque</option><option>set defense</option><option>set sante</option>
+        <option>set vitesse</option><option>set critique</option><option>set destruction</option>
+        <option>set coup</option><option>set resistance</option><option>set vol de vie</option>
+        <option>set contre</option><option>set unite</option><option>set immunite</option>
+        <option>set rage</option><option>set infiltration</option><option>set vengeance</option>
+        <option>set blessure</option><option>set protection</option><option>set tumulte</option>
+        <option>set riposte</option><option>set reaction</option>
+      </select>
+
       <input id="f_avatar" placeholder="URL Avatar (auto si nom reconnu)" />
     </div>
     <div class="form-actions">
@@ -197,6 +170,7 @@ option { background:#0b1220; color:#e2e8f0; }
     </div>
   </div>
 </header>
+
 <main class="wrap">
   <div class="grid">
     <table id="tbl">
@@ -257,8 +231,9 @@ const $$ = s => Array.from(document.querySelectorAll(s));
 function initials(name){ return (name||"??").split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
 function num(x){ const v = parseFloat(String(x).replace(/[^0-9.-]/g,'')); return isNaN(v)? null : v; }
 
+// ---- Démarrage VIERGE (pas d'autoload localStorage)
 const STORAGE_KEY = "e7_box_data_online";
-let data = []; // démarrage VIERGE (plus d'autoload localStorage)
+let data = []; // on commence vide
 
 function loadFromLocal(){
   try{
@@ -273,29 +248,24 @@ function loadFromLocal(){
   }
 }
 function clearLocal(){
-  try{
-    localStorage.removeItem(STORAGE_KEY);
-    alert("Sauvegarde locale supprimée.");
-  }catch(e){
-    alert("Impossible de vider la sauvegarde.");
-  }
+  try{ localStorage.removeItem(STORAGE_KEY); alert("Sauvegarde locale supprimée."); }
+  catch(e){ alert("Impossible de vider la sauvegarde."); }
 }
 
+// ---- Catalogues
 let HERO_OPTS = [];
 let ART_OPTS = [];
 const MIN_HEROES = 364;
 const MIN_ARTS = 259;
 
 async function fetchJson(u){ const r = await fetch(u,{cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status+" for "+u); return r.json(); }
-
 async function loadCatalog(){
   try{
     const [h,a] = await Promise.all([ fetchJson("data/heroes.json"), fetchJson("data/artifacts.json") ]);
     HERO_OPTS = Array.isArray(h.heroes)? h.heroes : [];
     ART_OPTS  = Array.isArray(a.artifacts)? a.artifacts : [];
   }catch(e){
-    console.error(e);
-    HERO_OPTS = []; ART_OPTS = [];
+    console.error(e); HERO_OPTS = []; ART_OPTS = [];
   }
   const hs = $("#hStatus"), as = $("#aStatus");
   hs.textContent = `Héros : ${HERO_OPTS.length}`;
@@ -304,6 +274,7 @@ async function loadCatalog(){
   as.className = "chip " + (ART_OPTS.length>=MIN_ARTS ? "ok" : ART_OPTS.length? "warn":"err");
 }
 
+// ---- Rendu tableau
 let sortKey="Nom", sortDir=1;
 function render(){
   const q = $("#q").value.toLowerCase().trim();
@@ -330,7 +301,7 @@ function render(){
 
   for (const it of rows){
     const tr = document.createElement("tr");
-    const img = it.avatar ? `<img src="${it.avatar}" alt="${it.Nom}" onerror="this.parentNode.textContent='${initials(it.Nom)}'; this.remove();" />` : "";
+    const img = it.avatar ? `<img src="${it.avatar}" alt="${it.Nom}" onerror="this.parentNode.textContent='${initials(it.Nom)}'; this.remove();">` : "";
     const avatar = `<div class="avatar">${ img || initials(it.Nom) }</div>`;
     const nameHtml = it.link ? `<a href="${it.link}" target="_blank" rel="noopener noreferrer">${it.Nom||""}</a>` : (it.Nom||"");
     const artHtml  = it.artifact_link ? `<a href="${it.artifact_link}" target="_blank" rel="noopener noreferrer">${it.Artefact||""}</a>` : (it.Artefact||"");
@@ -379,7 +350,7 @@ function render(){
       $("#f_elem").value = it.Élément||"";
       $("#f_class").value = it.Classe||"";
       $("#f_avatar").value = it.avatar||"";
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
     tr.querySelector("[data-del]")?.addEventListener("click", (e)=>{
       e.stopPropagation();
@@ -393,7 +364,7 @@ function render(){
   }
 }
 
-// Sorting handlers
+// Tri
 $$("thead th").forEach(th=>{
   th.addEventListener("click", ()=>{
     const k = th.dataset.k;
@@ -402,12 +373,12 @@ $$("thead th").forEach(th=>{
   });
 });
 
-// Filters & buttons
+// Filtres
 $("#q").addEventListener("input", render);
 $("#el").addEventListener("change", render);
 $("#cls").addEventListener("change", render);
 
-// Add / Update
+// Ajouter / Mettre à jour
 $("#add").addEventListener("click", ()=>{
   const item = {
     Nom: $("#f_nom").value.trim(),
@@ -429,7 +400,7 @@ $("#add").addEventListener("click", ()=>{
     link: "", artifact_link: "", artifact_icon: ""
   };
   if (!item.Nom){ alert("Le nom du héros est obligatoire."); return; }
-  // Auto link depuis catalogues statiques
+  // auto-link depuis catalogues
   const hero = HERO_OPTS.find(h => h.name.toLowerCase() === item.Nom.toLowerCase());
   if (hero){ item.link = hero.link; item.avatar = item.avatar || hero.img; }
   const art = ART_OPTS.find(a => a.name.toLowerCase() === item.Artefact.toLowerCase());
@@ -440,7 +411,7 @@ $("#add").addEventListener("click", ()=>{
   render();
 });
 
-// Delete from form
+// Supprimer depuis formulaire
 $("#delete").addEventListener("click", ()=>{
   const name = ($("#f_nom").value||"").trim();
   if (!name){ alert("Sélectionne d'abord un héros (clique une ligne)."); return; }
@@ -453,7 +424,7 @@ $("#delete").addEventListener("click", ()=>{
   }
 });
 
-// Import JSON (ma box)
+// Import / Export / Offline
 $("#import").addEventListener("click", ()=> $("#importFile").click());
 $("#importFile").addEventListener("change", async (ev)=>{
   const f = ev.target.files?.[0];
@@ -461,7 +432,7 @@ $("#importFile").addEventListener("change", async (ev)=>{
   try{
     const text = await f.text();
     const arr = JSON.parse(text);
-    if(!Array.isArray(arr)) throw new Error("JSON invalide: le root doit être un tableau.");
+    if(!Array.isArray(arr)) throw new Error("JSON invalide: racine attendue = tableau.");
     data = arr;
     render();
     alert("Import réussi !");
@@ -472,22 +443,12 @@ $("#importFile").addEventListener("change", async (ev)=>{
     ev.target.value = "";
   }
 });
-
-// Charger / Vider localStorage
 $("#loadLocal").addEventListener("click", loadFromLocal);
 $("#clearLocal").addEventListener("click", clearLocal);
-
-// Sauvegarder dans localStorage
 $("#save").addEventListener("click", ()=>{
-  try{
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    alert("Sauvegardé dans le navigateur (localStorage).");
-  }catch(e){
-    alert("Échec de sauvegarde.");
-  }
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); alert("Sauvegardé dans le navigateur (localStorage)."); }
+  catch(e){ alert("Échec de sauvegarde."); }
 });
-
-// Export JSON (ma box)
 $("#export").addEventListener("click", ()=>{
   const blob = new Blob([JSON.stringify(data, null, 2)], {type:"application/json"});
   const url = URL.createObjectURL(blob);
@@ -495,11 +456,10 @@ $("#export").addEventListener("click", ()=>{
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 });
 
-// Export HTML (offline) — tout-en-un
+// Export HTML offline autonome
 function exportOfflineHtml(){
   const heroes = (window.HERO_OPTS || []);
   const artifacts = (window.ART_OPTS || []);
-
   const offline = `<!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Epic7 — Ma Box (Offline)</title>
@@ -553,15 +513,12 @@ function exportOfflineHtml(){
   })();
 </script>
 </body></html>`;
-
   const blob = new Blob([offline], {type:"text/html;charset=utf-8"});
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url; a.download = "Epic7_Box_Offline.html";
-  document.body.appendChild(a); a.click(); a.remove();
-  URL.revokeObjectURL(url);
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 }
-
 $("#exportOffline").addEventListener("click", exportOfflineHtml);
 
 // Pickers
@@ -588,7 +545,6 @@ function fillGrid(gridSel, list, pickerSel, kind){
     grid.appendChild(div);
   });
 }
-
 $("#pickHero").addEventListener("click", ()=>{ $("#heroSearch").value=""; fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"); openPicker("#heroPicker"); });
 $("#pickArtifact").addEventListener("click", ()=>{ $("#artifactSearch").value=""; fillGrid("#artifactGrid", ART_OPTS, "#artifactPicker", "artifact"); openPicker("#artifactPicker"); });
 document.getElementById("heroSearch").addEventListener("input", ()=> fillGrid("#heroGrid", HERO_OPTS, "#heroPicker", "hero"));
@@ -597,7 +553,7 @@ document.getElementById("artifactSearch").addEventListener("input", ()=> fillGri
 // Boot
 (async function boot(){
   await loadCatalog();
-  render();
+  render(); // tableau vide tant que l'utilisateur n'importe pas ou n'ajoute pas
 })();
 </script>
 </body>
