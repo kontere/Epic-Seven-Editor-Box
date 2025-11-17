@@ -13,16 +13,16 @@
       "img": "https://epic7db.com/images/artifacts/jumbo-berry-special.webp"
     },
     {
-      "name": "Mirrored Lotus Ring",
-      "slug": "mirrored-lotus-ring",
-      "link": "https://epic7db.com/artifacts/mirrored-lotus-ring",
-      "img": "https://epic7db.com/images/artifacts/mirrored-lotus-ring.webp"
-    },
-    {
       "name": "A Precious Connection",
       "slug": "a-precious-connection",
       "link": "https://epic7db.com/artifacts/a-precious-connection",
       "img": "https://epic7db.com/images/artifacts/a-precious-connection.webp"
+    },
+    {
+      "name": "Mirrored Lotus Ring",
+      "slug": "mirrored-lotus-ring",
+      "link": "https://epic7db.com/artifacts/mirrored-lotus-ring",
+      "img": "https://epic7db.com/images/artifacts/mirrored-lotus-ring.webp"
     },
     {
       "name": "Lethal Whispers",
@@ -31,10 +31,10 @@
       "img": "https://epic7db.com/images/artifacts/lethal-whispers.webp"
     },
     {
-      "name": "Dreamlike Holiday",
-      "slug": "dreamlike-holiday",
-      "link": "https://epic7db.com/artifacts/dreamlike-holiday",
-      "img": "https://epic7db.com/images/artifacts/dreamlike-holiday.webp"
+      "name": "Justice For All",
+      "slug": "justice-for-all",
+      "link": "https://epic7db.com/artifacts/justice-for-all",
+      "img": "https://epic7db.com/images/artifacts/justice-for-all.webp"
     },
     {
       "name": "A Little Queens Huge Crown",
@@ -49,28 +49,10 @@
       "img": "https://epic7db.com/images/artifacts/els-fist.webp"
     },
     {
-      "name": "Sphere Of Sadism",
-      "slug": "sphere-of-sadism",
-      "link": "https://epic7db.com/artifacts/sphere-of-sadism",
-      "img": "https://epic7db.com/images/artifacts/sphere-of-sadism.webp"
-    },
-    {
       "name": "Sashe Ithanes",
       "slug": "sashe-ithanes",
       "link": "https://epic7db.com/artifacts/sashe-ithanes",
       "img": "https://epic7db.com/images/artifacts/sashe-ithanes.webp"
-    },
-    {
-      "name": "Adamant Shield",
-      "slug": "adamant-shield",
-      "link": "https://epic7db.com/artifacts/adamant-shield",
-      "img": "https://epic7db.com/images/artifacts/adamant-shield.webp"
-    },
-    {
-      "name": "Shepherd Of The Hollow",
-      "slug": "shepherd-of-the-hollow",
-      "link": "https://epic7db.com/artifacts/shepherd-of-the-hollow",
-      "img": "https://epic7db.com/images/artifacts/shepherd-of-the-hollow.webp"
     },
     {
       "name": "Kaladra",
@@ -79,10 +61,34 @@
       "img": "https://epic7db.com/images/artifacts/kaladra.webp"
     },
     {
+      "name": "Sphere Of Sadism",
+      "slug": "sphere-of-sadism",
+      "link": "https://epic7db.com/artifacts/sphere-of-sadism",
+      "img": "https://epic7db.com/images/artifacts/sphere-of-sadism.webp"
+    },
+    {
+      "name": "Shepherd Of The Hollow",
+      "slug": "shepherd-of-the-hollow",
+      "link": "https://epic7db.com/artifacts/shepherd-of-the-hollow",
+      "img": "https://epic7db.com/images/artifacts/shepherd-of-the-hollow.webp"
+    },
+    {
+      "name": "Adamant Shield",
+      "slug": "adamant-shield",
+      "link": "https://epic7db.com/artifacts/adamant-shield",
+      "img": "https://epic7db.com/images/artifacts/adamant-shield.webp"
+    },
+    {
       "name": "Stella Harpa",
       "slug": "stella-harpa",
       "link": "https://epic7db.com/artifacts/stella-harpa",
       "img": "https://epic7db.com/images/artifacts/stella-harpa.webp"
+    },
+    {
+      "name": "3f",
+      "slug": "3f",
+      "link": "https://epic7db.com/artifacts/3f",
+      "img": "https://epic7db.com/images/artifacts/3f.webp"
     },
     {
       "name": "A Song For Everybody",
@@ -91,10 +97,16 @@
       "img": "https://epic7db.com/images/artifacts/a-song-for-everybody.webp"
     },
     {
-      "name": "3f",
-      "slug": "3f",
-      "link": "https://epic7db.com/artifacts/3f",
-      "img": "https://epic7db.com/images/artifacts/3f.webp"
+      "name": "A Symbol Of Unity",
+      "slug": "a-symbol-of-unity",
+      "link": "https://epic7db.com/artifacts/a-symbol-of-unity",
+      "img": "https://epic7db.com/images/artifacts/a-symbol-of-unity.webp"
+    },
+    {
+      "name": "Alabastron",
+      "slug": "alabastron",
+      "link": "https://epic7db.com/artifacts/alabastron",
+      "img": "https://epic7db.com/images/artifacts/alabastron.webp"
     },
     {
       "name": "Alencinoxs Wrath",
@@ -109,22 +121,16 @@
       "img": "https://epic7db.com/images/artifacts/alsacian-spear.webp"
     },
     {
-      "name": "Air To Surface Missile Misha",
-      "slug": "air-to-surface-missile-misha",
-      "link": "https://epic7db.com/artifacts/air-to-surface-missile-misha",
-      "img": "https://epic7db.com/images/artifacts/air-to-surface-missile-misha.webp"
-    },
-    {
       "name": "Ambrote",
       "slug": "ambrote",
       "link": "https://epic7db.com/artifacts/ambrote",
       "img": "https://epic7db.com/images/artifacts/ambrote.webp"
     },
     {
-      "name": "An Offer You Cant Refuse",
-      "slug": "an-offer-you-cant-refuse",
-      "link": "https://epic7db.com/artifacts/an-offer-you-cant-refuse",
-      "img": "https://epic7db.com/images/artifacts/an-offer-you-cant-refuse.webp"
+      "name": "Air To Surface Missile Misha",
+      "slug": "air-to-surface-missile-misha",
+      "link": "https://epic7db.com/artifacts/air-to-surface-missile-misha",
+      "img": "https://epic7db.com/images/artifacts/air-to-surface-missile-misha.webp"
     },
     {
       "name": "Abyssal Crown",
@@ -133,46 +139,28 @@
       "img": "https://epic7db.com/images/artifacts/abyssal-crown.webp"
     },
     {
-      "name": "Alexas Basket",
-      "slug": "alexas-basket",
-      "link": "https://epic7db.com/artifacts/alexas-basket",
-      "img": "https://epic7db.com/images/artifacts/alexas-basket.webp"
-    },
-    {
-      "name": "Alabastron",
-      "slug": "alabastron",
-      "link": "https://epic7db.com/artifacts/alabastron",
-      "img": "https://epic7db.com/images/artifacts/alabastron.webp"
-    },
-    {
-      "name": "Ancient Dragons Legacy",
-      "slug": "ancient-dragons-legacy",
-      "link": "https://epic7db.com/artifacts/ancient-dragons-legacy",
-      "img": "https://epic7db.com/images/artifacts/ancient-dragons-legacy.webp"
-    },
-    {
-      "name": "A Symbol Of Unity",
-      "slug": "a-symbol-of-unity",
-      "link": "https://epic7db.com/artifacts/a-symbol-of-unity",
-      "img": "https://epic7db.com/images/artifacts/a-symbol-of-unity.webp"
-    },
-    {
       "name": "An Assassins Pledge",
       "slug": "an-assassins-pledge",
       "link": "https://epic7db.com/artifacts/an-assassins-pledge",
       "img": "https://epic7db.com/images/artifacts/an-assassins-pledge.webp"
     },
     {
-      "name": "Andres Crossbow",
-      "slug": "andres-crossbow",
-      "link": "https://epic7db.com/artifacts/andres-crossbow",
-      "img": "https://epic7db.com/images/artifacts/andres-crossbow.webp"
+      "name": "An Offer You Cant Refuse",
+      "slug": "an-offer-you-cant-refuse",
+      "link": "https://epic7db.com/artifacts/an-offer-you-cant-refuse",
+      "img": "https://epic7db.com/images/artifacts/an-offer-you-cant-refuse.webp"
     },
     {
-      "name": "Aqua Rose",
-      "slug": "aqua-rose",
-      "link": "https://epic7db.com/artifacts/aqua-rose",
-      "img": "https://epic7db.com/images/artifacts/aqua-rose.webp"
+      "name": "Alexas Basket",
+      "slug": "alexas-basket",
+      "link": "https://epic7db.com/artifacts/alexas-basket",
+      "img": "https://epic7db.com/images/artifacts/alexas-basket.webp"
+    },
+    {
+      "name": "Ancient Dragons Legacy",
+      "slug": "ancient-dragons-legacy",
+      "link": "https://epic7db.com/artifacts/ancient-dragons-legacy",
+      "img": "https://epic7db.com/images/artifacts/ancient-dragons-legacy.webp"
     },
     {
       "name": "Ancient Sheath",
@@ -187,16 +175,28 @@
       "img": "https://epic7db.com/images/artifacts/anti-magic-mask.webp"
     },
     {
-      "name": "Ascending Axe",
-      "slug": "ascending-axe",
-      "link": "https://epic7db.com/artifacts/ascending-axe",
-      "img": "https://epic7db.com/images/artifacts/ascending-axe.webp"
+      "name": "Andres Crossbow",
+      "slug": "andres-crossbow",
+      "link": "https://epic7db.com/artifacts/andres-crossbow",
+      "img": "https://epic7db.com/images/artifacts/andres-crossbow.webp"
     },
     {
       "name": "Atmas Portal",
       "slug": "atmas-portal",
       "link": "https://epic7db.com/artifacts/atmas-portal",
       "img": "https://epic7db.com/images/artifacts/atmas-portal.webp"
+    },
+    {
+      "name": "Aqua Rose",
+      "slug": "aqua-rose",
+      "link": "https://epic7db.com/artifacts/aqua-rose",
+      "img": "https://epic7db.com/images/artifacts/aqua-rose.webp"
+    },
+    {
+      "name": "Ascending Axe",
+      "slug": "ascending-axe",
+      "link": "https://epic7db.com/artifacts/ascending-axe",
+      "img": "https://epic7db.com/images/artifacts/ascending-axe.webp"
     },
     {
       "name": "Azure Comet",
@@ -217,16 +217,10 @@
       "img": "https://epic7db.com/images/artifacts/beguiling-wings.webp"
     },
     {
-      "name": "Bastion Of Hope",
-      "slug": "bastion-of-hope",
-      "link": "https://epic7db.com/artifacts/bastion-of-hope",
-      "img": "https://epic7db.com/images/artifacts/bastion-of-hope.webp"
-    },
-    {
-      "name": "Aurius",
-      "slug": "aurius",
-      "link": "https://epic7db.com/artifacts/aurius",
-      "img": "https://epic7db.com/images/artifacts/aurius.webp"
+      "name": "Birds Eye View",
+      "slug": "birds-eye-view",
+      "link": "https://epic7db.com/artifacts/birds-eye-view",
+      "img": "https://epic7db.com/images/artifacts/birds-eye-view.webp"
     },
     {
       "name": "Biting Wind Star",
@@ -235,34 +229,10 @@
       "img": "https://epic7db.com/images/artifacts/biting-wind-star.webp"
     },
     {
-      "name": "Birds Eye View",
-      "slug": "birds-eye-view",
-      "link": "https://epic7db.com/artifacts/birds-eye-view",
-      "img": "https://epic7db.com/images/artifacts/birds-eye-view.webp"
-    },
-    {
-      "name": "Blazing Full Moon Trophy",
-      "slug": "blazing-full-moon-trophy",
-      "link": "https://epic7db.com/artifacts/blazing-full-moon-trophy",
-      "img": "https://epic7db.com/images/artifacts/blazing-full-moon-trophy.webp"
-    },
-    {
       "name": "Blessings Of Camaraderie",
       "slug": "blessings-of-camaraderie",
       "link": "https://epic7db.com/artifacts/blessings-of-camaraderie",
       "img": "https://epic7db.com/images/artifacts/blessings-of-camaraderie.webp"
-    },
-    {
-      "name": "Benimarus Tachi",
-      "slug": "benimarus-tachi",
-      "link": "https://epic7db.com/artifacts/benimarus-tachi",
-      "img": "https://epic7db.com/images/artifacts/benimarus-tachi.webp"
-    },
-    {
-      "name": "Bloodbead Dagger",
-      "slug": "bloodbead-dagger",
-      "link": "https://epic7db.com/artifacts/bloodbead-dagger",
-      "img": "https://epic7db.com/images/artifacts/bloodbead-dagger.webp"
     },
     {
       "name": "Black Hand Of The Goddess",
@@ -271,10 +241,34 @@
       "img": "https://epic7db.com/images/artifacts/black-hand-of-the-goddess.webp"
     },
     {
-      "name": "Bloodstone",
-      "slug": "bloodstone",
-      "link": "https://epic7db.com/artifacts/bloodstone",
-      "img": "https://epic7db.com/images/artifacts/bloodstone.webp"
+      "name": "Bastion Of Perlutia",
+      "slug": "bastion-of-perlutia",
+      "link": "https://epic7db.com/artifacts/bastion-of-perlutia",
+      "img": "https://epic7db.com/images/artifacts/bastion-of-perlutia.webp"
+    },
+    {
+      "name": "Bastion Of Hope",
+      "slug": "bastion-of-hope",
+      "link": "https://epic7db.com/artifacts/bastion-of-hope",
+      "img": "https://epic7db.com/images/artifacts/bastion-of-hope.webp"
+    },
+    {
+      "name": "Benimarus Tachi",
+      "slug": "benimarus-tachi",
+      "link": "https://epic7db.com/artifacts/benimarus-tachi",
+      "img": "https://epic7db.com/images/artifacts/benimarus-tachi.webp"
+    },
+    {
+      "name": "Blazing Full Moon Trophy",
+      "slug": "blazing-full-moon-trophy",
+      "link": "https://epic7db.com/artifacts/blazing-full-moon-trophy",
+      "img": "https://epic7db.com/images/artifacts/blazing-full-moon-trophy.webp"
+    },
+    {
+      "name": "Bloodbead Dagger",
+      "slug": "bloodbead-dagger",
+      "link": "https://epic7db.com/artifacts/bloodbead-dagger",
+      "img": "https://epic7db.com/images/artifacts/bloodbead-dagger.webp"
     },
     {
       "name": "Brilliant Confidence",
@@ -283,16 +277,10 @@
       "img": "https://epic7db.com/images/artifacts/brilliant-confidence.webp"
     },
     {
-      "name": "Bastion Of Perlutia",
-      "slug": "bastion-of-perlutia",
-      "link": "https://epic7db.com/artifacts/bastion-of-perlutia",
-      "img": "https://epic7db.com/images/artifacts/bastion-of-perlutia.webp"
-    },
-    {
-      "name": "Butterfly Mandolin",
-      "slug": "butterfly-mandolin",
-      "link": "https://epic7db.com/artifacts/butterfly-mandolin",
-      "img": "https://epic7db.com/images/artifacts/butterfly-mandolin.webp"
+      "name": "Aurius",
+      "slug": "aurius",
+      "link": "https://epic7db.com/artifacts/aurius",
+      "img": "https://epic7db.com/images/artifacts/aurius.webp"
     },
     {
       "name": "Bloody Rose",
@@ -301,34 +289,22 @@
       "img": "https://epic7db.com/images/artifacts/bloody-rose.webp"
     },
     {
-      "name": "Broken Will Of The Priest",
-      "slug": "broken-will-of-the-priest",
-      "link": "https://epic7db.com/artifacts/broken-will-of-the-priest",
-      "img": "https://epic7db.com/images/artifacts/broken-will-of-the-priest.webp"
-    },
-    {
-      "name": "Border Coin",
-      "slug": "border-coin",
-      "link": "https://epic7db.com/artifacts/border-coin",
-      "img": "https://epic7db.com/images/artifacts/border-coin.webp"
-    },
-    {
       "name": "Card Of Small Miracles",
       "slug": "card-of-small-miracles",
       "link": "https://epic7db.com/artifacts/card-of-small-miracles",
       "img": "https://epic7db.com/images/artifacts/card-of-small-miracles.webp"
     },
     {
-      "name": "Chatty",
-      "slug": "chatty",
-      "link": "https://epic7db.com/artifacts/chatty",
-      "img": "https://epic7db.com/images/artifacts/chatty.webp"
+      "name": "Broken Will Of The Priest",
+      "slug": "broken-will-of-the-priest",
+      "link": "https://epic7db.com/artifacts/broken-will-of-the-priest",
+      "img": "https://epic7db.com/images/artifacts/broken-will-of-the-priest.webp"
     },
     {
-      "name": "Champions Trophy",
-      "slug": "champions-trophy",
-      "link": "https://epic7db.com/artifacts/champions-trophy",
-      "img": "https://epic7db.com/images/artifacts/champions-trophy.webp"
+      "name": "Butterfly Mandolin",
+      "slug": "butterfly-mandolin",
+      "link": "https://epic7db.com/artifacts/butterfly-mandolin",
+      "img": "https://epic7db.com/images/artifacts/butterfly-mandolin.webp"
     },
     {
       "name": "Circus Fantasia",
@@ -337,28 +313,28 @@
       "img": "https://epic7db.com/images/artifacts/circus-fantasia.webp"
     },
     {
-      "name": "Celestine",
-      "slug": "celestine",
-      "link": "https://epic7db.com/artifacts/celestine",
-      "img": "https://epic7db.com/images/artifacts/celestine.webp"
+      "name": "Bloodstone",
+      "slug": "bloodstone",
+      "link": "https://epic7db.com/artifacts/bloodstone",
+      "img": "https://epic7db.com/images/artifacts/bloodstone.webp"
     },
     {
-      "name": "Crimson Seed",
-      "slug": "crimson-seed",
-      "link": "https://epic7db.com/artifacts/crimson-seed",
-      "img": "https://epic7db.com/images/artifacts/crimson-seed.webp"
+      "name": "Border Coin",
+      "slug": "border-coin",
+      "link": "https://epic7db.com/artifacts/border-coin",
+      "img": "https://epic7db.com/images/artifacts/border-coin.webp"
     },
     {
-      "name": "Cradle Of Life",
-      "slug": "cradle-of-life",
-      "link": "https://epic7db.com/artifacts/cradle-of-life",
-      "img": "https://epic7db.com/images/artifacts/cradle-of-life.webp"
+      "name": "Champions Trophy",
+      "slug": "champions-trophy",
+      "link": "https://epic7db.com/artifacts/champions-trophy",
+      "img": "https://epic7db.com/images/artifacts/champions-trophy.webp"
     },
     {
-      "name": "Creation And Destruction",
-      "slug": "creation-and-destruction",
-      "link": "https://epic7db.com/artifacts/creation-and-destruction",
-      "img": "https://epic7db.com/images/artifacts/creation-and-destruction.webp"
+      "name": "Chatty",
+      "slug": "chatty",
+      "link": "https://epic7db.com/artifacts/chatty",
+      "img": "https://epic7db.com/images/artifacts/chatty.webp"
     },
     {
       "name": "Crimson Moon Of Nightmares",
@@ -367,10 +343,22 @@
       "img": "https://epic7db.com/images/artifacts/crimson-moon-of-nightmares.webp"
     },
     {
-      "name": "Crown Of Glory",
-      "slug": "crown-of-glory",
-      "link": "https://epic7db.com/artifacts/crown-of-glory",
-      "img": "https://epic7db.com/images/artifacts/crown-of-glory.webp"
+      "name": "Crimson Seed",
+      "slug": "crimson-seed",
+      "link": "https://epic7db.com/artifacts/crimson-seed",
+      "img": "https://epic7db.com/images/artifacts/crimson-seed.webp"
+    },
+    {
+      "name": "Celestine",
+      "slug": "celestine",
+      "link": "https://epic7db.com/artifacts/celestine",
+      "img": "https://epic7db.com/images/artifacts/celestine.webp"
+    },
+    {
+      "name": "Creation And Destruction",
+      "slug": "creation-and-destruction",
+      "link": "https://epic7db.com/artifacts/creation-and-destruction",
+      "img": "https://epic7db.com/images/artifacts/creation-and-destruction.webp"
     },
     {
       "name": "Cursed Compass",
@@ -379,16 +367,16 @@
       "img": "https://epic7db.com/images/artifacts/cursed-compass.webp"
     },
     {
-      "name": "Cruel Mischief",
-      "slug": "cruel-mischief",
-      "link": "https://epic7db.com/artifacts/cruel-mischief",
-      "img": "https://epic7db.com/images/artifacts/cruel-mischief.webp"
+      "name": "Cradle Of Life",
+      "slug": "cradle-of-life",
+      "link": "https://epic7db.com/artifacts/cradle-of-life",
+      "img": "https://epic7db.com/images/artifacts/cradle-of-life.webp"
     },
     {
-      "name": "Cutie Pando",
-      "slug": "cutie-pando",
-      "link": "https://epic7db.com/artifacts/cutie-pando",
-      "img": "https://epic7db.com/images/artifacts/cutie-pando.webp"
+      "name": "Crown Of Glory",
+      "slug": "crown-of-glory",
+      "link": "https://epic7db.com/artifacts/crown-of-glory",
+      "img": "https://epic7db.com/images/artifacts/crown-of-glory.webp"
     },
     {
       "name": "Dark Blood Keeper",
@@ -403,6 +391,24 @@
       "img": "https://epic7db.com/images/artifacts/days-of-destiny.webp"
     },
     {
+      "name": "Cruel Mischief",
+      "slug": "cruel-mischief",
+      "link": "https://epic7db.com/artifacts/cruel-mischief",
+      "img": "https://epic7db.com/images/artifacts/cruel-mischief.webp"
+    },
+    {
+      "name": "Devils Brand",
+      "slug": "devils-brand",
+      "link": "https://epic7db.com/artifacts/devils-brand",
+      "img": "https://epic7db.com/images/artifacts/devils-brand.webp"
+    },
+    {
+      "name": "Cutie Pando",
+      "slug": "cutie-pando",
+      "link": "https://epic7db.com/artifacts/cutie-pando",
+      "img": "https://epic7db.com/images/artifacts/cutie-pando.webp"
+    },
+    {
       "name": "Deadly Sword",
       "slug": "deadly-sword",
       "link": "https://epic7db.com/artifacts/deadly-sword",
@@ -415,10 +421,10 @@
       "img": "https://epic7db.com/images/artifacts/demons-pistol.webp"
     },
     {
-      "name": "Devils Brand",
-      "slug": "devils-brand",
-      "link": "https://epic7db.com/artifacts/devils-brand",
-      "img": "https://epic7db.com/images/artifacts/devils-brand.webp"
+      "name": "Dignus Orb",
+      "slug": "dignus-orb",
+      "link": "https://epic7db.com/artifacts/dignus-orb",
+      "img": "https://epic7db.com/images/artifacts/dignus-orb.webp"
     },
     {
       "name": "Discreet Hands",
@@ -427,10 +433,10 @@
       "img": "https://epic7db.com/images/artifacts/discreet-hands.webp"
     },
     {
-      "name": "Dignus Orb",
-      "slug": "dignus-orb",
-      "link": "https://epic7db.com/artifacts/dignus-orb",
-      "img": "https://epic7db.com/images/artifacts/dignus-orb.webp"
+      "name": "Doctors Bag",
+      "slug": "doctors-bag",
+      "link": "https://epic7db.com/artifacts/doctors-bag",
+      "img": "https://epic7db.com/images/artifacts/doctors-bag.webp"
     },
     {
       "name": "Dream Scroll",
@@ -439,10 +445,16 @@
       "img": "https://epic7db.com/images/artifacts/dream-scroll.webp"
     },
     {
-      "name": "Doctors Bag",
-      "slug": "doctors-bag",
-      "link": "https://epic7db.com/artifacts/doctors-bag",
-      "img": "https://epic7db.com/images/artifacts/doctors-bag.webp"
+      "name": "Draco Plate",
+      "slug": "draco-plate",
+      "link": "https://epic7db.com/artifacts/draco-plate",
+      "img": "https://epic7db.com/images/artifacts/draco-plate.webp"
+    },
+    {
+      "name": "Dreamlike Holiday",
+      "slug": "dreamlike-holiday",
+      "link": "https://epic7db.com/artifacts/dreamlike-holiday",
+      "img": "https://epic7db.com/images/artifacts/dreamlike-holiday.webp"
     },
     {
       "name": "Double Edged Decrescent",
@@ -451,28 +463,10 @@
       "img": "https://epic7db.com/images/artifacts/double-edged-decrescent.webp"
     },
     {
-      "name": "Dux Noctis",
-      "slug": "dux-noctis",
-      "link": "https://epic7db.com/artifacts/dux-noctis",
-      "img": "https://epic7db.com/images/artifacts/dux-noctis.webp"
-    },
-    {
-      "name": "Draco Plate",
-      "slug": "draco-plate",
-      "link": "https://epic7db.com/artifacts/draco-plate",
-      "img": "https://epic7db.com/images/artifacts/draco-plate.webp"
-    },
-    {
       "name": "Egg Of Delusion",
       "slug": "egg-of-delusion",
       "link": "https://epic7db.com/artifacts/egg-of-delusion",
       "img": "https://epic7db.com/images/artifacts/egg-of-delusion.webp"
-    },
-    {
-      "name": "Durandal",
-      "slug": "durandal",
-      "link": "https://epic7db.com/artifacts/durandal",
-      "img": "https://epic7db.com/images/artifacts/durandal.webp"
     },
     {
       "name": "Elfs Bow",
@@ -481,16 +475,10 @@
       "img": "https://epic7db.com/images/artifacts/elfs-bow.webp"
     },
     {
-      "name": "Enhanced Gauntlet",
-      "slug": "enhanced-gauntlet",
-      "link": "https://epic7db.com/artifacts/enhanced-gauntlet",
-      "img": "https://epic7db.com/images/artifacts/enhanced-gauntlet.webp"
-    },
-    {
-      "name": "Elegiac Candles",
-      "slug": "elegiac-candles",
-      "link": "https://epic7db.com/artifacts/elegiac-candles",
-      "img": "https://epic7db.com/images/artifacts/elegiac-candles.webp"
+      "name": "Dux Noctis",
+      "slug": "dux-noctis",
+      "link": "https://epic7db.com/artifacts/dux-noctis",
+      "img": "https://epic7db.com/images/artifacts/dux-noctis.webp"
     },
     {
       "name": "Elyhas Knife",
@@ -499,16 +487,40 @@
       "img": "https://epic7db.com/images/artifacts/elyhas-knife.webp"
     },
     {
-      "name": "Daydream Joker",
-      "slug": "daydream-joker",
-      "link": "https://epic7db.com/artifacts/daydream-joker",
-      "img": "https://epic7db.com/images/artifacts/daydream-joker.webp"
+      "name": "Durandal",
+      "slug": "durandal",
+      "link": "https://epic7db.com/artifacts/durandal",
+      "img": "https://epic7db.com/images/artifacts/durandal.webp"
     },
     {
       "name": "Envoys Pipe",
       "slug": "envoys-pipe",
       "link": "https://epic7db.com/artifacts/envoys-pipe",
       "img": "https://epic7db.com/images/artifacts/envoys-pipe.webp"
+    },
+    {
+      "name": "Dust Devil",
+      "slug": "dust-devil",
+      "link": "https://epic7db.com/artifacts/dust-devil",
+      "img": "https://epic7db.com/images/artifacts/dust-devil.webp"
+    },
+    {
+      "name": "Daydream Joker",
+      "slug": "daydream-joker",
+      "link": "https://epic7db.com/artifacts/daydream-joker",
+      "img": "https://epic7db.com/images/artifacts/daydream-joker.webp"
+    },
+    {
+      "name": "Elegiac Candles",
+      "slug": "elegiac-candles",
+      "link": "https://epic7db.com/artifacts/elegiac-candles",
+      "img": "https://epic7db.com/images/artifacts/elegiac-candles.webp"
+    },
+    {
+      "name": "Enhanced Gauntlet",
+      "slug": "enhanced-gauntlet",
+      "link": "https://epic7db.com/artifacts/enhanced-gauntlet",
+      "img": "https://epic7db.com/images/artifacts/enhanced-gauntlet.webp"
     },
     {
       "name": "Eternus",
@@ -529,12 +541,6 @@
       "img": "https://epic7db.com/images/artifacts/exif-detective-ed-gadget.webp"
     },
     {
-      "name": "Dust Devil",
-      "slug": "dust-devil",
-      "link": "https://epic7db.com/artifacts/dust-devil",
-      "img": "https://epic7db.com/images/artifacts/dust-devil.webp"
-    },
-    {
       "name": "Exorcists Tonfa",
       "slug": "exorcists-tonfa",
       "link": "https://epic7db.com/artifacts/exorcists-tonfa",
@@ -547,10 +553,10 @@
       "img": "https://epic7db.com/images/artifacts/fairys-grimoire.webp"
     },
     {
-      "name": "Flower Shower",
-      "slug": "flower-shower",
-      "link": "https://epic7db.com/artifacts/flower-shower",
-      "img": "https://epic7db.com/images/artifacts/flower-shower.webp"
+      "name": "Fairy Tale For A Nightmare",
+      "slug": "fairy-tale-for-a-nightmare",
+      "link": "https://epic7db.com/artifacts/fairy-tale-for-a-nightmare",
+      "img": "https://epic7db.com/images/artifacts/fairy-tale-for-a-nightmare.webp"
     },
     {
       "name": "Fan Of Light And Dark",
@@ -565,10 +571,10 @@
       "img": "https://epic7db.com/images/artifacts/eticas-scepter.webp"
     },
     {
-      "name": "Fairy Tale For A Nightmare",
-      "slug": "fairy-tale-for-a-nightmare",
-      "link": "https://epic7db.com/artifacts/fairy-tale-for-a-nightmare",
-      "img": "https://epic7db.com/images/artifacts/fairy-tale-for-a-nightmare.webp"
+      "name": "Feed Of Criticism",
+      "slug": "feed-of-criticism",
+      "link": "https://epic7db.com/artifacts/feed-of-criticism",
+      "img": "https://epic7db.com/images/artifacts/feed-of-criticism.webp"
     },
     {
       "name": "Firm Shield",
@@ -577,10 +583,10 @@
       "img": "https://epic7db.com/images/artifacts/firm-shield.webp"
     },
     {
-      "name": "Feed Of Criticism",
-      "slug": "feed-of-criticism",
-      "link": "https://epic7db.com/artifacts/feed-of-criticism",
-      "img": "https://epic7db.com/images/artifacts/feed-of-criticism.webp"
+      "name": "Flower Shower",
+      "slug": "flower-shower",
+      "link": "https://epic7db.com/artifacts/flower-shower",
+      "img": "https://epic7db.com/images/artifacts/flower-shower.webp"
     },
     {
       "name": "Flawless Garments",
@@ -601,28 +607,16 @@
       "img": "https://epic7db.com/images/artifacts/frame-of-light.webp"
     },
     {
-      "name": "Fullmetals Automail",
-      "slug": "fullmetals-automail",
-      "link": "https://epic7db.com/artifacts/fullmetals-automail",
-      "img": "https://epic7db.com/images/artifacts/fullmetals-automail.webp"
-    },
-    {
       "name": "Frantic Flight",
       "slug": "frantic-flight",
       "link": "https://epic7db.com/artifacts/frantic-flight",
       "img": "https://epic7db.com/images/artifacts/frantic-flight.webp"
     },
     {
-      "name": "Glo Wings 21",
-      "slug": "glo-wings-21",
-      "link": "https://epic7db.com/artifacts/glo-wings-21",
-      "img": "https://epic7db.com/images/artifacts/glo-wings-21.webp"
-    },
-    {
-      "name": "Goblet Of Oath",
-      "slug": "goblet-of-oath",
-      "link": "https://epic7db.com/artifacts/goblet-of-oath",
-      "img": "https://epic7db.com/images/artifacts/goblet-of-oath.webp"
+      "name": "Fullmetals Automail",
+      "slug": "fullmetals-automail",
+      "link": "https://epic7db.com/artifacts/fullmetals-automail",
+      "img": "https://epic7db.com/images/artifacts/fullmetals-automail.webp"
     },
     {
       "name": "Goblins Lamp",
@@ -631,10 +625,22 @@
       "img": "https://epic7db.com/images/artifacts/goblins-lamp.webp"
     },
     {
+      "name": "Glo Wings 21",
+      "slug": "glo-wings-21",
+      "link": "https://epic7db.com/artifacts/glo-wings-21",
+      "img": "https://epic7db.com/images/artifacts/glo-wings-21.webp"
+    },
+    {
       "name": "Golden Cocoa Cookie",
       "slug": "golden-cocoa-cookie",
       "link": "https://epic7db.com/artifacts/golden-cocoa-cookie",
       "img": "https://epic7db.com/images/artifacts/golden-cocoa-cookie.webp"
+    },
+    {
+      "name": "Goblet Of Oath",
+      "slug": "goblet-of-oath",
+      "link": "https://epic7db.com/artifacts/goblet-of-oath",
+      "img": "https://epic7db.com/images/artifacts/goblet-of-oath.webp"
     },
     {
       "name": "Grail Of Blood",
@@ -643,40 +649,16 @@
       "img": "https://epic7db.com/images/artifacts/grail-of-blood.webp"
     },
     {
-      "name": "Guide To A Decision",
-      "slug": "guide-to-a-decision",
-      "link": "https://epic7db.com/artifacts/guide-to-a-decision",
-      "img": "https://epic7db.com/images/artifacts/guide-to-a-decision.webp"
-    },
-    {
-      "name": "Holy Sacrifice",
-      "slug": "holy-sacrifice",
-      "link": "https://epic7db.com/artifacts/holy-sacrifice",
-      "img": "https://epic7db.com/images/artifacts/holy-sacrifice.webp"
-    },
-    {
       "name": "Golden Rose",
       "slug": "golden-rose",
       "link": "https://epic7db.com/artifacts/golden-rose",
       "img": "https://epic7db.com/images/artifacts/golden-rose.webp"
     },
     {
-      "name": "Hostess Of The Banquet",
-      "slug": "hostess-of-the-banquet",
-      "link": "https://epic7db.com/artifacts/hostess-of-the-banquet",
-      "img": "https://epic7db.com/images/artifacts/hostess-of-the-banquet.webp"
-    },
-    {
-      "name": "Hell Cutter",
-      "slug": "hell-cutter",
-      "link": "https://epic7db.com/artifacts/hell-cutter",
-      "img": "https://epic7db.com/images/artifacts/hell-cutter.webp"
-    },
-    {
-      "name": "Homage To Tarman",
-      "slug": "homage-to-tarman",
-      "link": "https://epic7db.com/artifacts/homage-to-tarman",
-      "img": "https://epic7db.com/images/artifacts/homage-to-tarman.webp"
+      "name": "Guide To A Decision",
+      "slug": "guide-to-a-decision",
+      "link": "https://epic7db.com/artifacts/guide-to-a-decision",
+      "img": "https://epic7db.com/images/artifacts/guide-to-a-decision.webp"
     },
     {
       "name": "Hilag Lance",
@@ -685,28 +667,28 @@
       "img": "https://epic7db.com/images/artifacts/hilag-lance.webp"
     },
     {
+      "name": "Homage To Tarman",
+      "slug": "homage-to-tarman",
+      "link": "https://epic7db.com/artifacts/homage-to-tarman",
+      "img": "https://epic7db.com/images/artifacts/homage-to-tarman.webp"
+    },
+    {
+      "name": "Hell Cutter",
+      "slug": "hell-cutter",
+      "link": "https://epic7db.com/artifacts/hell-cutter",
+      "img": "https://epic7db.com/images/artifacts/hell-cutter.webp"
+    },
+    {
       "name": "Ignition Cloth Gloves",
       "slug": "ignition-cloth-gloves",
       "link": "https://epic7db.com/artifacts/ignition-cloth-gloves",
       "img": "https://epic7db.com/images/artifacts/ignition-cloth-gloves.webp"
     },
     {
-      "name": "Iii The Empress",
-      "slug": "iii-the-empress",
-      "link": "https://epic7db.com/artifacts/iii-the-empress",
-      "img": "https://epic7db.com/images/artifacts/iii-the-empress.webp"
-    },
-    {
-      "name": "Iela Violin",
-      "slug": "iela-violin",
-      "link": "https://epic7db.com/artifacts/iela-violin",
-      "img": "https://epic7db.com/images/artifacts/iela-violin.webp"
-    },
-    {
-      "name": "Idols Cheer",
-      "slug": "idols-cheer",
-      "link": "https://epic7db.com/artifacts/idols-cheer",
-      "img": "https://epic7db.com/images/artifacts/idols-cheer.webp"
+      "name": "Hostess Of The Banquet",
+      "slug": "hostess-of-the-banquet",
+      "link": "https://epic7db.com/artifacts/hostess-of-the-banquet",
+      "img": "https://epic7db.com/images/artifacts/hostess-of-the-banquet.webp"
     },
     {
       "name": "Guardian Ice Crystals",
@@ -715,22 +697,28 @@
       "img": "https://epic7db.com/images/artifacts/guardian-ice-crystals.webp"
     },
     {
+      "name": "Iela Violin",
+      "slug": "iela-violin",
+      "link": "https://epic7db.com/artifacts/iela-violin",
+      "img": "https://epic7db.com/images/artifacts/iela-violin.webp"
+    },
+    {
+      "name": "Iii The Empress",
+      "slug": "iii-the-empress",
+      "link": "https://epic7db.com/artifacts/iii-the-empress",
+      "img": "https://epic7db.com/images/artifacts/iii-the-empress.webp"
+    },
+    {
       "name": "Indestructible Gaiters",
       "slug": "indestructible-gaiters",
       "link": "https://epic7db.com/artifacts/indestructible-gaiters",
       "img": "https://epic7db.com/images/artifacts/indestructible-gaiters.webp"
     },
     {
-      "name": "Infinity Basket",
-      "slug": "infinity-basket",
-      "link": "https://epic7db.com/artifacts/infinity-basket",
-      "img": "https://epic7db.com/images/artifacts/infinity-basket.webp"
-    },
-    {
-      "name": "Guiding Light",
-      "slug": "guiding-light",
-      "link": "https://epic7db.com/artifacts/guiding-light",
-      "img": "https://epic7db.com/images/artifacts/guiding-light.webp"
+      "name": "Holy Sacrifice",
+      "slug": "holy-sacrifice",
+      "link": "https://epic7db.com/artifacts/holy-sacrifice",
+      "img": "https://epic7db.com/images/artifacts/holy-sacrifice.webp"
     },
     {
       "name": "Iron Fan",
@@ -745,16 +733,28 @@
       "img": "https://epic7db.com/images/artifacts/iv-the-emperor.webp"
     },
     {
-      "name": "Justice For All",
-      "slug": "justice-for-all",
-      "link": "https://epic7db.com/artifacts/justice-for-all",
-      "img": "https://epic7db.com/images/artifacts/justice-for-all.webp"
+      "name": "Labyrinth Cube",
+      "slug": "labyrinth-cube",
+      "link": "https://epic7db.com/artifacts/labyrinth-cube",
+      "img": "https://epic7db.com/images/artifacts/labyrinth-cube.webp"
     },
     {
-      "name": "Knowledge Seed",
-      "slug": "knowledge-seed",
-      "link": "https://epic7db.com/artifacts/knowledge-seed",
-      "img": "https://epic7db.com/images/artifacts/knowledge-seed.webp"
+      "name": "Idols Cheer",
+      "slug": "idols-cheer",
+      "link": "https://epic7db.com/artifacts/idols-cheer",
+      "img": "https://epic7db.com/images/artifacts/idols-cheer.webp"
+    },
+    {
+      "name": "Guiding Light",
+      "slug": "guiding-light",
+      "link": "https://epic7db.com/artifacts/guiding-light",
+      "img": "https://epic7db.com/images/artifacts/guiding-light.webp"
+    },
+    {
+      "name": "Infinity Basket",
+      "slug": "infinity-basket",
+      "link": "https://epic7db.com/artifacts/infinity-basket",
+      "img": "https://epic7db.com/images/artifacts/infinity-basket.webp"
     },
     {
       "name": "Jack Os Symbol",
@@ -763,10 +763,10 @@
       "img": "https://epic7db.com/images/artifacts/jack-os-symbol.webp"
     },
     {
-      "name": "Labyrinth Cube",
-      "slug": "labyrinth-cube",
-      "link": "https://epic7db.com/artifacts/labyrinth-cube",
-      "img": "https://epic7db.com/images/artifacts/labyrinth-cube.webp"
+      "name": "Knowledge Seed",
+      "slug": "knowledge-seed",
+      "link": "https://epic7db.com/artifacts/knowledge-seed",
+      "img": "https://epic7db.com/images/artifacts/knowledge-seed.webp"
     },
     {
       "name": "Last Teatime",
@@ -781,34 +781,28 @@
       "img": "https://epic7db.com/images/artifacts/love-potion.webp"
     },
     {
-      "name": "Junkyard Dog",
-      "slug": "junkyard-dog",
-      "link": "https://epic7db.com/artifacts/junkyard-dog",
-      "img": "https://epic7db.com/images/artifacts/junkyard-dog.webp"
-    },
-    {
       "name": "Moas",
       "slug": "moas",
       "link": "https://epic7db.com/artifacts/moas",
       "img": "https://epic7db.com/images/artifacts/moas.webp"
     },
     {
-      "name": "Magic For Friends",
-      "slug": "magic-for-friends",
-      "link": "https://epic7db.com/artifacts/magic-for-friends",
-      "img": "https://epic7db.com/images/artifacts/magic-for-friends.webp"
-    },
-    {
-      "name": "Manica Of Control",
-      "slug": "manica-of-control",
-      "link": "https://epic7db.com/artifacts/manica-of-control",
-      "img": "https://epic7db.com/images/artifacts/manica-of-control.webp"
+      "name": "Junkyard Dog",
+      "slug": "junkyard-dog",
+      "link": "https://epic7db.com/artifacts/junkyard-dog",
+      "img": "https://epic7db.com/images/artifacts/junkyard-dog.webp"
     },
     {
       "name": "Magarahas Tome",
       "slug": "magarahas-tome",
       "link": "https://epic7db.com/artifacts/magarahas-tome",
       "img": "https://epic7db.com/images/artifacts/magarahas-tome.webp"
+    },
+    {
+      "name": "Magic For Friends",
+      "slug": "magic-for-friends",
+      "link": "https://epic7db.com/artifacts/magic-for-friends",
+      "img": "https://epic7db.com/images/artifacts/magic-for-friends.webp"
     },
     {
       "name": "Magic Bubble Maker",
@@ -823,6 +817,24 @@
       "img": "https://epic7db.com/images/artifacts/mature-sunglasses.webp"
     },
     {
+      "name": "Mighty Yaksha",
+      "slug": "mighty-yaksha",
+      "link": "https://epic7db.com/artifacts/mighty-yaksha",
+      "img": "https://epic7db.com/images/artifacts/mighty-yaksha.webp"
+    },
+    {
+      "name": "Manica Of Control",
+      "slug": "manica-of-control",
+      "link": "https://epic7db.com/artifacts/manica-of-control",
+      "img": "https://epic7db.com/images/artifacts/manica-of-control.webp"
+    },
+    {
+      "name": "Merciless Glutton",
+      "slug": "merciless-glutton",
+      "link": "https://epic7db.com/artifacts/merciless-glutton",
+      "img": "https://epic7db.com/images/artifacts/merciless-glutton.webp"
+    },
+    {
       "name": "Midnight Bloom",
       "slug": "midnight-bloom",
       "link": "https://epic7db.com/artifacts/midnight-bloom",
@@ -835,16 +847,10 @@
       "img": "https://epic7db.com/images/artifacts/midnight-pizza-delivery.webp"
     },
     {
-      "name": "Mighty Yaksha",
-      "slug": "mighty-yaksha",
-      "link": "https://epic7db.com/artifacts/mighty-yaksha",
-      "img": "https://epic7db.com/images/artifacts/mighty-yaksha.webp"
-    },
-    {
-      "name": "Merciless Glutton",
-      "slug": "merciless-glutton",
-      "link": "https://epic7db.com/artifacts/merciless-glutton",
-      "img": "https://epic7db.com/images/artifacts/merciless-glutton.webp"
+      "name": "Necro And Undine",
+      "slug": "necro-and-undine",
+      "link": "https://epic7db.com/artifacts/necro-and-undine",
+      "img": "https://epic7db.com/images/artifacts/necro-and-undine.webp"
     },
     {
       "name": "Moonlights Vestige",
@@ -853,22 +859,10 @@
       "img": "https://epic7db.com/images/artifacts/moonlights-vestige.webp"
     },
     {
-      "name": "Necro And Undine",
-      "slug": "necro-and-undine",
-      "link": "https://epic7db.com/artifacts/necro-and-undine",
-      "img": "https://epic7db.com/images/artifacts/necro-and-undine.webp"
-    },
-    {
       "name": "New Year Cookies",
       "slug": "new-year-cookies",
       "link": "https://epic7db.com/artifacts/new-year-cookies",
       "img": "https://epic7db.com/images/artifacts/new-year-cookies.webp"
-    },
-    {
-      "name": "Moonlight Dreamblade",
-      "slug": "moonlight-dreamblade",
-      "link": "https://epic7db.com/artifacts/moonlight-dreamblade",
-      "img": "https://epic7db.com/images/artifacts/moonlight-dreamblade.webp"
     },
     {
       "name": "New Years Festival Souvenir",
@@ -877,10 +871,10 @@
       "img": "https://epic7db.com/images/artifacts/new-years-festival-souvenir.webp"
     },
     {
-      "name": "Nostalgic Music Box",
-      "slug": "nostalgic-music-box",
-      "link": "https://epic7db.com/artifacts/nostalgic-music-box",
-      "img": "https://epic7db.com/images/artifacts/nostalgic-music-box.webp"
+      "name": "Moonlight Dreamblade",
+      "slug": "moonlight-dreamblade",
+      "link": "https://epic7db.com/artifacts/moonlight-dreamblade",
+      "img": "https://epic7db.com/images/artifacts/moonlight-dreamblade.webp"
     },
     {
       "name": "Oath Key",
@@ -889,16 +883,22 @@
       "img": "https://epic7db.com/images/artifacts/oath-key.webp"
     },
     {
-      "name": "Official Levulin Beach Volleyball",
-      "slug": "official-levulin-beach-volleyball",
-      "link": "https://epic7db.com/artifacts/official-levulin-beach-volleyball",
-      "img": "https://epic7db.com/images/artifacts/official-levulin-beach-volleyball.webp"
-    },
-    {
       "name": "Old Gardening Shears",
       "slug": "old-gardening-shears",
       "link": "https://epic7db.com/artifacts/old-gardening-shears",
       "img": "https://epic7db.com/images/artifacts/old-gardening-shears.webp"
+    },
+    {
+      "name": "Nostalgic Music Box",
+      "slug": "nostalgic-music-box",
+      "link": "https://epic7db.com/artifacts/nostalgic-music-box",
+      "img": "https://epic7db.com/images/artifacts/nostalgic-music-box.webp"
+    },
+    {
+      "name": "Official Levulin Beach Volleyball",
+      "slug": "official-levulin-beach-volleyball",
+      "link": "https://epic7db.com/artifacts/official-levulin-beach-volleyball",
+      "img": "https://epic7db.com/images/artifacts/official-levulin-beach-volleyball.webp"
     },
     {
       "name": "One Year Of Gratitude",
@@ -931,6 +931,18 @@
       "img": "https://epic7db.com/images/artifacts/our-beautiful-seasons.webp"
     },
     {
+      "name": "Proof Of Friendship",
+      "slug": "proof-of-friendship",
+      "link": "https://epic7db.com/artifacts/proof-of-friendship",
+      "img": "https://epic7db.com/images/artifacts/proof-of-friendship.webp"
+    },
+    {
+      "name": "Proof Of Love",
+      "slug": "proof-of-love",
+      "link": "https://epic7db.com/artifacts/proof-of-love",
+      "img": "https://epic7db.com/images/artifacts/proof-of-love.webp"
+    },
+    {
       "name": "Prayer Of Solitude",
       "slug": "prayer-of-solitude",
       "link": "https://epic7db.com/artifacts/prayer-of-solitude",
@@ -943,22 +955,10 @@
       "img": "https://epic7db.com/images/artifacts/pipette-lance.webp"
     },
     {
-      "name": "Proof Of Love",
-      "slug": "proof-of-love",
-      "link": "https://epic7db.com/artifacts/proof-of-love",
-      "img": "https://epic7db.com/images/artifacts/proof-of-love.webp"
-    },
-    {
-      "name": "Prelude To A New Era",
-      "slug": "prelude-to-a-new-era",
-      "link": "https://epic7db.com/artifacts/prelude-to-a-new-era",
-      "img": "https://epic7db.com/images/artifacts/prelude-to-a-new-era.webp"
-    },
-    {
-      "name": "Proof Of Friendship",
-      "slug": "proof-of-friendship",
-      "link": "https://epic7db.com/artifacts/proof-of-friendship",
-      "img": "https://epic7db.com/images/artifacts/proof-of-friendship.webp"
+      "name": "Radiant Forever",
+      "slug": "radiant-forever",
+      "link": "https://epic7db.com/artifacts/radiant-forever",
+      "img": "https://epic7db.com/images/artifacts/radiant-forever.webp"
     },
     {
       "name": "Queens Whistle",
@@ -967,16 +967,16 @@
       "img": "https://epic7db.com/images/artifacts/queens-whistle.webp"
     },
     {
-      "name": "Prophetic Candlestick",
-      "slug": "prophetic-candlestick",
-      "link": "https://epic7db.com/artifacts/prophetic-candlestick",
-      "img": "https://epic7db.com/images/artifacts/prophetic-candlestick.webp"
+      "name": "Pure White Trust",
+      "slug": "pure-white-trust",
+      "link": "https://epic7db.com/artifacts/pure-white-trust",
+      "img": "https://epic7db.com/images/artifacts/pure-white-trust.webp"
     },
     {
-      "name": "Radiant Forever",
-      "slug": "radiant-forever",
-      "link": "https://epic7db.com/artifacts/radiant-forever",
-      "img": "https://epic7db.com/images/artifacts/radiant-forever.webp"
+      "name": "Prelude To A New Era",
+      "slug": "prelude-to-a-new-era",
+      "link": "https://epic7db.com/artifacts/prelude-to-a-new-era",
+      "img": "https://epic7db.com/images/artifacts/prelude-to-a-new-era.webp"
     },
     {
       "name": "Rainbow Scale",
@@ -985,16 +985,16 @@
       "img": "https://epic7db.com/images/artifacts/rainbow-scale.webp"
     },
     {
-      "name": "Pure White Trust",
-      "slug": "pure-white-trust",
-      "link": "https://epic7db.com/artifacts/pure-white-trust",
-      "img": "https://epic7db.com/images/artifacts/pure-white-trust.webp"
+      "name": "Prophetic Candlestick",
+      "slug": "prophetic-candlestick",
+      "link": "https://epic7db.com/artifacts/prophetic-candlestick",
+      "img": "https://epic7db.com/images/artifacts/prophetic-candlestick.webp"
     },
     {
-      "name": "Proof Of Valor",
-      "slug": "proof-of-valor",
-      "link": "https://epic7db.com/artifacts/proof-of-valor",
-      "img": "https://epic7db.com/images/artifacts/proof-of-valor.webp"
+      "name": "Ranons Memorandum",
+      "slug": "ranons-memorandum",
+      "link": "https://epic7db.com/artifacts/ranons-memorandum",
+      "img": "https://epic7db.com/images/artifacts/ranons-memorandum.webp"
     },
     {
       "name": "Records Of Unity",
@@ -1009,22 +1009,16 @@
       "img": "https://epic7db.com/images/artifacts/reingars-special-drink.webp"
     },
     {
-      "name": "Ranons Memorandum",
-      "slug": "ranons-memorandum",
-      "link": "https://epic7db.com/artifacts/ranons-memorandum",
-      "img": "https://epic7db.com/images/artifacts/ranons-memorandum.webp"
-    },
-    {
       "name": "Resolute Soldier Series",
       "slug": "resolute-soldier-series",
       "link": "https://epic7db.com/artifacts/resolute-soldier-series",
       "img": "https://epic7db.com/images/artifacts/resolute-soldier-series.webp"
     },
     {
-      "name": "Portrait Of The Saviors",
-      "slug": "portrait-of-the-saviors",
-      "link": "https://epic7db.com/artifacts/portrait-of-the-saviors",
-      "img": "https://epic7db.com/images/artifacts/portrait-of-the-saviors.webp"
+      "name": "Proof Of Valor",
+      "slug": "proof-of-valor",
+      "link": "https://epic7db.com/artifacts/proof-of-valor",
+      "img": "https://epic7db.com/images/artifacts/proof-of-valor.webp"
     },
     {
       "name": "Renewed Will",
@@ -1033,22 +1027,10 @@
       "img": "https://epic7db.com/images/artifacts/renewed-will.webp"
     },
     {
-      "name": "Ruyi Jingu Bang",
-      "slug": "ruyi-jingu-bang",
-      "link": "https://epic7db.com/artifacts/ruyi-jingu-bang",
-      "img": "https://epic7db.com/images/artifacts/ruyi-jingu-bang.webp"
-    },
-    {
       "name": "Rise Of A Monarch",
       "slug": "rise-of-a-monarch",
       "link": "https://epic7db.com/artifacts/rise-of-a-monarch",
       "img": "https://epic7db.com/images/artifacts/rise-of-a-monarch.webp"
-    },
-    {
-      "name": "Rod Of Amaryllis",
-      "slug": "rod-of-amaryllis",
-      "link": "https://epic7db.com/artifacts/rod-of-amaryllis",
-      "img": "https://epic7db.com/images/artifacts/rod-of-amaryllis.webp"
     },
     {
       "name": "Rocket Punch Gauntlet",
@@ -1057,16 +1039,10 @@
       "img": "https://epic7db.com/images/artifacts/rocket-punch-gauntlet.webp"
     },
     {
-      "name": "Rosa Hargana",
-      "slug": "rosa-hargana",
-      "link": "https://epic7db.com/artifacts/rosa-hargana",
-      "img": "https://epic7db.com/images/artifacts/rosa-hargana.webp"
-    },
-    {
-      "name": "Seal Of Capture",
-      "slug": "seal-of-capture",
-      "link": "https://epic7db.com/artifacts/seal-of-capture",
-      "img": "https://epic7db.com/images/artifacts/seal-of-capture.webp"
+      "name": "Ruyi Jingu Bang",
+      "slug": "ruyi-jingu-bang",
+      "link": "https://epic7db.com/artifacts/ruyi-jingu-bang",
+      "img": "https://epic7db.com/images/artifacts/ruyi-jingu-bang.webp"
     },
     {
       "name": "Sacred Tree Branch",
@@ -1075,10 +1051,34 @@
       "img": "https://epic7db.com/images/artifacts/sacred-tree-branch.webp"
     },
     {
+      "name": "Rhianna Luciella",
+      "slug": "rhianna-luciella",
+      "link": "https://epic7db.com/artifacts/rhianna-luciella",
+      "img": "https://epic7db.com/images/artifacts/rhianna-luciella.webp"
+    },
+    {
+      "name": "Rosa Hargana",
+      "slug": "rosa-hargana",
+      "link": "https://epic7db.com/artifacts/rosa-hargana",
+      "img": "https://epic7db.com/images/artifacts/rosa-hargana.webp"
+    },
+    {
+      "name": "Portrait Of The Saviors",
+      "slug": "portrait-of-the-saviors",
+      "link": "https://epic7db.com/artifacts/portrait-of-the-saviors",
+      "img": "https://epic7db.com/images/artifacts/portrait-of-the-saviors.webp"
+    },
+    {
       "name": "Santa Muerte",
       "slug": "santa-muerte",
       "link": "https://epic7db.com/artifacts/santa-muerte",
       "img": "https://epic7db.com/images/artifacts/santa-muerte.webp"
+    },
+    {
+      "name": "Rod Of Amaryllis",
+      "slug": "rod-of-amaryllis",
+      "link": "https://epic7db.com/artifacts/rod-of-amaryllis",
+      "img": "https://epic7db.com/images/artifacts/rod-of-amaryllis.webp"
     },
     {
       "name": "Scroll Of Shadows",
@@ -1093,22 +1093,16 @@
       "img": "https://epic7db.com/images/artifacts/samsara-prayer-beads.webp"
     },
     {
-      "name": "Rhianna Luciella",
-      "slug": "rhianna-luciella",
-      "link": "https://epic7db.com/artifacts/rhianna-luciella",
-      "img": "https://epic7db.com/images/artifacts/rhianna-luciella.webp"
-    },
-    {
-      "name": "Secret Art Storm Sword",
-      "slug": "secret-art-storm-sword",
-      "link": "https://epic7db.com/artifacts/secret-art-storm-sword",
-      "img": "https://epic7db.com/images/artifacts/secret-art-storm-sword.webp"
-    },
-    {
       "name": "Seductive Flower",
       "slug": "seductive-flower",
       "link": "https://epic7db.com/artifacts/seductive-flower",
       "img": "https://epic7db.com/images/artifacts/seductive-flower.webp"
+    },
+    {
+      "name": "Seal Of Capture",
+      "slug": "seal-of-capture",
+      "link": "https://epic7db.com/artifacts/seal-of-capture",
+      "img": "https://epic7db.com/images/artifacts/seal-of-capture.webp"
     },
     {
       "name": "Sepulcrum",
@@ -1117,10 +1111,10 @@
       "img": "https://epic7db.com/images/artifacts/sepulcrum.webp"
     },
     {
-      "name": "Sharpshooters Handgun",
-      "slug": "sharpshooters-handgun",
-      "link": "https://epic7db.com/artifacts/sharpshooters-handgun",
-      "img": "https://epic7db.com/images/artifacts/sharpshooters-handgun.webp"
+      "name": "Secret Art Storm Sword",
+      "slug": "secret-art-storm-sword",
+      "link": "https://epic7db.com/artifacts/secret-art-storm-sword",
+      "img": "https://epic7db.com/images/artifacts/secret-art-storm-sword.webp"
     },
     {
       "name": "Shepherds Of Chaos",
@@ -1129,16 +1123,10 @@
       "img": "https://epic7db.com/images/artifacts/shepherds-of-chaos.webp"
     },
     {
-      "name": "Silver Rain",
-      "slug": "silver-rain",
-      "link": "https://epic7db.com/artifacts/silver-rain",
-      "img": "https://epic7db.com/images/artifacts/silver-rain.webp"
-    },
-    {
-      "name": "Shimadra Staff",
-      "slug": "shimadra-staff",
-      "link": "https://epic7db.com/artifacts/shimadra-staff",
-      "img": "https://epic7db.com/images/artifacts/shimadra-staff.webp"
+      "name": "Sharpshooters Handgun",
+      "slug": "sharpshooters-handgun",
+      "link": "https://epic7db.com/artifacts/sharpshooters-handgun",
+      "img": "https://epic7db.com/images/artifacts/sharpshooters-handgun.webp"
     },
     {
       "name": "Severed Horn Wand",
@@ -1147,10 +1135,16 @@
       "img": "https://epic7db.com/images/artifacts/severed-horn-wand.webp"
     },
     {
-      "name": "Sigurd Scythe",
-      "slug": "sigurd-scythe",
-      "link": "https://epic7db.com/artifacts/sigurd-scythe",
-      "img": "https://epic7db.com/images/artifacts/sigurd-scythe.webp"
+      "name": "Shimadra Staff",
+      "slug": "shimadra-staff",
+      "link": "https://epic7db.com/artifacts/shimadra-staff",
+      "img": "https://epic7db.com/images/artifacts/shimadra-staff.webp"
+    },
+    {
+      "name": "Silver Rain",
+      "slug": "silver-rain",
+      "link": "https://epic7db.com/artifacts/silver-rain",
+      "img": "https://epic7db.com/images/artifacts/silver-rain.webp"
     },
     {
       "name": "Snow Crystal",
@@ -1165,28 +1159,10 @@
       "img": "https://epic7db.com/images/artifacts/spear-of-a-new-dawn.webp"
     },
     {
-      "name": "Sole Consolation",
-      "slug": "sole-consolation",
-      "link": "https://epic7db.com/artifacts/sole-consolation",
-      "img": "https://epic7db.com/images/artifacts/sole-consolation.webp"
-    },
-    {
-      "name": "Sphere Of Inferno",
-      "slug": "sphere-of-inferno",
-      "link": "https://epic7db.com/artifacts/sphere-of-inferno",
-      "img": "https://epic7db.com/images/artifacts/sphere-of-inferno.webp"
-    },
-    {
-      "name": "Sira Ren",
-      "slug": "sira-ren",
-      "link": "https://epic7db.com/artifacts/sira-ren",
-      "img": "https://epic7db.com/images/artifacts/sira-ren.webp"
-    },
-    {
-      "name": "Spear Of Purification",
-      "slug": "spear-of-purification",
-      "link": "https://epic7db.com/artifacts/spear-of-purification",
-      "img": "https://epic7db.com/images/artifacts/spear-of-purification.webp"
+      "name": "Song Of Stars",
+      "slug": "song-of-stars",
+      "link": "https://epic7db.com/artifacts/song-of-stars",
+      "img": "https://epic7db.com/images/artifacts/song-of-stars.webp"
     },
     {
       "name": "Spatiotemporal Fan",
@@ -1195,16 +1171,34 @@
       "img": "https://epic7db.com/images/artifacts/spatiotemporal-fan.webp"
     },
     {
-      "name": "Song Of Stars",
-      "slug": "song-of-stars",
-      "link": "https://epic7db.com/artifacts/song-of-stars",
-      "img": "https://epic7db.com/images/artifacts/song-of-stars.webp"
+      "name": "Sigurd Scythe",
+      "slug": "sigurd-scythe",
+      "link": "https://epic7db.com/artifacts/sigurd-scythe",
+      "img": "https://epic7db.com/images/artifacts/sigurd-scythe.webp"
+    },
+    {
+      "name": "Sira Ren",
+      "slug": "sira-ren",
+      "link": "https://epic7db.com/artifacts/sira-ren",
+      "img": "https://epic7db.com/images/artifacts/sira-ren.webp"
+    },
+    {
+      "name": "Sole Consolation",
+      "slug": "sole-consolation",
+      "link": "https://epic7db.com/artifacts/sole-consolation",
+      "img": "https://epic7db.com/images/artifacts/sole-consolation.webp"
     },
     {
       "name": "Special Strawberry Cake",
       "slug": "special-strawberry-cake",
       "link": "https://epic7db.com/artifacts/special-strawberry-cake",
       "img": "https://epic7db.com/images/artifacts/special-strawberry-cake.webp"
+    },
+    {
+      "name": "Sphere Of Inferno",
+      "slug": "sphere-of-inferno",
+      "link": "https://epic7db.com/artifacts/sphere-of-inferno",
+      "img": "https://epic7db.com/images/artifacts/sphere-of-inferno.webp"
     },
     {
       "name": "Spirits Breath",
@@ -1231,6 +1225,12 @@
       "img": "https://epic7db.com/images/artifacts/staff-of-ainz-ooal-gown.webp"
     },
     {
+      "name": "Spear Of Purification",
+      "slug": "spear-of-purification",
+      "link": "https://epic7db.com/artifacts/spear-of-purification",
+      "img": "https://epic7db.com/images/artifacts/spear-of-purification.webp"
+    },
+    {
       "name": "Staff Of Wisdom",
       "slug": "staff-of-wisdom",
       "link": "https://epic7db.com/artifacts/staff-of-wisdom",
@@ -1255,22 +1255,28 @@
       "img": "https://epic7db.com/images/artifacts/strike-of-aspiration.webp"
     },
     {
-      "name": "Summer Photogenic",
-      "slug": "summer-photogenic",
-      "link": "https://epic7db.com/artifacts/summer-photogenic",
-      "img": "https://epic7db.com/images/artifacts/summer-photogenic.webp"
-    },
-    {
       "name": "Strak Gauntlet",
       "slug": "strak-gauntlet",
       "link": "https://epic7db.com/artifacts/strak-gauntlet",
       "img": "https://epic7db.com/images/artifacts/strak-gauntlet.webp"
     },
     {
+      "name": "Summer Photogenic",
+      "slug": "summer-photogenic",
+      "link": "https://epic7db.com/artifacts/summer-photogenic",
+      "img": "https://epic7db.com/images/artifacts/summer-photogenic.webp"
+    },
+    {
       "name": "Sword Of Autumn Eclipse",
       "slug": "sword-of-autumn-eclipse",
       "link": "https://epic7db.com/artifacts/sword-of-autumn-eclipse",
       "img": "https://epic7db.com/images/artifacts/sword-of-autumn-eclipse.webp"
+    },
+    {
+      "name": "Sword Of Cycling Seasons",
+      "slug": "sword-of-cycling-seasons",
+      "link": "https://epic7db.com/artifacts/sword-of-cycling-seasons",
+      "img": "https://epic7db.com/images/artifacts/sword-of-cycling-seasons.webp"
     },
     {
       "name": "Sweet Miracle",
@@ -1291,10 +1297,10 @@
       "img": "https://epic7db.com/images/artifacts/sword-of-the-morning.webp"
     },
     {
-      "name": "Sword Of Cycling Seasons",
-      "slug": "sword-of-cycling-seasons",
-      "link": "https://epic7db.com/artifacts/sword-of-cycling-seasons",
-      "img": "https://epic7db.com/images/artifacts/sword-of-cycling-seasons.webp"
+      "name": "Super Duper Water Gun Shooter",
+      "slug": "super-duper-water-gun-shooter",
+      "link": "https://epic7db.com/artifacts/super-duper-water-gun-shooter",
+      "img": "https://epic7db.com/images/artifacts/super-duper-water-gun-shooter.webp"
     },
     {
       "name": "Sword Of Ezera",
@@ -1303,16 +1309,16 @@
       "img": "https://epic7db.com/images/artifacts/sword-of-ezera.webp"
     },
     {
-      "name": "Sword Of Summer Twilight",
-      "slug": "sword-of-summer-twilight",
-      "link": "https://epic7db.com/artifacts/sword-of-summer-twilight",
-      "img": "https://epic7db.com/images/artifacts/sword-of-summer-twilight.webp"
-    },
-    {
       "name": "Sword Of Judgment",
       "slug": "sword-of-judgment",
       "link": "https://epic7db.com/artifacts/sword-of-judgment",
       "img": "https://epic7db.com/images/artifacts/sword-of-judgment.webp"
+    },
+    {
+      "name": "Sword Of Summer Twilight",
+      "slug": "sword-of-summer-twilight",
+      "link": "https://epic7db.com/artifacts/sword-of-summer-twilight",
+      "img": "https://epic7db.com/images/artifacts/sword-of-summer-twilight.webp"
     },
     {
       "name": "Sword Of Winter Shadow",
@@ -1339,12 +1345,6 @@
       "img": "https://epic7db.com/images/artifacts/the-guardian-stars-blessing.webp"
     },
     {
-      "name": "Super Duper Water Gun Shooter",
-      "slug": "super-duper-water-gun-shooter",
-      "link": "https://epic7db.com/artifacts/super-duper-water-gun-shooter",
-      "img": "https://epic7db.com/images/artifacts/super-duper-water-gun-shooter.webp"
-    },
-    {
       "name": "Thorn Of The Blue Rose",
       "slug": "thorn-of-the-blue-rose",
       "link": "https://epic7db.com/artifacts/thorn-of-the-blue-rose",
@@ -1363,16 +1363,16 @@
       "img": "https://epic7db.com/images/artifacts/to-a-new-world.webp"
     },
     {
-      "name": "Torn Sleeve",
-      "slug": "torn-sleeve",
-      "link": "https://epic7db.com/artifacts/torn-sleeve",
-      "img": "https://epic7db.com/images/artifacts/torn-sleeve.webp"
-    },
-    {
       "name": "Time Matter",
       "slug": "time-matter",
       "link": "https://epic7db.com/artifacts/time-matter",
       "img": "https://epic7db.com/images/artifacts/time-matter.webp"
+    },
+    {
+      "name": "Torn Sleeve",
+      "slug": "torn-sleeve",
+      "link": "https://epic7db.com/artifacts/torn-sleeve",
+      "img": "https://epic7db.com/images/artifacts/torn-sleeve.webp"
     },
     {
       "name": "Tyrants Descent",
@@ -1387,18 +1387,6 @@
       "img": "https://epic7db.com/images/artifacts/tagehels-ancient-book.webp"
     },
     {
-      "name": "Umbral Keystones",
-      "slug": "umbral-keystones",
-      "link": "https://epic7db.com/artifacts/umbral-keystones",
-      "img": "https://epic7db.com/images/artifacts/umbral-keystones.webp"
-    },
-    {
-      "name": "Touch Of Rekos",
-      "slug": "touch-of-rekos",
-      "link": "https://epic7db.com/artifacts/touch-of-rekos",
-      "img": "https://epic7db.com/images/artifacts/touch-of-rekos.webp"
-    },
-    {
       "name": "Twilight Calamity",
       "slug": "twilight-calamity",
       "link": "https://epic7db.com/artifacts/twilight-calamity",
@@ -1411,22 +1399,34 @@
       "img": "https://epic7db.com/images/artifacts/uberiuss-tooth.webp"
     },
     {
+      "name": "Umbral Keystones",
+      "slug": "umbral-keystones",
+      "link": "https://epic7db.com/artifacts/umbral-keystones",
+      "img": "https://epic7db.com/images/artifacts/umbral-keystones.webp"
+    },
+    {
       "name": "Upgraded Dragon Knuckles",
       "slug": "upgraded-dragon-knuckles",
       "link": "https://epic7db.com/artifacts/upgraded-dragon-knuckles",
       "img": "https://epic7db.com/images/artifacts/upgraded-dragon-knuckles.webp"
     },
     {
-      "name": "Unfading Memories",
-      "slug": "unfading-memories",
-      "link": "https://epic7db.com/artifacts/unfading-memories",
-      "img": "https://epic7db.com/images/artifacts/unfading-memories.webp"
-    },
-    {
       "name": "Venus Orb",
       "slug": "venus-orb",
       "link": "https://epic7db.com/artifacts/venus-orb",
       "img": "https://epic7db.com/images/artifacts/venus-orb.webp"
+    },
+    {
+      "name": "Touch Of Rekos",
+      "slug": "touch-of-rekos",
+      "link": "https://epic7db.com/artifacts/touch-of-rekos",
+      "img": "https://epic7db.com/images/artifacts/touch-of-rekos.webp"
+    },
+    {
+      "name": "Unfading Memories",
+      "slug": "unfading-memories",
+      "link": "https://epic7db.com/artifacts/unfading-memories",
+      "img": "https://epic7db.com/images/artifacts/unfading-memories.webp"
     },
     {
       "name": "Vi The Lovers",
@@ -1453,10 +1453,10 @@
       "img": "https://epic7db.com/images/artifacts/victorious-flag.webp"
     },
     {
-      "name": "Wall Of Order",
-      "slug": "wall-of-order",
-      "link": "https://epic7db.com/artifacts/wall-of-order",
-      "img": "https://epic7db.com/images/artifacts/wall-of-order.webp"
+      "name": "Violet Talisman",
+      "slug": "violet-talisman",
+      "link": "https://epic7db.com/artifacts/violet-talisman",
+      "img": "https://epic7db.com/images/artifacts/violet-talisman.webp"
     },
     {
       "name": "Xii The Hanged Man",
@@ -1465,34 +1465,16 @@
       "img": "https://epic7db.com/images/artifacts/xii-the-hanged-man.webp"
     },
     {
-      "name": "Violet Talisman",
-      "slug": "violet-talisman",
-      "link": "https://epic7db.com/artifacts/violet-talisman",
-      "img": "https://epic7db.com/images/artifacts/violet-talisman.webp"
-    },
-    {
       "name": "Xiii Death",
       "slug": "xiii-death",
       "link": "https://epic7db.com/artifacts/xiii-death",
       "img": "https://epic7db.com/images/artifacts/xiii-death.webp"
     },
     {
-      "name": "Xv The Devil",
-      "slug": "xv-the-devil",
-      "link": "https://epic7db.com/artifacts/xv-the-devil",
-      "img": "https://epic7db.com/images/artifacts/xv-the-devil.webp"
-    },
-    {
-      "name": "Waters Origin",
-      "slug": "waters-origin",
-      "link": "https://epic7db.com/artifacts/waters-origin",
-      "img": "https://epic7db.com/images/artifacts/waters-origin.webp"
-    },
-    {
-      "name": "Wings Of Light And Shadow",
-      "slug": "wings-of-light-and-shadow",
-      "link": "https://epic7db.com/artifacts/wings-of-light-and-shadow",
-      "img": "https://epic7db.com/images/artifacts/wings-of-light-and-shadow.webp"
+      "name": "Wall Of Order",
+      "slug": "wall-of-order",
+      "link": "https://epic7db.com/artifacts/wall-of-order",
+      "img": "https://epic7db.com/images/artifacts/wall-of-order.webp"
     },
     {
       "name": "Xiv Temperance",
@@ -1501,10 +1483,34 @@
       "img": "https://epic7db.com/images/artifacts/xiv-temperance.webp"
     },
     {
+      "name": "Wind Rider",
+      "slug": "wind-rider",
+      "link": "https://epic7db.com/artifacts/wind-rider",
+      "img": "https://epic7db.com/images/artifacts/wind-rider.webp"
+    },
+    {
       "name": "Xix The Sun",
       "slug": "xix-the-sun",
       "link": "https://epic7db.com/artifacts/xix-the-sun",
       "img": "https://epic7db.com/images/artifacts/xix-the-sun.webp"
+    },
+    {
+      "name": "Wings Of Light And Shadow",
+      "slug": "wings-of-light-and-shadow",
+      "link": "https://epic7db.com/artifacts/wings-of-light-and-shadow",
+      "img": "https://epic7db.com/images/artifacts/wings-of-light-and-shadow.webp"
+    },
+    {
+      "name": "War Horn",
+      "slug": "war-horn",
+      "link": "https://epic7db.com/artifacts/war-horn",
+      "img": "https://epic7db.com/images/artifacts/war-horn.webp"
+    },
+    {
+      "name": "Xv The Devil",
+      "slug": "xv-the-devil",
+      "link": "https://epic7db.com/artifacts/xv-the-devil",
+      "img": "https://epic7db.com/images/artifacts/xv-the-devil.webp"
     },
     {
       "name": "Xvi The Tower",
@@ -1519,22 +1525,16 @@
       "img": "https://epic7db.com/images/artifacts/xvii-the-star.webp"
     },
     {
-      "name": "War Horn",
-      "slug": "war-horn",
-      "link": "https://epic7db.com/artifacts/war-horn",
-      "img": "https://epic7db.com/images/artifacts/war-horn.webp"
+      "name": "Waters Origin",
+      "slug": "waters-origin",
+      "link": "https://epic7db.com/artifacts/waters-origin",
+      "img": "https://epic7db.com/images/artifacts/waters-origin.webp"
     },
     {
       "name": "Xviii The Moon",
       "slug": "xviii-the-moon",
       "link": "https://epic7db.com/artifacts/xviii-the-moon",
       "img": "https://epic7db.com/images/artifacts/xviii-the-moon.webp"
-    },
-    {
-      "name": "Wind Rider",
-      "slug": "wind-rider",
-      "link": "https://epic7db.com/artifacts/wind-rider",
-      "img": "https://epic7db.com/images/artifacts/wind-rider.webp"
     },
     {
       "name": "Wondrous Potion Vial",
