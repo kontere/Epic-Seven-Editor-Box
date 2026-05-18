@@ -31,16 +31,28 @@
       "img": "https://epic7db.com/images/heroes/monarch-of-the-sword-iseria.webp"
     },
     {
-      "name": "Wandering Prince Cidd",
-      "slug": "wandering-prince-cidd",
-      "link": "https://epic7db.com/heroes/wandering-prince-cidd",
-      "img": "https://epic7db.com/images/heroes/wandering-prince-cidd.webp"
+      "name": "Schniel",
+      "slug": "schniel",
+      "link": "https://epic7db.com/heroes/schniel",
+      "img": "https://epic7db.com/images/heroes/schniel.webp"
     },
     {
-      "name": "Abigail",
-      "slug": "abigail",
-      "link": "https://epic7db.com/heroes/abigail",
-      "img": "https://epic7db.com/images/heroes/abigail.webp"
+      "name": "Great Chief Khawana",
+      "slug": "great-chief-khawana",
+      "link": "https://epic7db.com/heroes/great-chief-khawana",
+      "img": "https://epic7db.com/images/heroes/great-chief-khawana.webp"
+    },
+    {
+      "name": "Hellion Lua",
+      "slug": "hellion-lua",
+      "link": "https://epic7db.com/heroes/hellion-lua",
+      "img": "https://epic7db.com/images/heroes/hellion-lua.webp"
+    },
+    {
+      "name": "Martial Artist Ken",
+      "slug": "martial-artist-ken",
+      "link": "https://epic7db.com/heroes/martial-artist-ken",
+      "img": "https://epic7db.com/images/heroes/martial-artist-ken.webp"
     },
     {
       "name": "Commander Pavel",
@@ -49,10 +61,28 @@
       "img": "https://epic7db.com/images/heroes/commander-pavel.webp"
     },
     {
+      "name": "Pirate Captain Flan",
+      "slug": "pirate-captain-flan",
+      "link": "https://epic7db.com/heroes/pirate-captain-flan",
+      "img": "https://epic7db.com/images/heroes/pirate-captain-flan.webp"
+    },
+    {
+      "name": "Top Model Luluca",
+      "slug": "top-model-luluca",
+      "link": "https://epic7db.com/heroes/top-model-luluca",
+      "img": "https://epic7db.com/images/heroes/top-model-luluca.webp"
+    },
+    {
       "name": "Death Dealer Ray",
       "slug": "death-dealer-ray",
       "link": "https://epic7db.com/heroes/death-dealer-ray",
       "img": "https://epic7db.com/images/heroes/death-dealer-ray.webp"
+    },
+    {
+      "name": "Zahhak",
+      "slug": "zahhak",
+      "link": "https://epic7db.com/heroes/zahhak",
+      "img": "https://epic7db.com/images/heroes/zahhak.webp"
     },
     {
       "name": "Lionheart Cermia",
@@ -73,34 +103,16 @@
       "img": "https://epic7db.com/images/heroes/senya.webp"
     },
     {
-      "name": "Zahhak",
-      "slug": "zahhak",
-      "link": "https://epic7db.com/heroes/zahhak",
-      "img": "https://epic7db.com/images/heroes/zahhak.webp"
-    },
-    {
-      "name": "Abyssal Yufine",
-      "slug": "abyssal-yufine",
-      "link": "https://epic7db.com/heroes/abyssal-yufine",
-      "img": "https://epic7db.com/images/heroes/abyssal-yufine.webp"
-    },
-    {
       "name": "Achates",
       "slug": "achates",
       "link": "https://epic7db.com/heroes/achates",
       "img": "https://epic7db.com/images/heroes/achates.webp"
     },
     {
-      "name": "Adlay",
-      "slug": "adlay",
-      "link": "https://epic7db.com/heroes/adlay",
-      "img": "https://epic7db.com/images/heroes/adlay.webp"
-    },
-    {
-      "name": "Ae Karina",
-      "slug": "ae-karina",
-      "link": "https://epic7db.com/heroes/ae-karina",
-      "img": "https://epic7db.com/images/heroes/ae-karina.webp"
+      "name": "Abyssal Yufine",
+      "slug": "abyssal-yufine",
+      "link": "https://epic7db.com/heroes/abyssal-yufine",
+      "img": "https://epic7db.com/images/heroes/abyssal-yufine.webp"
     },
     {
       "name": "Adin",
@@ -115,22 +127,22 @@
       "img": "https://epic7db.com/images/heroes/ae-giselle.webp"
     },
     {
-      "name": "Adventurer Ras",
-      "slug": "adventurer-ras",
-      "link": "https://epic7db.com/heroes/adventurer-ras",
-      "img": "https://epic7db.com/images/heroes/adventurer-ras.webp"
+      "name": "Ae Karina",
+      "slug": "ae-karina",
+      "link": "https://epic7db.com/heroes/ae-karina",
+      "img": "https://epic7db.com/images/heroes/ae-karina.webp"
     },
     {
-      "name": "Afternoon Soak Flan",
-      "slug": "afternoon-soak-flan",
-      "link": "https://epic7db.com/heroes/afternoon-soak-flan",
-      "img": "https://epic7db.com/images/heroes/afternoon-soak-flan.webp"
+      "name": "Abigail",
+      "slug": "abigail",
+      "link": "https://epic7db.com/heroes/abigail",
+      "img": "https://epic7db.com/images/heroes/abigail.webp"
     },
     {
-      "name": "Ae Ningning",
-      "slug": "ae-ningning",
-      "link": "https://epic7db.com/heroes/ae-ningning",
-      "img": "https://epic7db.com/images/heroes/ae-ningning.webp"
+      "name": "Adlay",
+      "slug": "adlay",
+      "link": "https://epic7db.com/heroes/adlay",
+      "img": "https://epic7db.com/images/heroes/adlay.webp"
     },
     {
       "name": "Ae Winter",
@@ -139,16 +151,34 @@
       "img": "https://epic7db.com/images/heroes/ae-winter.webp"
     },
     {
-      "name": "Ainos 20",
-      "slug": "ainos-20",
-      "link": "https://epic7db.com/heroes/ainos-20",
-      "img": "https://epic7db.com/images/heroes/ainos-20.webp"
+      "name": "Adventurer Ras",
+      "slug": "adventurer-ras",
+      "link": "https://epic7db.com/heroes/adventurer-ras",
+      "img": "https://epic7db.com/images/heroes/adventurer-ras.webp"
+    },
+    {
+      "name": "Ae Ningning",
+      "slug": "ae-ningning",
+      "link": "https://epic7db.com/heroes/ae-ningning",
+      "img": "https://epic7db.com/images/heroes/ae-ningning.webp"
+    },
+    {
+      "name": "Afternoon Soak Flan",
+      "slug": "afternoon-soak-flan",
+      "link": "https://epic7db.com/heroes/afternoon-soak-flan",
+      "img": "https://epic7db.com/images/heroes/afternoon-soak-flan.webp"
     },
     {
       "name": "Ainos",
       "slug": "ainos",
       "link": "https://epic7db.com/heroes/ainos",
       "img": "https://epic7db.com/images/heroes/ainos.webp"
+    },
+    {
+      "name": "Ainos 20",
+      "slug": "ainos-20",
+      "link": "https://epic7db.com/heroes/ainos-20",
+      "img": "https://epic7db.com/images/heroes/ainos-20.webp"
     },
     {
       "name": "Ains",
@@ -175,16 +205,22 @@
       "img": "https://epic7db.com/images/heroes/albedo.webp"
     },
     {
+      "name": "Alencia",
+      "slug": "alencia",
+      "link": "https://epic7db.com/heroes/alencia",
+      "img": "https://epic7db.com/images/heroes/alencia.webp"
+    },
+    {
       "name": "Alexa",
       "slug": "alexa",
       "link": "https://epic7db.com/heroes/alexa",
       "img": "https://epic7db.com/images/heroes/alexa.webp"
     },
     {
-      "name": "Alencia",
-      "slug": "alencia",
-      "link": "https://epic7db.com/heroes/alencia",
-      "img": "https://epic7db.com/images/heroes/alencia.webp"
+      "name": "Amid",
+      "slug": "amid",
+      "link": "https://epic7db.com/heroes/amid",
+      "img": "https://epic7db.com/images/heroes/amid.webp"
     },
     {
       "name": "All Rounder Wanda",
@@ -205,18 +241,6 @@
       "img": "https://epic7db.com/images/heroes/amiki.webp"
     },
     {
-      "name": "Angelica",
-      "slug": "angelica",
-      "link": "https://epic7db.com/heroes/angelica",
-      "img": "https://epic7db.com/images/heroes/angelica.webp"
-    },
-    {
-      "name": "Amid",
-      "slug": "amid",
-      "link": "https://epic7db.com/heroes/amid",
-      "img": "https://epic7db.com/images/heroes/amid.webp"
-    },
-    {
       "name": "Angel Of Light Angelica",
       "slug": "angel-of-light-angelica",
       "link": "https://epic7db.com/heroes/angel-of-light-angelica",
@@ -227,6 +251,18 @@
       "slug": "aram",
       "link": "https://epic7db.com/heroes/aram",
       "img": "https://epic7db.com/images/heroes/aram.webp"
+    },
+    {
+      "name": "Arbiter Vildred",
+      "slug": "arbiter-vildred",
+      "link": "https://epic7db.com/heroes/arbiter-vildred",
+      "img": "https://epic7db.com/images/heroes/arbiter-vildred.webp"
+    },
+    {
+      "name": "Angelica",
+      "slug": "angelica",
+      "link": "https://epic7db.com/heroes/angelica",
+      "img": "https://epic7db.com/images/heroes/angelica.webp"
     },
     {
       "name": "Angelic Montmorancy",
@@ -241,6 +277,12 @@
       "img": "https://epic7db.com/images/heroes/apocalypse-ravi.webp"
     },
     {
+      "name": "Architect Laika",
+      "slug": "architect-laika",
+      "link": "https://epic7db.com/heroes/architect-laika",
+      "img": "https://epic7db.com/images/heroes/architect-laika.webp"
+    },
+    {
       "name": "Aramintha",
       "slug": "aramintha",
       "link": "https://epic7db.com/heroes/aramintha",
@@ -253,22 +295,10 @@
       "img": "https://epic7db.com/images/heroes/archdemons-shadow.webp"
     },
     {
-      "name": "Architect Laika",
-      "slug": "architect-laika",
-      "link": "https://epic7db.com/heroes/architect-laika",
-      "img": "https://epic7db.com/images/heroes/architect-laika.webp"
-    },
-    {
       "name": "Argent Waves Hwayoung",
       "slug": "argent-waves-hwayoung",
       "link": "https://epic7db.com/heroes/argent-waves-hwayoung",
       "img": "https://epic7db.com/images/heroes/argent-waves-hwayoung.webp"
-    },
-    {
-      "name": "Aria",
-      "slug": "aria",
-      "link": "https://epic7db.com/heroes/aria",
-      "img": "https://epic7db.com/images/heroes/aria.webp"
     },
     {
       "name": "Armin",
@@ -283,16 +313,10 @@
       "img": "https://epic7db.com/images/heroes/arowell.webp"
     },
     {
-      "name": "Assassin Cartuja",
-      "slug": "assassin-cartuja",
-      "link": "https://epic7db.com/heroes/assassin-cartuja",
-      "img": "https://epic7db.com/images/heroes/assassin-cartuja.webp"
-    },
-    {
-      "name": "Arbiter Vildred",
-      "slug": "arbiter-vildred",
-      "link": "https://epic7db.com/heroes/arbiter-vildred",
-      "img": "https://epic7db.com/images/heroes/arbiter-vildred.webp"
+      "name": "Aria",
+      "slug": "aria",
+      "link": "https://epic7db.com/heroes/aria",
+      "img": "https://epic7db.com/images/heroes/aria.webp"
     },
     {
       "name": "Arunka",
@@ -301,10 +325,10 @@
       "img": "https://epic7db.com/images/heroes/arunka.webp"
     },
     {
-      "name": "Assassin Coli",
-      "slug": "assassin-coli",
-      "link": "https://epic7db.com/heroes/assassin-coli",
-      "img": "https://epic7db.com/images/heroes/assassin-coli.webp"
+      "name": "Assassin Cartuja",
+      "slug": "assassin-cartuja",
+      "link": "https://epic7db.com/heroes/assassin-cartuja",
+      "img": "https://epic7db.com/images/heroes/assassin-cartuja.webp"
     },
     {
       "name": "Assassin Cidd",
@@ -313,22 +337,10 @@
       "img": "https://epic7db.com/images/heroes/assassin-cidd.webp"
     },
     {
-      "name": "Auxiliary Lots",
-      "slug": "auxiliary-lots",
-      "link": "https://epic7db.com/heroes/auxiliary-lots",
-      "img": "https://epic7db.com/images/heroes/auxiliary-lots.webp"
-    },
-    {
-      "name": "Baal And Sezan",
-      "slug": "baal-and-sezan",
-      "link": "https://epic7db.com/heroes/baal-and-sezan",
-      "img": "https://epic7db.com/images/heroes/baal-and-sezan.webp"
-    },
-    {
-      "name": "Astromancer Elena",
-      "slug": "astromancer-elena",
-      "link": "https://epic7db.com/heroes/astromancer-elena",
-      "img": "https://epic7db.com/images/heroes/astromancer-elena.webp"
+      "name": "Assassin Coli",
+      "slug": "assassin-coli",
+      "link": "https://epic7db.com/heroes/assassin-coli",
+      "img": "https://epic7db.com/images/heroes/assassin-coli.webp"
     },
     {
       "name": "Azalea",
@@ -337,16 +349,22 @@
       "img": "https://epic7db.com/images/heroes/azalea.webp"
     },
     {
-      "name": "Baiken",
-      "slug": "baiken",
-      "link": "https://epic7db.com/heroes/baiken",
-      "img": "https://epic7db.com/images/heroes/baiken.webp"
+      "name": "Baal And Sezan",
+      "slug": "baal-and-sezan",
+      "link": "https://epic7db.com/heroes/baal-and-sezan",
+      "img": "https://epic7db.com/images/heroes/baal-and-sezan.webp"
     },
     {
-      "name": "Batisse",
-      "slug": "batisse",
-      "link": "https://epic7db.com/heroes/batisse",
-      "img": "https://epic7db.com/images/heroes/batisse.webp"
+      "name": "Auxiliary Lots",
+      "slug": "auxiliary-lots",
+      "link": "https://epic7db.com/heroes/auxiliary-lots",
+      "img": "https://epic7db.com/images/heroes/auxiliary-lots.webp"
+    },
+    {
+      "name": "Astromancer Elena",
+      "slug": "astromancer-elena",
+      "link": "https://epic7db.com/heroes/astromancer-elena",
+      "img": "https://epic7db.com/images/heroes/astromancer-elena.webp"
     },
     {
       "name": "Bad Cat Armin",
@@ -355,28 +373,34 @@
       "img": "https://epic7db.com/images/heroes/bad-cat-armin.webp"
     },
     {
-      "name": "Basar",
-      "slug": "basar",
-      "link": "https://epic7db.com/heroes/basar",
-      "img": "https://epic7db.com/images/heroes/basar.webp"
-    },
-    {
       "name": "Bask",
       "slug": "bask",
       "link": "https://epic7db.com/heroes/bask",
       "img": "https://epic7db.com/images/heroes/bask.webp"
     },
     {
-      "name": "Bellona",
-      "slug": "bellona",
-      "link": "https://epic7db.com/heroes/bellona",
-      "img": "https://epic7db.com/images/heroes/bellona.webp"
+      "name": "Batisse",
+      "slug": "batisse",
+      "link": "https://epic7db.com/heroes/batisse",
+      "img": "https://epic7db.com/images/heroes/batisse.webp"
     },
     {
-      "name": "Bernard",
-      "slug": "bernard",
-      "link": "https://epic7db.com/heroes/bernard",
-      "img": "https://epic7db.com/images/heroes/bernard.webp"
+      "name": "Basar",
+      "slug": "basar",
+      "link": "https://epic7db.com/heroes/basar",
+      "img": "https://epic7db.com/images/heroes/basar.webp"
+    },
+    {
+      "name": "Baiken",
+      "slug": "baiken",
+      "link": "https://epic7db.com/heroes/baiken",
+      "img": "https://epic7db.com/images/heroes/baiken.webp"
+    },
+    {
+      "name": "Benevolent Romann",
+      "slug": "benevolent-romann",
+      "link": "https://epic7db.com/heroes/benevolent-romann",
+      "img": "https://epic7db.com/images/heroes/benevolent-romann.webp"
     },
     {
       "name": "Beehoo",
@@ -391,10 +415,16 @@
       "img": "https://epic7db.com/images/heroes/belian.webp"
     },
     {
-      "name": "Benevolent Romann",
-      "slug": "benevolent-romann",
-      "link": "https://epic7db.com/heroes/benevolent-romann",
-      "img": "https://epic7db.com/images/heroes/benevolent-romann.webp"
+      "name": "Bellona",
+      "slug": "bellona",
+      "link": "https://epic7db.com/heroes/bellona",
+      "img": "https://epic7db.com/images/heroes/bellona.webp"
+    },
+    {
+      "name": "Bernard",
+      "slug": "bernard",
+      "link": "https://epic7db.com/heroes/bernard",
+      "img": "https://epic7db.com/images/heroes/bernard.webp"
     },
     {
       "name": "Benimaru",
@@ -421,22 +451,10 @@
       "img": "https://epic7db.com/images/heroes/blood-blade-karin.webp"
     },
     {
-      "name": "Brieg",
-      "slug": "brieg",
-      "link": "https://epic7db.com/heroes/brieg",
-      "img": "https://epic7db.com/images/heroes/brieg.webp"
-    },
-    {
       "name": "Blood Moon Haste",
       "slug": "blood-moon-haste",
       "link": "https://epic7db.com/heroes/blood-moon-haste",
       "img": "https://epic7db.com/images/heroes/blood-moon-haste.webp"
-    },
-    {
-      "name": "Butcher Corps Inquisitor",
-      "slug": "butcher-corps-inquisitor",
-      "link": "https://epic7db.com/heroes/butcher-corps-inquisitor",
-      "img": "https://epic7db.com/images/heroes/butcher-corps-inquisitor.webp"
     },
     {
       "name": "Blooming Lidica",
@@ -451,6 +469,30 @@
       "img": "https://epic7db.com/images/heroes/bomb-model-kanna.webp"
     },
     {
+      "name": "Boss Arunka",
+      "slug": "boss-arunka",
+      "link": "https://epic7db.com/heroes/boss-arunka",
+      "img": "https://epic7db.com/images/heroes/boss-arunka.webp"
+    },
+    {
+      "name": "Briar Witch Iseria",
+      "slug": "briar-witch-iseria",
+      "link": "https://epic7db.com/heroes/briar-witch-iseria",
+      "img": "https://epic7db.com/images/heroes/briar-witch-iseria.webp"
+    },
+    {
+      "name": "Brieg",
+      "slug": "brieg",
+      "link": "https://epic7db.com/heroes/brieg",
+      "img": "https://epic7db.com/images/heroes/brieg.webp"
+    },
+    {
+      "name": "Butcher Corps Inquisitor",
+      "slug": "butcher-corps-inquisitor",
+      "link": "https://epic7db.com/heroes/butcher-corps-inquisitor",
+      "img": "https://epic7db.com/images/heroes/butcher-corps-inquisitor.webp"
+    },
+    {
       "name": "Byblis",
       "slug": "byblis",
       "link": "https://epic7db.com/heroes/byblis",
@@ -461,24 +503,6 @@
       "slug": "bystander-hwayoung",
       "link": "https://epic7db.com/heroes/bystander-hwayoung",
       "img": "https://epic7db.com/images/heroes/bystander-hwayoung.webp"
-    },
-    {
-      "name": "Cartuja",
-      "slug": "cartuja",
-      "link": "https://epic7db.com/heroes/cartuja",
-      "img": "https://epic7db.com/images/heroes/cartuja.webp"
-    },
-    {
-      "name": "Boss Arunka",
-      "slug": "boss-arunka",
-      "link": "https://epic7db.com/heroes/boss-arunka",
-      "img": "https://epic7db.com/images/heroes/boss-arunka.webp"
-    },
-    {
-      "name": "Celestial Mercedes",
-      "slug": "celestial-mercedes",
-      "link": "https://epic7db.com/heroes/celestial-mercedes",
-      "img": "https://epic7db.com/images/heroes/celestial-mercedes.webp"
     },
     {
       "name": "Carmainerose",
@@ -493,40 +517,10 @@
       "img": "https://epic7db.com/images/heroes/camilla.webp"
     },
     {
-      "name": "Briar Witch Iseria",
-      "slug": "briar-witch-iseria",
-      "link": "https://epic7db.com/heroes/briar-witch-iseria",
-      "img": "https://epic7db.com/images/heroes/briar-witch-iseria.webp"
-    },
-    {
-      "name": "Carrot",
-      "slug": "carrot",
-      "link": "https://epic7db.com/heroes/carrot",
-      "img": "https://epic7db.com/images/heroes/carrot.webp"
-    },
-    {
       "name": "Captain Rikoris",
       "slug": "captain-rikoris",
       "link": "https://epic7db.com/heroes/captain-rikoris",
       "img": "https://epic7db.com/images/heroes/captain-rikoris.webp"
-    },
-    {
-      "name": "Cerise",
-      "slug": "cerise",
-      "link": "https://epic7db.com/heroes/cerise",
-      "img": "https://epic7db.com/images/heroes/cerise.webp"
-    },
-    {
-      "name": "Celeste",
-      "slug": "celeste",
-      "link": "https://epic7db.com/heroes/celeste",
-      "img": "https://epic7db.com/images/heroes/celeste.webp"
-    },
-    {
-      "name": "Challenger Dominiel",
-      "slug": "challenger-dominiel",
-      "link": "https://epic7db.com/heroes/challenger-dominiel",
-      "img": "https://epic7db.com/images/heroes/challenger-dominiel.webp"
     },
     {
       "name": "Cecilia",
@@ -535,16 +529,40 @@
       "img": "https://epic7db.com/images/heroes/cecilia.webp"
     },
     {
+      "name": "Carrot",
+      "slug": "carrot",
+      "link": "https://epic7db.com/heroes/carrot",
+      "img": "https://epic7db.com/images/heroes/carrot.webp"
+    },
+    {
+      "name": "Cartuja",
+      "slug": "cartuja",
+      "link": "https://epic7db.com/heroes/cartuja",
+      "img": "https://epic7db.com/images/heroes/cartuja.webp"
+    },
+    {
+      "name": "Celeste",
+      "slug": "celeste",
+      "link": "https://epic7db.com/heroes/celeste",
+      "img": "https://epic7db.com/images/heroes/celeste.webp"
+    },
+    {
+      "name": "Celestial Mercedes",
+      "slug": "celestial-mercedes",
+      "link": "https://epic7db.com/heroes/celestial-mercedes",
+      "img": "https://epic7db.com/images/heroes/celestial-mercedes.webp"
+    },
+    {
       "name": "Celine",
       "slug": "celine",
       "link": "https://epic7db.com/heroes/celine",
       "img": "https://epic7db.com/images/heroes/celine.webp"
     },
     {
-      "name": "Champion Zerato",
-      "slug": "champion-zerato",
-      "link": "https://epic7db.com/heroes/champion-zerato",
-      "img": "https://epic7db.com/images/heroes/champion-zerato.webp"
+      "name": "Cerise",
+      "slug": "cerise",
+      "link": "https://epic7db.com/heroes/cerise",
+      "img": "https://epic7db.com/images/heroes/cerise.webp"
     },
     {
       "name": "Cermia",
@@ -553,10 +571,22 @@
       "img": "https://epic7db.com/images/heroes/cermia.webp"
     },
     {
+      "name": "Challenger Dominiel",
+      "slug": "challenger-dominiel",
+      "link": "https://epic7db.com/heroes/challenger-dominiel",
+      "img": "https://epic7db.com/images/heroes/challenger-dominiel.webp"
+    },
+    {
       "name": "Chaos Inquisitor",
       "slug": "chaos-inquisitor",
       "link": "https://epic7db.com/heroes/chaos-inquisitor",
       "img": "https://epic7db.com/images/heroes/chaos-inquisitor.webp"
+    },
+    {
+      "name": "Champion Zerato",
+      "slug": "champion-zerato",
+      "link": "https://epic7db.com/heroes/champion-zerato",
+      "img": "https://epic7db.com/images/heroes/champion-zerato.webp"
     },
     {
       "name": "Chaos Sect Axe",
@@ -565,10 +595,10 @@
       "img": "https://epic7db.com/images/heroes/chaos-sect-axe.webp"
     },
     {
-      "name": "Choux",
-      "slug": "choux",
-      "link": "https://epic7db.com/heroes/choux",
-      "img": "https://epic7db.com/images/heroes/choux.webp"
+      "name": "Charles",
+      "slug": "charles",
+      "link": "https://epic7db.com/heroes/charles",
+      "img": "https://epic7db.com/images/heroes/charles.webp"
     },
     {
       "name": "Charlotte",
@@ -577,16 +607,16 @@
       "img": "https://epic7db.com/images/heroes/charlotte.webp"
     },
     {
-      "name": "Charles",
-      "slug": "charles",
-      "link": "https://epic7db.com/heroes/charles",
-      "img": "https://epic7db.com/images/heroes/charles.webp"
-    },
-    {
       "name": "Chloe",
       "slug": "chloe",
       "link": "https://epic7db.com/heroes/chloe",
       "img": "https://epic7db.com/images/heroes/chloe.webp"
+    },
+    {
+      "name": "Choux",
+      "slug": "choux",
+      "link": "https://epic7db.com/heroes/choux",
+      "img": "https://epic7db.com/images/heroes/choux.webp"
     },
     {
       "name": "Christy",
@@ -599,18 +629,6 @@
       "slug": "church-of-ilryos-axe",
       "link": "https://epic7db.com/heroes/church-of-ilryos-axe",
       "img": "https://epic7db.com/images/heroes/church-of-ilryos-axe.webp"
-    },
-    {
-      "name": "Closer Charles",
-      "slug": "closer-charles",
-      "link": "https://epic7db.com/heroes/closer-charles",
-      "img": "https://epic7db.com/images/heroes/closer-charles.webp"
-    },
-    {
-      "name": "Coli",
-      "slug": "coli",
-      "link": "https://epic7db.com/heroes/coli",
-      "img": "https://epic7db.com/images/heroes/coli.webp"
     },
     {
       "name": "Cidd",
@@ -631,16 +649,22 @@
       "img": "https://epic7db.com/images/heroes/claudia.webp"
     },
     {
-      "name": "Conqueror Lilias",
-      "slug": "conqueror-lilias",
-      "link": "https://epic7db.com/heroes/conqueror-lilias",
-      "img": "https://epic7db.com/images/heroes/conqueror-lilias.webp"
+      "name": "Coli",
+      "slug": "coli",
+      "link": "https://epic7db.com/heroes/coli",
+      "img": "https://epic7db.com/images/heroes/coli.webp"
     },
     {
       "name": "Command Model Laika",
       "slug": "command-model-laika",
       "link": "https://epic7db.com/heroes/command-model-laika",
       "img": "https://epic7db.com/images/heroes/command-model-laika.webp"
+    },
+    {
+      "name": "Closer Charles",
+      "slug": "closer-charles",
+      "link": "https://epic7db.com/heroes/closer-charles",
+      "img": "https://epic7db.com/images/heroes/closer-charles.webp"
     },
     {
       "name": "Commander Lorina",
@@ -667,16 +691,16 @@
       "img": "https://epic7db.com/images/heroes/crozet.webp"
     },
     {
+      "name": "Conqueror Lilias",
+      "slug": "conqueror-lilias",
+      "link": "https://epic7db.com/heroes/conqueror-lilias",
+      "img": "https://epic7db.com/images/heroes/conqueror-lilias.webp"
+    },
+    {
       "name": "Crimson Armin",
       "slug": "crimson-armin",
       "link": "https://epic7db.com/heroes/crimson-armin",
       "img": "https://epic7db.com/images/heroes/crimson-armin.webp"
-    },
-    {
-      "name": "Desert Jewel Basar",
-      "slug": "desert-jewel-basar",
-      "link": "https://epic7db.com/heroes/desert-jewel-basar",
-      "img": "https://epic7db.com/images/heroes/desert-jewel-basar.webp"
     },
     {
       "name": "Dark Corvus",
@@ -685,28 +709,10 @@
       "img": "https://epic7db.com/images/heroes/dark-corvus.webp"
     },
     {
-      "name": "Diene",
-      "slug": "diene",
-      "link": "https://epic7db.com/heroes/diene",
-      "img": "https://epic7db.com/images/heroes/diene.webp"
-    },
-    {
       "name": "Designer Lilibet",
       "slug": "designer-lilibet",
       "link": "https://epic7db.com/heroes/designer-lilibet",
       "img": "https://epic7db.com/images/heroes/designer-lilibet.webp"
-    },
-    {
-      "name": "Destina",
-      "slug": "destina",
-      "link": "https://epic7db.com/heroes/destina",
-      "img": "https://epic7db.com/images/heroes/destina.webp"
-    },
-    {
-      "name": "Disciplinary Prefect Aria",
-      "slug": "disciplinary-prefect-aria",
-      "link": "https://epic7db.com/heroes/disciplinary-prefect-aria",
-      "img": "https://epic7db.com/images/heroes/disciplinary-prefect-aria.webp"
     },
     {
       "name": "Dingo",
@@ -715,22 +721,28 @@
       "img": "https://epic7db.com/images/heroes/dingo.webp"
     },
     {
-      "name": "Dominiel",
-      "slug": "dominiel",
-      "link": "https://epic7db.com/heroes/dominiel",
-      "img": "https://epic7db.com/images/heroes/dominiel.webp"
+      "name": "Desert Jewel Basar",
+      "slug": "desert-jewel-basar",
+      "link": "https://epic7db.com/heroes/desert-jewel-basar",
+      "img": "https://epic7db.com/images/heroes/desert-jewel-basar.webp"
     },
     {
-      "name": "Dragon King Sharun",
-      "slug": "dragon-king-sharun",
-      "link": "https://epic7db.com/heroes/dragon-king-sharun",
-      "img": "https://epic7db.com/images/heroes/dragon-king-sharun.webp"
+      "name": "Destina",
+      "slug": "destina",
+      "link": "https://epic7db.com/heroes/destina",
+      "img": "https://epic7db.com/images/heroes/destina.webp"
     },
     {
-      "name": "Doll Maker Pearlhorizon",
-      "slug": "doll-maker-pearlhorizon",
-      "link": "https://epic7db.com/heroes/doll-maker-pearlhorizon",
-      "img": "https://epic7db.com/images/heroes/doll-maker-pearlhorizon.webp"
+      "name": "Diene",
+      "slug": "diene",
+      "link": "https://epic7db.com/heroes/diene",
+      "img": "https://epic7db.com/images/heroes/diene.webp"
+    },
+    {
+      "name": "Disciplinary Prefect Aria",
+      "slug": "disciplinary-prefect-aria",
+      "link": "https://epic7db.com/heroes/disciplinary-prefect-aria",
+      "img": "https://epic7db.com/images/heroes/disciplinary-prefect-aria.webp"
     },
     {
       "name": "Dizzy",
@@ -739,16 +751,22 @@
       "img": "https://epic7db.com/images/heroes/dizzy.webp"
     },
     {
+      "name": "Doll Maker Pearlhorizon",
+      "slug": "doll-maker-pearlhorizon",
+      "link": "https://epic7db.com/heroes/doll-maker-pearlhorizon",
+      "img": "https://epic7db.com/images/heroes/doll-maker-pearlhorizon.webp"
+    },
+    {
+      "name": "Dominiel",
+      "slug": "dominiel",
+      "link": "https://epic7db.com/heroes/dominiel",
+      "img": "https://epic7db.com/images/heroes/dominiel.webp"
+    },
+    {
       "name": "Doris",
       "slug": "doris",
       "link": "https://epic7db.com/heroes/doris",
       "img": "https://epic7db.com/images/heroes/doris.webp"
-    },
-    {
-      "name": "Eligos",
-      "slug": "eligos",
-      "link": "https://epic7db.com/heroes/eligos",
-      "img": "https://epic7db.com/images/heroes/eligos.webp"
     },
     {
       "name": "Dragon Bride Senya",
@@ -757,16 +775,22 @@
       "img": "https://epic7db.com/images/heroes/dragon-bride-senya.webp"
     },
     {
+      "name": "Dragon King Sharun",
+      "slug": "dragon-king-sharun",
+      "link": "https://epic7db.com/heroes/dragon-king-sharun",
+      "img": "https://epic7db.com/images/heroes/dragon-king-sharun.webp"
+    },
+    {
+      "name": "Elena",
+      "slug": "elena",
+      "link": "https://epic7db.com/heroes/elena",
+      "img": "https://epic7db.com/images/heroes/elena.webp"
+    },
+    {
       "name": "Eaton",
       "slug": "eaton",
       "link": "https://epic7db.com/heroes/eaton",
       "img": "https://epic7db.com/images/heroes/eaton.webp"
-    },
-    {
-      "name": "Edward Elric",
-      "slug": "edward-elric",
-      "link": "https://epic7db.com/heroes/edward-elric",
-      "img": "https://epic7db.com/images/heroes/edward-elric.webp"
     },
     {
       "name": "Eda",
@@ -775,10 +799,28 @@
       "img": "https://epic7db.com/images/heroes/eda.webp"
     },
     {
-      "name": "Elena",
-      "slug": "elena",
-      "link": "https://epic7db.com/heroes/elena",
-      "img": "https://epic7db.com/images/heroes/elena.webp"
+      "name": "Eligos",
+      "slug": "eligos",
+      "link": "https://epic7db.com/heroes/eligos",
+      "img": "https://epic7db.com/images/heroes/eligos.webp"
+    },
+    {
+      "name": "Edward Elric",
+      "slug": "edward-elric",
+      "link": "https://epic7db.com/heroes/edward-elric",
+      "img": "https://epic7db.com/images/heroes/edward-elric.webp"
+    },
+    {
+      "name": "Emilia",
+      "slug": "emilia",
+      "link": "https://epic7db.com/heroes/emilia",
+      "img": "https://epic7db.com/images/heroes/emilia.webp"
+    },
+    {
+      "name": "Empyrean Ilynav",
+      "slug": "empyrean-ilynav",
+      "link": "https://epic7db.com/heroes/empyrean-ilynav",
+      "img": "https://epic7db.com/images/heroes/empyrean-ilynav.webp"
     },
     {
       "name": "Elphelt",
@@ -805,22 +847,16 @@
       "img": "https://epic7db.com/images/heroes/enott.webp"
     },
     {
-      "name": "Empyrean Ilynav",
-      "slug": "empyrean-ilynav",
-      "link": "https://epic7db.com/heroes/empyrean-ilynav",
-      "img": "https://epic7db.com/images/heroes/empyrean-ilynav.webp"
-    },
-    {
-      "name": "Emilia",
-      "slug": "emilia",
-      "link": "https://epic7db.com/heroes/emilia",
-      "img": "https://epic7db.com/images/heroes/emilia.webp"
-    },
-    {
       "name": "Eternal Wanderer Ludwig",
       "slug": "eternal-wanderer-ludwig",
       "link": "https://epic7db.com/heroes/eternal-wanderer-ludwig",
       "img": "https://epic7db.com/images/heroes/eternal-wanderer-ludwig.webp"
+    },
+    {
+      "name": "Ervalen",
+      "slug": "ervalen",
+      "link": "https://epic7db.com/heroes/ervalen",
+      "img": "https://epic7db.com/images/heroes/ervalen.webp"
     },
     {
       "name": "Ezra",
@@ -829,10 +865,16 @@
       "img": "https://epic7db.com/images/heroes/ezra.webp"
     },
     {
-      "name": "Ervalen",
-      "slug": "ervalen",
-      "link": "https://epic7db.com/heroes/ervalen",
-      "img": "https://epic7db.com/images/heroes/ervalen.webp"
+      "name": "Fairytale Tenebria",
+      "slug": "fairytale-tenebria",
+      "link": "https://epic7db.com/heroes/fairytale-tenebria",
+      "img": "https://epic7db.com/images/heroes/fairytale-tenebria.webp"
+    },
+    {
+      "name": "Faithless Lidica",
+      "slug": "faithless-lidica",
+      "link": "https://epic7db.com/heroes/faithless-lidica",
+      "img": "https://epic7db.com/images/heroes/faithless-lidica.webp"
     },
     {
       "name": "Falconer Kluri",
@@ -847,12 +889,6 @@
       "img": "https://epic7db.com/images/heroes/fallen-cecilia.webp"
     },
     {
-      "name": "Fairytale Tenebria",
-      "slug": "fairytale-tenebria",
-      "link": "https://epic7db.com/heroes/fairytale-tenebria",
-      "img": "https://epic7db.com/images/heroes/fairytale-tenebria.webp"
-    },
-    {
       "name": "Fenne",
       "slug": "fenne",
       "link": "https://epic7db.com/heroes/fenne",
@@ -865,22 +901,16 @@
       "img": "https://epic7db.com/images/heroes/fenris.webp"
     },
     {
-      "name": "Festive Eda",
-      "slug": "festive-eda",
-      "link": "https://epic7db.com/heroes/festive-eda",
-      "img": "https://epic7db.com/images/heroes/festive-eda.webp"
-    },
-    {
-      "name": "Faithless Lidica",
-      "slug": "faithless-lidica",
-      "link": "https://epic7db.com/heroes/faithless-lidica",
-      "img": "https://epic7db.com/images/heroes/faithless-lidica.webp"
-    },
-    {
       "name": "Fern",
       "slug": "fern",
       "link": "https://epic7db.com/heroes/fern",
       "img": "https://epic7db.com/images/heroes/fern.webp"
+    },
+    {
+      "name": "Festive Eda",
+      "slug": "festive-eda",
+      "link": "https://epic7db.com/heroes/festive-eda",
+      "img": "https://epic7db.com/images/heroes/festive-eda.webp"
     },
     {
       "name": "Fighter Maya",
@@ -925,12 +955,6 @@
       "img": "https://epic7db.com/images/heroes/furious.webp"
     },
     {
-      "name": "Godmother",
-      "slug": "godmother",
-      "link": "https://epic7db.com/heroes/godmother",
-      "img": "https://epic7db.com/images/heroes/godmother.webp"
-    },
-    {
       "name": "General Purrgis",
       "slug": "general-purrgis",
       "link": "https://epic7db.com/heroes/general-purrgis",
@@ -949,40 +973,34 @@
       "img": "https://epic7db.com/images/heroes/glenn.webp"
     },
     {
-      "name": "Guard Captain Krau",
-      "slug": "guard-captain-krau",
-      "link": "https://epic7db.com/heroes/guard-captain-krau",
-      "img": "https://epic7db.com/images/heroes/guard-captain-krau.webp"
-    },
-    {
-      "name": "Gunther",
-      "slug": "gunther",
-      "link": "https://epic7db.com/heroes/gunther",
-      "img": "https://epic7db.com/images/heroes/gunther.webp"
-    },
-    {
       "name": "Gloomyrain",
       "slug": "gloomyrain",
       "link": "https://epic7db.com/heroes/gloomyrain",
       "img": "https://epic7db.com/images/heroes/gloomyrain.webp"
     },
     {
-      "name": "Hataan",
-      "slug": "hataan",
-      "link": "https://epic7db.com/heroes/hataan",
-      "img": "https://epic7db.com/images/heroes/hataan.webp"
+      "name": "Godmother",
+      "slug": "godmother",
+      "link": "https://epic7db.com/heroes/godmother",
+      "img": "https://epic7db.com/images/heroes/godmother.webp"
     },
     {
-      "name": "Great Chief Khawana",
-      "slug": "great-chief-khawana",
-      "link": "https://epic7db.com/heroes/great-chief-khawana",
-      "img": "https://epic7db.com/images/heroes/great-chief-khawana.webp"
+      "name": "Guard Captain Krau",
+      "slug": "guard-captain-krau",
+      "link": "https://epic7db.com/heroes/guard-captain-krau",
+      "img": "https://epic7db.com/images/heroes/guard-captain-krau.webp"
     },
     {
       "name": "Guider Aither",
       "slug": "guider-aither",
       "link": "https://epic7db.com/heroes/guider-aither",
       "img": "https://epic7db.com/images/heroes/guider-aither.webp"
+    },
+    {
+      "name": "Gunther",
+      "slug": "gunther",
+      "link": "https://epic7db.com/heroes/gunther",
+      "img": "https://epic7db.com/images/heroes/gunther.webp"
     },
     {
       "name": "Harsetti",
@@ -997,6 +1015,18 @@
       "img": "https://epic7db.com/images/heroes/hasol.webp"
     },
     {
+      "name": "Haste",
+      "slug": "haste",
+      "link": "https://epic7db.com/heroes/haste",
+      "img": "https://epic7db.com/images/heroes/haste.webp"
+    },
+    {
+      "name": "Hataan",
+      "slug": "hataan",
+      "link": "https://epic7db.com/heroes/hataan",
+      "img": "https://epic7db.com/images/heroes/hataan.webp"
+    },
+    {
       "name": "Hazel",
       "slug": "hazel",
       "link": "https://epic7db.com/heroes/hazel",
@@ -1009,34 +1039,10 @@
       "img": "https://epic7db.com/images/heroes/hecate.webp"
     },
     {
-      "name": "Helen",
-      "slug": "helen",
-      "link": "https://epic7db.com/heroes/helen",
-      "img": "https://epic7db.com/images/heroes/helen.webp"
-    },
-    {
-      "name": "Haste",
-      "slug": "haste",
-      "link": "https://epic7db.com/heroes/haste",
-      "img": "https://epic7db.com/images/heroes/haste.webp"
-    },
-    {
       "name": "Helga",
       "slug": "helga",
       "link": "https://epic7db.com/heroes/helga",
       "img": "https://epic7db.com/images/heroes/helga.webp"
-    },
-    {
-      "name": "Holiday Yufine",
-      "slug": "holiday-yufine",
-      "link": "https://epic7db.com/heroes/holiday-yufine",
-      "img": "https://epic7db.com/images/heroes/holiday-yufine.webp"
-    },
-    {
-      "name": "Hellion Lua",
-      "slug": "hellion-lua",
-      "link": "https://epic7db.com/heroes/hellion-lua",
-      "img": "https://epic7db.com/images/heroes/hellion-lua.webp"
     },
     {
       "name": "Holy Flame Adin",
@@ -1045,34 +1051,16 @@
       "img": "https://epic7db.com/images/heroes/holy-flame-adin.webp"
     },
     {
-      "name": "Hurado",
-      "slug": "hurado",
-      "link": "https://epic7db.com/heroes/hurado",
-      "img": "https://epic7db.com/images/heroes/hurado.webp"
+      "name": "Helen",
+      "slug": "helen",
+      "link": "https://epic7db.com/heroes/helen",
+      "img": "https://epic7db.com/images/heroes/helen.webp"
     },
     {
-      "name": "Ilynav",
-      "slug": "ilynav",
-      "link": "https://epic7db.com/heroes/ilynav",
-      "img": "https://epic7db.com/images/heroes/ilynav.webp"
-    },
-    {
-      "name": "Immortal King Wukong",
-      "slug": "immortal-king-wukong",
-      "link": "https://epic7db.com/heroes/immortal-king-wukong",
-      "img": "https://epic7db.com/images/heroes/immortal-king-wukong.webp"
-    },
-    {
-      "name": "Ian",
-      "slug": "ian",
-      "link": "https://epic7db.com/heroes/ian",
-      "img": "https://epic7db.com/images/heroes/ian.webp"
-    },
-    {
-      "name": "Inheritor Amiki",
-      "slug": "inheritor-amiki",
-      "link": "https://epic7db.com/heroes/inheritor-amiki",
-      "img": "https://epic7db.com/images/heroes/inheritor-amiki.webp"
+      "name": "Holiday Yufine",
+      "slug": "holiday-yufine",
+      "link": "https://epic7db.com/heroes/holiday-yufine",
+      "img": "https://epic7db.com/images/heroes/holiday-yufine.webp"
     },
     {
       "name": "Hwayoung",
@@ -1081,16 +1069,52 @@
       "img": "https://epic7db.com/images/heroes/hwayoung.webp"
     },
     {
+      "name": "Immortal King Wukong",
+      "slug": "immortal-king-wukong",
+      "link": "https://epic7db.com/heroes/immortal-king-wukong",
+      "img": "https://epic7db.com/images/heroes/immortal-king-wukong.webp"
+    },
+    {
+      "name": "Hurado",
+      "slug": "hurado",
+      "link": "https://epic7db.com/heroes/hurado",
+      "img": "https://epic7db.com/images/heroes/hurado.webp"
+    },
+    {
+      "name": "Ian",
+      "slug": "ian",
+      "link": "https://epic7db.com/heroes/ian",
+      "img": "https://epic7db.com/images/heroes/ian.webp"
+    },
+    {
+      "name": "Ilynav",
+      "slug": "ilynav",
+      "link": "https://epic7db.com/heroes/ilynav",
+      "img": "https://epic7db.com/images/heroes/ilynav.webp"
+    },
+    {
       "name": "Inferno Khawazu",
       "slug": "inferno-khawazu",
       "link": "https://epic7db.com/heroes/inferno-khawazu",
       "img": "https://epic7db.com/images/heroes/inferno-khawazu.webp"
     },
     {
+      "name": "Inheritor Amiki",
+      "slug": "inheritor-amiki",
+      "link": "https://epic7db.com/heroes/inheritor-amiki",
+      "img": "https://epic7db.com/images/heroes/inheritor-amiki.webp"
+    },
+    {
       "name": "Infinite Horizon Achates",
       "slug": "infinite-horizon-achates",
       "link": "https://epic7db.com/heroes/infinite-horizon-achates",
       "img": "https://epic7db.com/images/heroes/infinite-horizon-achates.webp"
+    },
+    {
+      "name": "Iseria",
+      "slug": "iseria",
+      "link": "https://epic7db.com/heroes/iseria",
+      "img": "https://epic7db.com/images/heroes/iseria.webp"
     },
     {
       "name": "Januta",
@@ -1105,34 +1129,10 @@
       "img": "https://epic7db.com/images/heroes/jack-o.webp"
     },
     {
-      "name": "Jecht",
-      "slug": "jecht",
-      "link": "https://epic7db.com/heroes/jecht",
-      "img": "https://epic7db.com/images/heroes/jecht.webp"
-    },
-    {
       "name": "Jena",
       "slug": "jena",
       "link": "https://epic7db.com/heroes/jena",
       "img": "https://epic7db.com/images/heroes/jena.webp"
-    },
-    {
-      "name": "Iseria",
-      "slug": "iseria",
-      "link": "https://epic7db.com/heroes/iseria",
-      "img": "https://epic7db.com/images/heroes/iseria.webp"
-    },
-    {
-      "name": "Jenua",
-      "slug": "jenua",
-      "link": "https://epic7db.com/heroes/jenua",
-      "img": "https://epic7db.com/images/heroes/jenua.webp"
-    },
-    {
-      "name": "Juni",
-      "slug": "juni",
-      "link": "https://epic7db.com/heroes/juni",
-      "img": "https://epic7db.com/images/heroes/juni.webp"
     },
     {
       "name": "Judith",
@@ -1141,28 +1141,34 @@
       "img": "https://epic7db.com/images/heroes/judith.webp"
     },
     {
+      "name": "Jecht",
+      "slug": "jecht",
+      "link": "https://epic7db.com/heroes/jecht",
+      "img": "https://epic7db.com/images/heroes/jecht.webp"
+    },
+    {
+      "name": "Jenua",
+      "slug": "jenua",
+      "link": "https://epic7db.com/heroes/jenua",
+      "img": "https://epic7db.com/images/heroes/jenua.webp"
+    },
+    {
       "name": "Judge Kise",
       "slug": "judge-kise",
       "link": "https://epic7db.com/heroes/judge-kise",
       "img": "https://epic7db.com/images/heroes/judge-kise.webp"
     },
     {
-      "name": "Khawazu",
-      "slug": "khawazu",
-      "link": "https://epic7db.com/heroes/khawazu",
-      "img": "https://epic7db.com/images/heroes/khawazu.webp"
+      "name": "Juni",
+      "slug": "juni",
+      "link": "https://epic7db.com/heroes/juni",
+      "img": "https://epic7db.com/images/heroes/juni.webp"
     },
     {
       "name": "Kane",
       "slug": "kane",
       "link": "https://epic7db.com/heroes/kane",
       "img": "https://epic7db.com/images/heroes/kane.webp"
-    },
-    {
-      "name": "Khawana",
-      "slug": "khawana",
-      "link": "https://epic7db.com/heroes/khawana",
-      "img": "https://epic7db.com/images/heroes/khawana.webp"
     },
     {
       "name": "Karin",
@@ -1177,10 +1183,28 @@
       "img": "https://epic7db.com/images/heroes/kawerik.webp"
     },
     {
+      "name": "Kayron",
+      "slug": "kayron",
+      "link": "https://epic7db.com/heroes/kayron",
+      "img": "https://epic7db.com/images/heroes/kayron.webp"
+    },
+    {
       "name": "Ken",
       "slug": "ken",
       "link": "https://epic7db.com/heroes/ken",
       "img": "https://epic7db.com/images/heroes/ken.webp"
+    },
+    {
+      "name": "Khawana",
+      "slug": "khawana",
+      "link": "https://epic7db.com/heroes/khawana",
+      "img": "https://epic7db.com/images/heroes/khawana.webp"
+    },
+    {
+      "name": "Khawazu",
+      "slug": "khawazu",
+      "link": "https://epic7db.com/heroes/khawazu",
+      "img": "https://epic7db.com/images/heroes/khawazu.webp"
     },
     {
       "name": "Kikirat V2",
@@ -1201,18 +1225,6 @@
       "img": "https://epic7db.com/images/heroes/kise.webp"
     },
     {
-      "name": "Kayron",
-      "slug": "kayron",
-      "link": "https://epic7db.com/heroes/kayron",
-      "img": "https://epic7db.com/images/heroes/kayron.webp"
-    },
-    {
-      "name": "Kitty Clarissa",
-      "slug": "kitty-clarissa",
-      "link": "https://epic7db.com/heroes/kitty-clarissa",
-      "img": "https://epic7db.com/images/heroes/kitty-clarissa.webp"
-    },
-    {
       "name": "Kizuna Ai",
       "slug": "kizuna-ai",
       "link": "https://epic7db.com/heroes/kizuna-ai",
@@ -1225,22 +1237,22 @@
       "img": "https://epic7db.com/images/heroes/kluri.webp"
     },
     {
-      "name": "Laia",
-      "slug": "laia",
-      "link": "https://epic7db.com/heroes/laia",
-      "img": "https://epic7db.com/images/heroes/laia.webp"
-    },
-    {
       "name": "Lady Of The Scales",
       "slug": "lady-of-the-scales",
       "link": "https://epic7db.com/heroes/lady-of-the-scales",
       "img": "https://epic7db.com/images/heroes/lady-of-the-scales.webp"
     },
     {
-      "name": "Lethe",
-      "slug": "lethe",
-      "link": "https://epic7db.com/heroes/lethe",
-      "img": "https://epic7db.com/images/heroes/lethe.webp"
+      "name": "Laia",
+      "slug": "laia",
+      "link": "https://epic7db.com/heroes/laia",
+      "img": "https://epic7db.com/images/heroes/laia.webp"
+    },
+    {
+      "name": "Kitty Clarissa",
+      "slug": "kitty-clarissa",
+      "link": "https://epic7db.com/heroes/kitty-clarissa",
+      "img": "https://epic7db.com/images/heroes/kitty-clarissa.webp"
     },
     {
       "name": "Krau",
@@ -1249,22 +1261,16 @@
       "img": "https://epic7db.com/images/heroes/krau.webp"
     },
     {
-      "name": "Last Piece Karin",
-      "slug": "last-piece-karin",
-      "link": "https://epic7db.com/heroes/last-piece-karin",
-      "img": "https://epic7db.com/images/heroes/last-piece-karin.webp"
-    },
-    {
-      "name": "Last Rider Krau",
-      "slug": "last-rider-krau",
-      "link": "https://epic7db.com/heroes/last-rider-krau",
-      "img": "https://epic7db.com/images/heroes/last-rider-krau.webp"
-    },
-    {
       "name": "Landy",
       "slug": "landy",
       "link": "https://epic7db.com/heroes/landy",
       "img": "https://epic7db.com/images/heroes/landy.webp"
+    },
+    {
+      "name": "Last Piece Karin",
+      "slug": "last-piece-karin",
+      "link": "https://epic7db.com/heroes/last-piece-karin",
+      "img": "https://epic7db.com/images/heroes/last-piece-karin.webp"
     },
     {
       "name": "Leah",
@@ -1279,16 +1285,22 @@
       "img": "https://epic7db.com/images/heroes/lena.webp"
     },
     {
+      "name": "Last Rider Krau",
+      "slug": "last-rider-krau",
+      "link": "https://epic7db.com/heroes/last-rider-krau",
+      "img": "https://epic7db.com/images/heroes/last-rider-krau.webp"
+    },
+    {
       "name": "Leo",
       "slug": "leo",
       "link": "https://epic7db.com/heroes/leo",
       "img": "https://epic7db.com/images/heroes/leo.webp"
     },
     {
-      "name": "Lilias",
-      "slug": "lilias",
-      "link": "https://epic7db.com/heroes/lilias",
-      "img": "https://epic7db.com/images/heroes/lilias.webp"
+      "name": "Lethe",
+      "slug": "lethe",
+      "link": "https://epic7db.com/heroes/lethe",
+      "img": "https://epic7db.com/images/heroes/lethe.webp"
     },
     {
       "name": "Lidica",
@@ -1303,22 +1315,28 @@
       "img": "https://epic7db.com/images/heroes/lilibet.webp"
     },
     {
-      "name": "Lone Crescent Bellona",
-      "slug": "lone-crescent-bellona",
-      "link": "https://epic7db.com/heroes/lone-crescent-bellona",
-      "img": "https://epic7db.com/images/heroes/lone-crescent-bellona.webp"
-    },
-    {
       "name": "Lilka",
       "slug": "lilka",
       "link": "https://epic7db.com/heroes/lilka",
       "img": "https://epic7db.com/images/heroes/lilka.webp"
     },
     {
+      "name": "Lilias",
+      "slug": "lilias",
+      "link": "https://epic7db.com/heroes/lilias",
+      "img": "https://epic7db.com/images/heroes/lilias.webp"
+    },
+    {
       "name": "Little Queen Charlotte",
       "slug": "little-queen-charlotte",
       "link": "https://epic7db.com/heroes/little-queen-charlotte",
       "img": "https://epic7db.com/images/heroes/little-queen-charlotte.webp"
+    },
+    {
+      "name": "Lone Crescent Bellona",
+      "slug": "lone-crescent-bellona",
+      "link": "https://epic7db.com/heroes/lone-crescent-bellona",
+      "img": "https://epic7db.com/images/heroes/lone-crescent-bellona.webp"
     },
     {
       "name": "Lone Wolf Peira",
@@ -1333,6 +1351,12 @@
       "img": "https://epic7db.com/images/heroes/lorina.webp"
     },
     {
+      "name": "Luna",
+      "slug": "luna",
+      "link": "https://epic7db.com/heroes/luna",
+      "img": "https://epic7db.com/images/heroes/luna.webp"
+    },
+    {
       "name": "Lots",
       "slug": "lots",
       "link": "https://epic7db.com/heroes/lots",
@@ -1345,34 +1369,16 @@
       "img": "https://epic7db.com/images/heroes/lucy.webp"
     },
     {
-      "name": "Ludwig",
-      "slug": "ludwig",
-      "link": "https://epic7db.com/heroes/ludwig",
-      "img": "https://epic7db.com/images/heroes/ludwig.webp"
-    },
-    {
-      "name": "Luna",
-      "slug": "luna",
-      "link": "https://epic7db.com/heroes/luna",
-      "img": "https://epic7db.com/images/heroes/luna.webp"
-    },
-    {
       "name": "Luluca",
       "slug": "luluca",
       "link": "https://epic7db.com/heroes/luluca",
       "img": "https://epic7db.com/images/heroes/luluca.webp"
     },
     {
-      "name": "Martial Artist Ken",
-      "slug": "martial-artist-ken",
-      "link": "https://epic7db.com/heroes/martial-artist-ken",
-      "img": "https://epic7db.com/images/heroes/martial-artist-ken.webp"
-    },
-    {
-      "name": "Melany",
-      "slug": "melany",
-      "link": "https://epic7db.com/heroes/melany",
-      "img": "https://epic7db.com/images/heroes/melany.webp"
+      "name": "Ludwig",
+      "slug": "ludwig",
+      "link": "https://epic7db.com/heroes/ludwig",
+      "img": "https://epic7db.com/images/heroes/ludwig.webp"
     },
     {
       "name": "Magic Scholar Doris",
@@ -1381,10 +1387,10 @@
       "img": "https://epic7db.com/images/heroes/magic-scholar-doris.webp"
     },
     {
-      "name": "Maid Chloe",
-      "slug": "maid-chloe",
-      "link": "https://epic7db.com/heroes/maid-chloe",
-      "img": "https://epic7db.com/images/heroes/maid-chloe.webp"
+      "name": "Mascot Hazel",
+      "slug": "mascot-hazel",
+      "link": "https://epic7db.com/heroes/mascot-hazel",
+      "img": "https://epic7db.com/images/heroes/mascot-hazel.webp"
     },
     {
       "name": "Maya",
@@ -1393,10 +1399,10 @@
       "img": "https://epic7db.com/images/heroes/maya.webp"
     },
     {
-      "name": "Mascot Hazel",
-      "slug": "mascot-hazel",
-      "link": "https://epic7db.com/heroes/mascot-hazel",
-      "img": "https://epic7db.com/images/heroes/mascot-hazel.webp"
+      "name": "Maid Chloe",
+      "slug": "maid-chloe",
+      "link": "https://epic7db.com/heroes/maid-chloe",
+      "img": "https://epic7db.com/images/heroes/maid-chloe.webp"
     },
     {
       "name": "Mediator Kawerik",
@@ -1405,10 +1411,10 @@
       "img": "https://epic7db.com/images/heroes/mediator-kawerik.webp"
     },
     {
-      "name": "Milim",
-      "slug": "milim",
-      "link": "https://epic7db.com/heroes/milim",
-      "img": "https://epic7db.com/images/heroes/milim.webp"
+      "name": "Melany",
+      "slug": "melany",
+      "link": "https://epic7db.com/heroes/melany",
+      "img": "https://epic7db.com/images/heroes/melany.webp"
     },
     {
       "name": "Mercedes",
@@ -1423,10 +1429,22 @@
       "img": "https://epic7db.com/images/heroes/mercenary-helga.webp"
     },
     {
+      "name": "Melissa",
+      "slug": "melissa",
+      "link": "https://epic7db.com/heroes/melissa",
+      "img": "https://epic7db.com/images/heroes/melissa.webp"
+    },
+    {
       "name": "Midnight Gala Lilias",
       "slug": "midnight-gala-lilias",
       "link": "https://epic7db.com/heroes/midnight-gala-lilias",
       "img": "https://epic7db.com/images/heroes/midnight-gala-lilias.webp"
+    },
+    {
+      "name": "Milim",
+      "slug": "milim",
+      "link": "https://epic7db.com/heroes/milim",
+      "img": "https://epic7db.com/images/heroes/milim.webp"
     },
     {
       "name": "Mirsa",
@@ -1435,22 +1453,16 @@
       "img": "https://epic7db.com/images/heroes/mirsa.webp"
     },
     {
-      "name": "Montmorancy",
-      "slug": "montmorancy",
-      "link": "https://epic7db.com/heroes/montmorancy",
-      "img": "https://epic7db.com/images/heroes/montmorancy.webp"
-    },
-    {
-      "name": "Melissa",
-      "slug": "melissa",
-      "link": "https://epic7db.com/heroes/melissa",
-      "img": "https://epic7db.com/images/heroes/melissa.webp"
-    },
-    {
       "name": "Mistychain",
       "slug": "mistychain",
       "link": "https://epic7db.com/heroes/mistychain",
       "img": "https://epic7db.com/images/heroes/mistychain.webp"
+    },
+    {
+      "name": "Montmorancy",
+      "slug": "montmorancy",
+      "link": "https://epic7db.com/heroes/montmorancy",
+      "img": "https://epic7db.com/images/heroes/montmorancy.webp"
     },
     {
       "name": "Moon Bunny Dominiel",
@@ -1465,10 +1477,10 @@
       "img": "https://epic7db.com/images/heroes/mort.webp"
     },
     {
-      "name": "Mucacha",
-      "slug": "mucacha",
-      "link": "https://epic7db.com/heroes/mucacha",
-      "img": "https://epic7db.com/images/heroes/mucacha.webp"
+      "name": "Muse Rima",
+      "slug": "muse-rima",
+      "link": "https://epic7db.com/heroes/muse-rima",
+      "img": "https://epic7db.com/images/heroes/muse-rima.webp"
     },
     {
       "name": "Mui",
@@ -1477,10 +1489,10 @@
       "img": "https://epic7db.com/images/heroes/mui.webp"
     },
     {
-      "name": "Muse Rima",
-      "slug": "muse-rima",
-      "link": "https://epic7db.com/heroes/muse-rima",
-      "img": "https://epic7db.com/images/heroes/muse-rima.webp"
+      "name": "Mucacha",
+      "slug": "mucacha",
+      "link": "https://epic7db.com/heroes/mucacha",
+      "img": "https://epic7db.com/images/heroes/mucacha.webp"
     },
     {
       "name": "Muwi",
@@ -1489,16 +1501,10 @@
       "img": "https://epic7db.com/images/heroes/muwi.webp"
     },
     {
-      "name": "Nahkwol",
-      "slug": "nahkwol",
-      "link": "https://epic7db.com/heroes/nahkwol",
-      "img": "https://epic7db.com/images/heroes/nahkwol.webp"
-    },
-    {
-      "name": "Navy Captain Landy",
-      "slug": "navy-captain-landy",
-      "link": "https://epic7db.com/heroes/navy-captain-landy",
-      "img": "https://epic7db.com/images/heroes/navy-captain-landy.webp"
+      "name": "New Kid Adin",
+      "slug": "new-kid-adin",
+      "link": "https://epic7db.com/heroes/new-kid-adin",
+      "img": "https://epic7db.com/images/heroes/new-kid-adin.webp"
     },
     {
       "name": "Nemunas",
@@ -1507,10 +1513,10 @@
       "img": "https://epic7db.com/images/heroes/nemunas.webp"
     },
     {
-      "name": "New Kid Adin",
-      "slug": "new-kid-adin",
-      "link": "https://epic7db.com/heroes/new-kid-adin",
-      "img": "https://epic7db.com/images/heroes/new-kid-adin.webp"
+      "name": "Nahkwol",
+      "slug": "nahkwol",
+      "link": "https://epic7db.com/heroes/nahkwol",
+      "img": "https://epic7db.com/images/heroes/nahkwol.webp"
     },
     {
       "name": "New Moon Luna",
@@ -1519,16 +1525,22 @@
       "img": "https://epic7db.com/images/heroes/new-moon-luna.webp"
     },
     {
+      "name": "Pavel",
+      "slug": "pavel",
+      "link": "https://epic7db.com/heroes/pavel",
+      "img": "https://epic7db.com/images/heroes/pavel.webp"
+    },
+    {
+      "name": "Navy Captain Landy",
+      "slug": "navy-captain-landy",
+      "link": "https://epic7db.com/heroes/navy-captain-landy",
+      "img": "https://epic7db.com/images/heroes/navy-captain-landy.webp"
+    },
+    {
       "name": "Ocean Breeze Luluca",
       "slug": "ocean-breeze-luluca",
       "link": "https://epic7db.com/heroes/ocean-breeze-luluca",
       "img": "https://epic7db.com/images/heroes/ocean-breeze-luluca.webp"
-    },
-    {
-      "name": "Otillie",
-      "slug": "otillie",
-      "link": "https://epic7db.com/heroes/otillie",
-      "img": "https://epic7db.com/images/heroes/otillie.webp"
     },
     {
       "name": "Orte",
@@ -1537,22 +1549,16 @@
       "img": "https://epic7db.com/images/heroes/orte.webp"
     },
     {
-      "name": "Pavel",
-      "slug": "pavel",
-      "link": "https://epic7db.com/heroes/pavel",
-      "img": "https://epic7db.com/images/heroes/pavel.webp"
-    },
-    {
       "name": "Operator Sigret",
       "slug": "operator-sigret",
       "link": "https://epic7db.com/heroes/operator-sigret",
       "img": "https://epic7db.com/images/heroes/operator-sigret.webp"
     },
     {
-      "name": "Peacemaker Furious",
-      "slug": "peacemaker-furious",
-      "link": "https://epic7db.com/heroes/peacemaker-furious",
-      "img": "https://epic7db.com/images/heroes/peacemaker-furious.webp"
+      "name": "Otillie",
+      "slug": "otillie",
+      "link": "https://epic7db.com/heroes/otillie",
+      "img": "https://epic7db.com/images/heroes/otillie.webp"
     },
     {
       "name": "Pearlhorizon",
@@ -1561,16 +1567,10 @@
       "img": "https://epic7db.com/images/heroes/pearlhorizon.webp"
     },
     {
-      "name": "Pernilla",
-      "slug": "pernilla",
-      "link": "https://epic7db.com/heroes/pernilla",
-      "img": "https://epic7db.com/images/heroes/pernilla.webp"
-    },
-    {
-      "name": "Purrgis",
-      "slug": "purrgis",
-      "link": "https://epic7db.com/heroes/purrgis",
-      "img": "https://epic7db.com/images/heroes/purrgis.webp"
+      "name": "Peacemaker Furious",
+      "slug": "peacemaker-furious",
+      "link": "https://epic7db.com/heroes/peacemaker-furious",
+      "img": "https://epic7db.com/images/heroes/peacemaker-furious.webp"
     },
     {
       "name": "Peira",
@@ -1585,16 +1585,22 @@
       "img": "https://epic7db.com/images/heroes/penelope.webp"
     },
     {
-      "name": "Pirate Captain Flan",
-      "slug": "pirate-captain-flan",
-      "link": "https://epic7db.com/heroes/pirate-captain-flan",
-      "img": "https://epic7db.com/images/heroes/pirate-captain-flan.webp"
+      "name": "Pernilla",
+      "slug": "pernilla",
+      "link": "https://epic7db.com/heroes/pernilla",
+      "img": "https://epic7db.com/images/heroes/pernilla.webp"
     },
     {
       "name": "Politis",
       "slug": "politis",
       "link": "https://epic7db.com/heroes/politis",
       "img": "https://epic7db.com/images/heroes/politis.webp"
+    },
+    {
+      "name": "Purrgis",
+      "slug": "purrgis",
+      "link": "https://epic7db.com/heroes/purrgis",
+      "img": "https://epic7db.com/images/heroes/purrgis.webp"
     },
     {
       "name": "Pyllis",
@@ -1633,16 +1639,16 @@
       "img": "https://epic7db.com/images/heroes/ravi.webp"
     },
     {
-      "name": "Ray",
-      "slug": "ray",
-      "link": "https://epic7db.com/heroes/ray",
-      "img": "https://epic7db.com/images/heroes/ray.webp"
-    },
-    {
       "name": "Rem",
       "slug": "rem",
       "link": "https://epic7db.com/heroes/rem",
       "img": "https://epic7db.com/images/heroes/rem.webp"
+    },
+    {
+      "name": "Ray",
+      "slug": "ray",
+      "link": "https://epic7db.com/heroes/ray",
+      "img": "https://epic7db.com/images/heroes/ray.webp"
     },
     {
       "name": "Remnant Violet",
@@ -1663,16 +1669,16 @@
       "img": "https://epic7db.com/images/heroes/requiemroar.webp"
     },
     {
-      "name": "Researcher Carrot",
-      "slug": "researcher-carrot",
-      "link": "https://epic7db.com/heroes/researcher-carrot",
-      "img": "https://epic7db.com/images/heroes/researcher-carrot.webp"
-    },
-    {
       "name": "Revna",
       "slug": "revna",
       "link": "https://epic7db.com/heroes/revna",
       "img": "https://epic7db.com/images/heroes/revna.webp"
+    },
+    {
+      "name": "Researcher Carrot",
+      "slug": "researcher-carrot",
+      "link": "https://epic7db.com/heroes/researcher-carrot",
+      "img": "https://epic7db.com/images/heroes/researcher-carrot.webp"
     },
     {
       "name": "Righteous Thief Roozid",
@@ -1711,12 +1717,6 @@
       "img": "https://epic7db.com/images/heroes/rinak.webp"
     },
     {
-      "name": "Riza Hawkeye",
-      "slug": "riza-hawkeye",
-      "link": "https://epic7db.com/heroes/riza-hawkeye",
-      "img": "https://epic7db.com/images/heroes/riza-hawkeye.webp"
-    },
-    {
       "name": "Roaming Warrior Leo",
       "slug": "roaming-warrior-leo",
       "link": "https://epic7db.com/heroes/roaming-warrior-leo",
@@ -1727,6 +1727,12 @@
       "slug": "roana",
       "link": "https://epic7db.com/heroes/roana",
       "img": "https://epic7db.com/images/heroes/roana.webp"
+    },
+    {
+      "name": "Riza Hawkeye",
+      "slug": "riza-hawkeye",
+      "link": "https://epic7db.com/heroes/riza-hawkeye",
+      "img": "https://epic7db.com/images/heroes/riza-hawkeye.webp"
     },
     {
       "name": "Robin",
@@ -1747,16 +1753,22 @@
       "img": "https://epic7db.com/images/heroes/roozid.webp"
     },
     {
-      "name": "Rose",
-      "slug": "rose",
-      "link": "https://epic7db.com/heroes/rose",
-      "img": "https://epic7db.com/images/heroes/rose.webp"
-    },
-    {
       "name": "Roy Mustang",
       "slug": "roy-mustang",
       "link": "https://epic7db.com/heroes/roy-mustang",
       "img": "https://epic7db.com/images/heroes/roy-mustang.webp"
+    },
+    {
+      "name": "Saria",
+      "slug": "saria",
+      "link": "https://epic7db.com/heroes/saria",
+      "img": "https://epic7db.com/images/heroes/saria.webp"
+    },
+    {
+      "name": "Rose",
+      "slug": "rose",
+      "link": "https://epic7db.com/heroes/rose",
+      "img": "https://epic7db.com/images/heroes/rose.webp"
     },
     {
       "name": "Ruele Of Light",
@@ -1771,34 +1783,10 @@
       "img": "https://epic7db.com/images/heroes/sage-baal-and-sezan.webp"
     },
     {
-      "name": "Saria",
-      "slug": "saria",
-      "link": "https://epic7db.com/heroes/saria",
-      "img": "https://epic7db.com/images/heroes/saria.webp"
-    },
-    {
-      "name": "Savior Adin",
-      "slug": "savior-adin",
-      "link": "https://epic7db.com/heroes/savior-adin",
-      "img": "https://epic7db.com/images/heroes/savior-adin.webp"
-    },
-    {
-      "name": "Schniel",
-      "slug": "schniel",
-      "link": "https://epic7db.com/heroes/schniel",
-      "img": "https://epic7db.com/images/heroes/schniel.webp"
-    },
-    {
       "name": "School Nurse Yulha",
       "slug": "school-nurse-yulha",
       "link": "https://epic7db.com/heroes/school-nurse-yulha",
       "img": "https://epic7db.com/images/heroes/school-nurse-yulha.webp"
-    },
-    {
-      "name": "Schuri",
-      "slug": "schuri",
-      "link": "https://epic7db.com/heroes/schuri",
-      "img": "https://epic7db.com/images/heroes/schuri.webp"
     },
     {
       "name": "Sea Phantom Politis",
@@ -1813,16 +1801,34 @@
       "img": "https://epic7db.com/images/heroes/sealed-eye-surin.webp"
     },
     {
-      "name": "Seaside Bellona",
-      "slug": "seaside-bellona",
-      "link": "https://epic7db.com/heroes/seaside-bellona",
-      "img": "https://epic7db.com/images/heroes/seaside-bellona.webp"
+      "name": "Savior Adin",
+      "slug": "savior-adin",
+      "link": "https://epic7db.com/heroes/savior-adin",
+      "img": "https://epic7db.com/images/heroes/savior-adin.webp"
+    },
+    {
+      "name": "Schuri",
+      "slug": "schuri",
+      "link": "https://epic7db.com/heroes/schuri",
+      "img": "https://epic7db.com/images/heroes/schuri.webp"
     },
     {
       "name": "Serene Purity Adin",
       "slug": "serene-purity-adin",
       "link": "https://epic7db.com/heroes/serene-purity-adin",
       "img": "https://epic7db.com/images/heroes/serene-purity-adin.webp"
+    },
+    {
+      "name": "Serila",
+      "slug": "serila",
+      "link": "https://epic7db.com/heroes/serila",
+      "img": "https://epic7db.com/images/heroes/serila.webp"
+    },
+    {
+      "name": "Seaside Bellona",
+      "slug": "seaside-bellona",
+      "link": "https://epic7db.com/heroes/seaside-bellona",
+      "img": "https://epic7db.com/images/heroes/seaside-bellona.webp"
     },
     {
       "name": "Setsuka",
@@ -1837,46 +1843,10 @@
       "img": "https://epic7db.com/images/heroes/sez.webp"
     },
     {
-      "name": "Serila",
-      "slug": "serila",
-      "link": "https://epic7db.com/heroes/serila",
-      "img": "https://epic7db.com/images/heroes/serila.webp"
-    },
-    {
       "name": "Shadow Rose",
       "slug": "shadow-rose",
       "link": "https://epic7db.com/heroes/shadow-rose",
       "img": "https://epic7db.com/images/heroes/shadow-rose.webp"
-    },
-    {
-      "name": "Shepherd Of The Dark Diene",
-      "slug": "shepherd-of-the-dark-diene",
-      "link": "https://epic7db.com/heroes/shepherd-of-the-dark-diene",
-      "img": "https://epic7db.com/images/heroes/shepherd-of-the-dark-diene.webp"
-    },
-    {
-      "name": "Shadow Knight Pyllis",
-      "slug": "shadow-knight-pyllis",
-      "link": "https://epic7db.com/heroes/shadow-knight-pyllis",
-      "img": "https://epic7db.com/images/heroes/shadow-knight-pyllis.webp"
-    },
-    {
-      "name": "Shepherd Jena",
-      "slug": "shepherd-jena",
-      "link": "https://epic7db.com/heroes/shepherd-jena",
-      "img": "https://epic7db.com/images/heroes/shepherd-jena.webp"
-    },
-    {
-      "name": "Sigret",
-      "slug": "sigret",
-      "link": "https://epic7db.com/heroes/sigret",
-      "img": "https://epic7db.com/images/heroes/sigret.webp"
-    },
-    {
-      "name": "Sharun",
-      "slug": "sharun",
-      "link": "https://epic7db.com/heroes/sharun",
-      "img": "https://epic7db.com/images/heroes/sharun.webp"
     },
     {
       "name": "Shalltear",
@@ -1885,10 +1855,28 @@
       "img": "https://epic7db.com/images/heroes/shalltear.webp"
     },
     {
-      "name": "Shuna",
-      "slug": "shuna",
-      "link": "https://epic7db.com/heroes/shuna",
-      "img": "https://epic7db.com/images/heroes/shuna.webp"
+      "name": "Sharun",
+      "slug": "sharun",
+      "link": "https://epic7db.com/heroes/sharun",
+      "img": "https://epic7db.com/images/heroes/sharun.webp"
+    },
+    {
+      "name": "Shadow Knight Pyllis",
+      "slug": "shadow-knight-pyllis",
+      "link": "https://epic7db.com/heroes/shadow-knight-pyllis",
+      "img": "https://epic7db.com/images/heroes/shadow-knight-pyllis.webp"
+    },
+    {
+      "name": "Shepherd Of The Dark Diene",
+      "slug": "shepherd-of-the-dark-diene",
+      "link": "https://epic7db.com/heroes/shepherd-of-the-dark-diene",
+      "img": "https://epic7db.com/images/heroes/shepherd-of-the-dark-diene.webp"
+    },
+    {
+      "name": "Shepherd Jena",
+      "slug": "shepherd-jena",
+      "link": "https://epic7db.com/heroes/shepherd-jena",
+      "img": "https://epic7db.com/images/heroes/shepherd-jena.webp"
     },
     {
       "name": "Shooting Star Achates",
@@ -1897,34 +1885,22 @@
       "img": "https://epic7db.com/images/heroes/shooting-star-achates.webp"
     },
     {
+      "name": "Sigret",
+      "slug": "sigret",
+      "link": "https://epic7db.com/heroes/sigret",
+      "img": "https://epic7db.com/images/heroes/sigret.webp"
+    },
+    {
       "name": "Silk",
       "slug": "silk",
       "link": "https://epic7db.com/heroes/silk",
       "img": "https://epic7db.com/images/heroes/silk.webp"
     },
     {
-      "name": "Silvertide Christy",
-      "slug": "silvertide-christy",
-      "link": "https://epic7db.com/heroes/silvertide-christy",
-      "img": "https://epic7db.com/images/heroes/silvertide-christy.webp"
-    },
-    {
-      "name": "Sinful Angelica",
-      "slug": "sinful-angelica",
-      "link": "https://epic7db.com/heroes/sinful-angelica",
-      "img": "https://epic7db.com/images/heroes/sinful-angelica.webp"
-    },
-    {
-      "name": "Silver Blade Aramintha",
-      "slug": "silver-blade-aramintha",
-      "link": "https://epic7db.com/heroes/silver-blade-aramintha",
-      "img": "https://epic7db.com/images/heroes/silver-blade-aramintha.webp"
-    },
-    {
-      "name": "Specter Tenebria",
-      "slug": "specter-tenebria",
-      "link": "https://epic7db.com/heroes/specter-tenebria",
-      "img": "https://epic7db.com/images/heroes/specter-tenebria.webp"
+      "name": "Shuna",
+      "slug": "shuna",
+      "link": "https://epic7db.com/heroes/shuna",
+      "img": "https://epic7db.com/images/heroes/shuna.webp"
     },
     {
       "name": "Sol",
@@ -1933,22 +1909,22 @@
       "img": "https://epic7db.com/images/heroes/sol.webp"
     },
     {
-      "name": "Sonia",
-      "slug": "sonia",
-      "link": "https://epic7db.com/heroes/sonia",
-      "img": "https://epic7db.com/images/heroes/sonia.webp"
+      "name": "Silver Blade Aramintha",
+      "slug": "silver-blade-aramintha",
+      "link": "https://epic7db.com/heroes/silver-blade-aramintha",
+      "img": "https://epic7db.com/images/heroes/silver-blade-aramintha.webp"
     },
     {
-      "name": "Specimen Sez",
-      "slug": "specimen-sez",
-      "link": "https://epic7db.com/heroes/specimen-sez",
-      "img": "https://epic7db.com/images/heroes/specimen-sez.webp"
+      "name": "Sinful Angelica",
+      "slug": "sinful-angelica",
+      "link": "https://epic7db.com/heroes/sinful-angelica",
+      "img": "https://epic7db.com/images/heroes/sinful-angelica.webp"
     },
     {
-      "name": "Solitaria Of The Snow",
-      "slug": "solitaria-of-the-snow",
-      "link": "https://epic7db.com/heroes/solitaria-of-the-snow",
-      "img": "https://epic7db.com/images/heroes/solitaria-of-the-snow.webp"
+      "name": "Silvertide Christy",
+      "slug": "silvertide-christy",
+      "link": "https://epic7db.com/heroes/silvertide-christy",
+      "img": "https://epic7db.com/images/heroes/silvertide-christy.webp"
     },
     {
       "name": "Spirit Eye Celine",
@@ -1957,10 +1933,34 @@
       "img": "https://epic7db.com/images/heroes/spirit-eye-celine.webp"
     },
     {
+      "name": "Solitaria Of The Snow",
+      "slug": "solitaria-of-the-snow",
+      "link": "https://epic7db.com/heroes/solitaria-of-the-snow",
+      "img": "https://epic7db.com/images/heroes/solitaria-of-the-snow.webp"
+    },
+    {
+      "name": "Sonia",
+      "slug": "sonia",
+      "link": "https://epic7db.com/heroes/sonia",
+      "img": "https://epic7db.com/images/heroes/sonia.webp"
+    },
+    {
       "name": "Stark",
       "slug": "stark",
       "link": "https://epic7db.com/heroes/stark",
       "img": "https://epic7db.com/images/heroes/stark.webp"
+    },
+    {
+      "name": "Specter Tenebria",
+      "slug": "specter-tenebria",
+      "link": "https://epic7db.com/heroes/specter-tenebria",
+      "img": "https://epic7db.com/images/heroes/specter-tenebria.webp"
+    },
+    {
+      "name": "Specimen Sez",
+      "slug": "specimen-sez",
+      "link": "https://epic7db.com/heroes/specimen-sez",
+      "img": "https://epic7db.com/images/heroes/specimen-sez.webp"
     },
     {
       "name": "Straze",
@@ -1975,34 +1975,10 @@
       "img": "https://epic7db.com/images/heroes/successor-taeyou.webp"
     },
     {
-      "name": "Summer Break Charlotte",
-      "slug": "summer-break-charlotte",
-      "link": "https://epic7db.com/heroes/summer-break-charlotte",
-      "img": "https://epic7db.com/images/heroes/summer-break-charlotte.webp"
-    },
-    {
       "name": "Summers Disciple Alexa",
       "slug": "summers-disciple-alexa",
       "link": "https://epic7db.com/heroes/summers-disciple-alexa",
       "img": "https://epic7db.com/images/heroes/summers-disciple-alexa.webp"
-    },
-    {
-      "name": "Summertime Iseria",
-      "slug": "summertime-iseria",
-      "link": "https://epic7db.com/heroes/summertime-iseria",
-      "img": "https://epic7db.com/images/heroes/summertime-iseria.webp"
-    },
-    {
-      "name": "Surin",
-      "slug": "surin",
-      "link": "https://epic7db.com/heroes/surin",
-      "img": "https://epic7db.com/images/heroes/surin.webp"
-    },
-    {
-      "name": "Suthan",
-      "slug": "suthan",
-      "link": "https://epic7db.com/heroes/suthan",
-      "img": "https://epic7db.com/images/heroes/suthan.webp"
     },
     {
       "name": "Swift Flagbearer Sigret",
@@ -2011,28 +1987,34 @@
       "img": "https://epic7db.com/images/heroes/swift-flagbearer-sigret.webp"
     },
     {
+      "name": "Summer Break Charlotte",
+      "slug": "summer-break-charlotte",
+      "link": "https://epic7db.com/heroes/summer-break-charlotte",
+      "img": "https://epic7db.com/images/heroes/summer-break-charlotte.webp"
+    },
+    {
+      "name": "Summertime Iseria",
+      "slug": "summertime-iseria",
+      "link": "https://epic7db.com/heroes/summertime-iseria",
+      "img": "https://epic7db.com/images/heroes/summertime-iseria.webp"
+    },
+    {
+      "name": "Suthan",
+      "slug": "suthan",
+      "link": "https://epic7db.com/heroes/suthan",
+      "img": "https://epic7db.com/images/heroes/suthan.webp"
+    },
+    {
       "name": "Sven",
       "slug": "sven",
       "link": "https://epic7db.com/heroes/sven",
       "img": "https://epic7db.com/images/heroes/sven.webp"
     },
     {
-      "name": "Talaz",
-      "slug": "talaz",
-      "link": "https://epic7db.com/heroes/talaz",
-      "img": "https://epic7db.com/images/heroes/talaz.webp"
-    },
-    {
-      "name": "Talia",
-      "slug": "talia",
-      "link": "https://epic7db.com/heroes/talia",
-      "img": "https://epic7db.com/images/heroes/talia.webp"
-    },
-    {
-      "name": "Tamarinne",
-      "slug": "tamarinne",
-      "link": "https://epic7db.com/heroes/tamarinne",
-      "img": "https://epic7db.com/images/heroes/tamarinne.webp"
+      "name": "Surin",
+      "slug": "surin",
+      "link": "https://epic7db.com/heroes/surin",
+      "img": "https://epic7db.com/images/heroes/surin.webp"
     },
     {
       "name": "Sylvan Sage Vivian",
@@ -2041,16 +2023,40 @@
       "img": "https://epic7db.com/images/heroes/sylvan-sage-vivian.webp"
     },
     {
+      "name": "Talia",
+      "slug": "talia",
+      "link": "https://epic7db.com/heroes/talia",
+      "img": "https://epic7db.com/images/heroes/talia.webp"
+    },
+    {
       "name": "Taeyou",
       "slug": "taeyou",
       "link": "https://epic7db.com/heroes/taeyou",
       "img": "https://epic7db.com/images/heroes/taeyou.webp"
     },
     {
+      "name": "Talaz",
+      "slug": "talaz",
+      "link": "https://epic7db.com/heroes/talaz",
+      "img": "https://epic7db.com/images/heroes/talaz.webp"
+    },
+    {
+      "name": "Tamarinne",
+      "slug": "tamarinne",
+      "link": "https://epic7db.com/heroes/tamarinne",
+      "img": "https://epic7db.com/images/heroes/tamarinne.webp"
+    },
+    {
       "name": "Taranor Guard",
       "slug": "taranor-guard",
       "link": "https://epic7db.com/heroes/taranor-guard",
       "img": "https://epic7db.com/images/heroes/taranor-guard.webp"
+    },
+    {
+      "name": "Tempest Surin",
+      "slug": "tempest-surin",
+      "link": "https://epic7db.com/heroes/tempest-surin",
+      "img": "https://epic7db.com/images/heroes/tempest-surin.webp"
     },
     {
       "name": "Taranor Royal Guard",
@@ -2065,22 +2071,10 @@
       "img": "https://epic7db.com/images/heroes/tenebria.webp"
     },
     {
-      "name": "Tempest Surin",
-      "slug": "tempest-surin",
-      "link": "https://epic7db.com/heroes/tempest-surin",
-      "img": "https://epic7db.com/images/heroes/tempest-surin.webp"
-    },
-    {
       "name": "Tieria",
       "slug": "tieria",
       "link": "https://epic7db.com/heroes/tieria",
       "img": "https://epic7db.com/images/heroes/tieria.webp"
-    },
-    {
-      "name": "Top Model Luluca",
-      "slug": "top-model-luluca",
-      "link": "https://epic7db.com/heroes/top-model-luluca",
-      "img": "https://epic7db.com/images/heroes/top-model-luluca.webp"
     },
     {
       "name": "Tori",
@@ -2089,16 +2083,22 @@
       "img": "https://epic7db.com/images/heroes/tori.webp"
     },
     {
+      "name": "Twisted Eidolon Kayron",
+      "slug": "twisted-eidolon-kayron",
+      "link": "https://epic7db.com/heroes/twisted-eidolon-kayron",
+      "img": "https://epic7db.com/images/heroes/twisted-eidolon-kayron.webp"
+    },
+    {
       "name": "Troublemaker Crozet",
       "slug": "troublemaker-crozet",
       "link": "https://epic7db.com/heroes/troublemaker-crozet",
       "img": "https://epic7db.com/images/heroes/troublemaker-crozet.webp"
     },
     {
-      "name": "Twisted Eidolon Kayron",
-      "slug": "twisted-eidolon-kayron",
-      "link": "https://epic7db.com/heroes/twisted-eidolon-kayron",
-      "img": "https://epic7db.com/images/heroes/twisted-eidolon-kayron.webp"
+      "name": "Verdant Adin",
+      "slug": "verdant-adin",
+      "link": "https://epic7db.com/heroes/verdant-adin",
+      "img": "https://epic7db.com/images/heroes/verdant-adin.webp"
     },
     {
       "name": "Unbound Knight Arowell",
@@ -2107,10 +2107,10 @@
       "img": "https://epic7db.com/images/heroes/unbound-knight-arowell.webp"
     },
     {
-      "name": "Verdant Adin",
-      "slug": "verdant-adin",
-      "link": "https://epic7db.com/heroes/verdant-adin",
-      "img": "https://epic7db.com/images/heroes/verdant-adin.webp"
+      "name": "Veronica",
+      "slug": "veronica",
+      "link": "https://epic7db.com/heroes/veronica",
+      "img": "https://epic7db.com/images/heroes/veronica.webp"
     },
     {
       "name": "Tywin",
@@ -2125,22 +2125,16 @@
       "img": "https://epic7db.com/images/heroes/urban-shadow-choux.webp"
     },
     {
-      "name": "Veronica",
-      "slug": "veronica",
-      "link": "https://epic7db.com/heroes/veronica",
-      "img": "https://epic7db.com/images/heroes/veronica.webp"
-    },
-    {
       "name": "Victorika",
       "slug": "victorika",
       "link": "https://epic7db.com/heroes/victorika",
       "img": "https://epic7db.com/images/heroes/victorika.webp"
     },
     {
-      "name": "Vigilante Leader Glenn",
-      "slug": "vigilante-leader-glenn",
-      "link": "https://epic7db.com/heroes/vigilante-leader-glenn",
-      "img": "https://epic7db.com/images/heroes/vigilante-leader-glenn.webp"
+      "name": "Vildred",
+      "slug": "vildred",
+      "link": "https://epic7db.com/heroes/vildred",
+      "img": "https://epic7db.com/images/heroes/vildred.webp"
     },
     {
       "name": "Violet",
@@ -2149,10 +2143,10 @@
       "img": "https://epic7db.com/images/heroes/violet.webp"
     },
     {
-      "name": "Vildred",
-      "slug": "vildred",
-      "link": "https://epic7db.com/heroes/vildred",
-      "img": "https://epic7db.com/images/heroes/vildred.webp"
+      "name": "Vigilante Leader Glenn",
+      "slug": "vigilante-leader-glenn",
+      "link": "https://epic7db.com/heroes/vigilante-leader-glenn",
+      "img": "https://epic7db.com/images/heroes/vigilante-leader-glenn.webp"
     },
     {
       "name": "Vivian",
@@ -2165,6 +2159,12 @@
       "slug": "wanda",
       "link": "https://epic7db.com/heroes/wanda",
       "img": "https://epic7db.com/images/heroes/wanda.webp"
+    },
+    {
+      "name": "Wandering Prince Cidd",
+      "slug": "wandering-prince-cidd",
+      "link": "https://epic7db.com/heroes/wandering-prince-cidd",
+      "img": "https://epic7db.com/images/heroes/wandering-prince-cidd.webp"
     },
     {
       "name": "Wanderer Silk",
@@ -2221,12 +2221,6 @@
       "img": "https://epic7db.com/images/heroes/yulha.webp"
     },
     {
-      "name": "Zeno",
-      "slug": "zeno",
-      "link": "https://epic7db.com/heroes/zeno",
-      "img": "https://epic7db.com/images/heroes/zeno.webp"
-    },
-    {
       "name": "Yuna",
       "slug": "yuna",
       "link": "https://epic7db.com/heroes/yuna",
@@ -2237,6 +2231,12 @@
       "slug": "zealot-carmainerose",
       "link": "https://epic7db.com/heroes/zealot-carmainerose",
       "img": "https://epic7db.com/images/heroes/zealot-carmainerose.webp"
+    },
+    {
+      "name": "Zeno",
+      "slug": "zeno",
+      "link": "https://epic7db.com/heroes/zeno",
+      "img": "https://epic7db.com/images/heroes/zeno.webp"
     },
     {
       "name": "Zerato",
